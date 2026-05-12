@@ -103,10 +103,6 @@ manuscript live here. As of the current release:
 | `supplementary/table_s5_drug_panel_tan60.md` | Same content rendered as Markdown |
 | `supplementary/table_s5_drug_panel_tan60.json` | Same content as JSON |
 
-Note: there is no Table S4. The paper's numbering jumps from S3 → S5
-(the main-text Table 4b — tan60 branch ablation — fills the slot that an
-earlier draft used for S4).
-
 Notes S1, S2 and Tables S6–S9 and Figure S1 will be added in subsequent
 releases. Seethe manuscript's *Additional files* section for the full list.
 
