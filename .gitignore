@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+.python-version
+
+# uv / pip
+uv.lock
+pip-log.txt
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large artifacts hosted on Zenodo — do not commit
+weights/
+features/
+data/features/
+data/weights/
+*.tar.zst
+*.tar.gz
+*.zip
+
+# Numpy / parquet caches that exceed GitHub size limits (>50 MB recommended cap)
+# Specific small files we DO want to ship are listed positively below.
+*.npy
+*.parquet
+!data/splits/max_tan_to_train_tan60_v2.npy
+!data/splits/max_tan_to_train_tan70_v2.npy
+!data/leakage/leak_mask_*.npy
+
+# Local logs
+*.log
+/tmp/
