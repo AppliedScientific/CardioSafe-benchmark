@@ -99,10 +99,16 @@ manuscript live here. As of the current release:
 | `supplementary/table_s3_comparator_post_de_leak.csv` | Table S3 — same as S2 but *post-de-leak* (expanded Table 3b): comparator-train compounds at Tanimoto ≥ 0.99 removed; reports `n_total`, `n_leak`, `n_kept`. |
 | `supplementary/table_s3_comparator_post_de_leak.md` | Same content rendered as Markdown |
 | `supplementary/tables_s2_s3_paired_bootstrap.json` | Combined structured JSON underlying S2 + S3 (channels × comparators × pre/post). |
+| `supplementary/table_s5_drug_panel_tan60.csv` | Table S5 — the 11-drug case-study panel from main-text Table 5 (tan70), evaluated on the stricter tan60 split. Same schema and same drugs. |
+| `supplementary/table_s5_drug_panel_tan60.md` | Same content rendered as Markdown |
+| `supplementary/table_s5_drug_panel_tan60.json` | Same content as JSON |
 
-Notes S1, S2 and Tables S5–S9 (no S4) and Figure S1 will be added in
-subsequent releases. Seethe manuscript's *Additional files* section for the
-full list.
+Note: there is no Table S4. The paper's numbering jumps from S3 → S5
+(the main-text Table 4b — tan60 branch ablation — fills the slot that an
+earlier draft used for S4).
+
+Notes S1, S2 and Tables S6–S9 and Figure S1 will be added in subsequent
+releases. Seethe manuscript's *Additional files* section for the full list.
 
 ## Loading example
 
