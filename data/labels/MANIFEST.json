@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "source": {
+    "chembl_version": "36",
+    "chembl_release_date": "2025-07-28",
+    "chembl_tarball_sha256": "b25820eef0f0481ad7712bdf4bac3b45f354e3cbacb76be1fdbf4205d6b48fb9",
+    "chembl_download_url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/",
+    "rdkit_version": "2025.09.6",
+    "additional_source_herg": "hERG Central primary screen (Harvard Dataverse)"
+  },
+  "labels_csv": {
+    "filename": "labels_v1.csv",
+    "rows": 334444,
+    "cols": [
+      "row_idx",
+      "inchikey",
+      "herg_pchembl",
+      "herg_blocker_10um",
+      "herg_blocker_1um",
+      "nav15_pchembl",
+      "nav15_blocker",
+      "cav12_pchembl",
+      "cav12_blocker",
+      "iks_blocker"
+    ],
+    "row_order": "canonical row_idx (joins to data/compounds/compounds.csv)",
+    "missing_value_encoding": "empty cell (CSV NaN)"
+  },
+  "label_columns": {
+    "herg_pchembl": {
+      "type": "regression",
+      "unit": "pIC50 (\u2212log10 molar IC50)"
+    },
+    "herg_blocker_10um": {
+      "type": "binary",
+      "blocker_threshold_uM": 10.0
+    },
+    "herg_blocker_1um": {
+      "type": "binary",
+      "blocker_threshold_uM": 1.0
+    },
+    "nav15_pchembl": {
+      "type": "regression",
+      "unit": "pIC50"
+    },
+    "nav15_blocker": {
+      "type": "binary",
+      "blocker_threshold_uM": 10.0
+    },
+    "cav12_pchembl": {
+      "type": "regression",
+      "unit": "pIC50"
+    },
+    "cav12_blocker": {
+      "type": "binary",
+      "blocker_threshold_uM": 10.0
+    },
+    "iks_blocker": {
+      "type": "binary",
+      "blocker_threshold_uM": 10.0,
+      "note": "exploratory head; n=115 total"
+    }
+  },
+  "channels": {
+    "hERG": {
+      "n_total_primary_label": 331127,
+      "n_blockers": 11881,
+      "primary_column": "herg_blocker_10um",
+      "per_column_non_nan": {
+        "herg_pchembl": 23787,
+        "herg_blocker_10um": 331127,
+        "herg_blocker_1um": 330541
+      }
+    },
+    "Nav1.5": {
+      "n_total_primary_label": 3160,
+      "n_blockers": 1240,
+      "primary_column": "nav15_blocker",
+      "per_column_non_nan": {
+        "nav15_pchembl": 2855,
+        "nav15_blocker": 3160
+      }
+    },
+    "Cav1.2": {
+      "n_total_primary_label": 1138,
+      "n_blockers": 548,
+      "primary_column": "cav12_blocker",
+      "per_column_non_nan": {
+        "cav12_pchembl": 997,
+        "cav12_blocker": 1138
+      }
+    },
+    "IKs": {
+      "n_total_primary_label": 115,
+      "n_blockers": 30,
+      "primary_column": "iks_blocker",
+      "per_column_non_nan": {
+        "iks_blocker": 115
+      }
+    }
+  },
+  "curation_policy": "Pharmacology-aware: (1) exact pChEMBL records (data_validity_comment IS NULL, pchembl_value IS NOT NULL); (2) censored relations >, >=, <, <= in nM (IC50/Ki/EC50/Kd) converted via pChEMBL = 9 \u2212 log10(nM); (3) inhibition-percentage votes with assay-parsed test concentration. hERG augmented with the hERG Central primary screen.",
+  "checksums": {
+    "labels_v1.csv": "b33cbe38204599ce2d63218756e7c3e5cfbe80078965f6656509d02654fb77ed",
+    "source_labels.npy_sha256": "189845fcc9b1a40bc76de3823cb96e0e97e33d3307e232ccf267ca8fa32bbf42"
+  }
+}
