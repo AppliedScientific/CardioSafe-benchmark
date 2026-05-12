@@ -91,8 +91,11 @@ manuscript live here. As of the current release:
 | `supplementary/table_s0_descriptor_spec.csv` | Table S0 — 20-descriptor specification with per-column non-zero fractions and summary statistics over the 334,444-compound production cache |
 | `supplementary/table_s0_descriptor_spec.md` | Same content as a rendered Markdown table |
 | `supplementary/table_s0_summary.json` | Same content as a JSON dump (machine-friendly, includes per-descriptor definitions) |
+| `supplementary/table_s1_confusion_matrices.csv` | Table S1 — per-head confusion matrices (TP / FP / TN / FN + derived metrics) for the deployed 5-seed ensemble at threshold 0.5, on both tan70 and tan60 test folds |
+| `supplementary/table_s1_confusion_matrices.md` | Same content rendered as Markdown |
+| `supplementary/table_s1_confusion_matrices.json` | Same content as JSON |
 
-Notes S1, S2 and Tables S1–S9 (no S4) and Figure S1 will be added in
+Notes S1, S2 and Tables S2, S3, S5–S9 (no S4) and Figure S1 will be added in
 subsequent releases. Seethe manuscript's *Additional files* section for the
 full list.
 
