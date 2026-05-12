@@ -119,9 +119,14 @@ manuscript live here. As of the current release:
 | `supplementary/figure_s1_herg_calibration.json` | Underlying decile data (`p_lo`, `p_hi`, `p_mean`, `obs_pos_rate`, `n`) plus per-panel total *n* and ECE |
 | `supplementary/note_s1_yrand_mechanism.md` | Note S1 — Y-randomization mechanism + per-MW-stratum analysis explaining the elevated unstratified hERG Y-randomized AUC (~0.70) as a molecular-weight prevalence confound. Includes the unconfounded controls (regression *r* and MCC) collapsing to ~0. |
 | `supplementary/note_s1_yrand_data.json` | Underlying data behind Note S1 — V6 and Stage 2 Y-randomized overall AUCs, per-MW-bin metrics, seed-42 unconfounded controls, prevalence-controlled subsample |
+| `supplementary/note_s2_cliff_curation.md` | Note S2 — prose documenting the two-stage activity-cliff curation pipeline (manual literature curation + automated Tanimoto leak-prevention filter), with the 25-source bibliography and the 30-`pair_id` composition table |
+| `supplementary/note_s2_pair_id_composition.csv` | Per-`pair_id` table: therapeutic class, blocker members, safer members, sources, ranking-pair eligibility per split |
+| `supplementary/note_s2_per_split_manifest.csv` | One row per cliff compound × split with include / exclude status, literature IC50, and herg_1um / herg_10um block flags |
+| `supplementary/note_s2_source_bibliography.csv` | 25 source citation keys with per-source compound counts and citation stubs (full citations to be completed by author at proof stage) |
 
-Note S2 will be added in a subsequent release. Seethe manuscript's
-*Additional files* section for the full list.
+All paper-promised supplementary materials are now in this directory.See
+the manuscript's *Additional files* section for the original list and the
+context in which each item is cited.
 
 ## Loading example
 

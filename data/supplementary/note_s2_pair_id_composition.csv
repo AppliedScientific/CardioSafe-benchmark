@@ -1,0 +1,31 @@
+pair_id,category,n_members_total,blocker_members,safer_members,sources,ranking_pair_tan70,ranking_pair_tan60,members_in_tan70_cliff_set,members_in_tan60_cliff_set
+AA1,Antiarrhythmic,2,,Mexiletine; Ranolazine,Kramer2013; Rajamani2008,False,False,Mexiletine,Mexiletine; Ranolazine
+AA2,Antiarrhythmic,2,Flecainide,Lidocaine,Kramer2013; Paul2002,True,True,Flecainide; Lidocaine,Flecainide; Lidocaine
+AA3,Antiarrhythmic,2,Sotalol; Dofetilide,,Kramer2013; Numaguchi2000,False,False,Sotalol; Dofetilide,Sotalol; Dofetilide
+AA4,Antiarrhythmic,1,Ibutilide,,Yang1995,False,False,Ibutilide,Ibutilide
+AH1,Antihistamine,2,Terfenadine,Fexofenadine,Bowes2012; Scherer2002,False,False,,
+AH2,Antihistamine,2,Astemizole,Desloratadine,Bowes2012; Kongsamut2002,True,True,Astemizole; Desloratadine,Astemizole; Desloratadine
+AH3,Antihistamine,2,,Loratadine; Cetirizine,Taglialatela1998; Taglialatela2000,False,False,Loratadine; Cetirizine,Loratadine; Cetirizine
+AP1,Atypical antipsychotic,2,Ziprasidone,Aripiprazole,Kongsamut2002,True,True,Ziprasidone; Aripiprazole,Ziprasidone; Aripiprazole
+AP2,Atypical antipsychotic,1,,Olanzapine,Kongsamut2002,False,False,Olanzapine,Olanzapine
+AP3,Atypical antipsychotic,2,Risperidone,Paliperidone,ChavesGonzalez2013; Kongsamut2002,True,True,Risperidone; Paliperidone,Risperidone; Paliperidone
+AP4,Atypical antipsychotic,2,Sertindole,Quetiapine,Kongsamut2002; Rampe1998,True,True,Sertindole; Quetiapine,Sertindole; Quetiapine
+BB1,Beta-blocker,2,,Atenolol; Metoprolol,Bowes2012,False,False,Atenolol; Metoprolol,Atenolol; Metoprolol
+BB2,Beta-blocker,1,,Propranolol,Bowes2012,False,False,Propranolol,Propranolol
+BF1,Benzofuran,1,,Amiodarone,Kiesecker2004,False,False,Amiodarone,Amiodarone
+BP1,Butyrophenone,2,Haloperidol; Droperidol,,Drolet1999; Suessbrich1997,False,False,Haloperidol; Droperidol,Haloperidol; Droperidol
+BP2,Butyrophenone,1,Pimozide,,Kang2000,False,False,Pimozide,Pimozide
+CCB1,Calcium-channel blocker,2,,Verapamil; Diltiazem,Kramer2013,False,False,Verapamil; Diltiazem,Verapamil; Diltiazem
+CCB2,Calcium-channel blocker,2,,Nifedipine; Amlodipine,Zhang1999,False,False,Nifedipine; Amlodipine,Nifedipine; Amlodipine
+FQ1,Fluoroquinolone,2,Sparfloxacin,Ciprofloxacin,Kang2001,True,True,Sparfloxacin; Ciprofloxacin,Sparfloxacin; Ciprofloxacin
+FQ2,Fluoroquinolone,2,Moxifloxacin,Levofloxacin,Kang2001,True,True,Moxifloxacin; Levofloxacin,Moxifloxacin; Levofloxacin
+FQ3,Fluoroquinolone,2,Grepafloxacin,Norfloxacin,Kang2001,True,True,Grepafloxacin; Norfloxacin,Grepafloxacin; Norfloxacin
+GP1,Gastroprokinetic (5-HT4),2,Cisapride,Mosapride,Carlsson2005; Rampe1997,True,True,Cisapride; Mosapride,Cisapride; Mosapride
+GP2,Gastroprokinetic (5-HT4),1,,Prucalopride,Mendzelevski2012,False,False,Prucalopride,Prucalopride
+OP1,Opioid,2,Methadone,Buprenorphine,Katchman2002; Katchman2006,True,True,Methadone; Buprenorphine,Methadone; Buprenorphine
+OP2,Opioid,2,,Morphine; Oxycodone,Katchman2002,False,False,Morphine; Oxycodone,Morphine; Oxycodone
+OP3,Opioid,1,,Fentanyl,Katchman2002,False,False,Fentanyl,Fentanyl
+PH1,Phenothiazine,2,Thioridazine,Prochlorperazine,Bowes2012; Guo2005,True,True,Thioridazine; Prochlorperazine,Thioridazine; Prochlorperazine
+PH2,Phenothiazine,2,Chlorpromazine,Trifluoperazine,Bowes2012; Rampe1997,True,True,Chlorpromazine; Trifluoperazine,Chlorpromazine; Trifluoperazine
+TC1,Tricyclic antidepressant,2,Imipramine; Desipramine,,Bowes2012; Teschemacher1999,False,False,Imipramine,Imipramine; Desipramine
+TC2,Tricyclic antidepressant,2,Amitriptyline,Doxepin,Bowes2012,False,True,Doxepin,Amitriptyline; Doxepin
