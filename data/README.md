@@ -81,6 +81,21 @@ test concentration. hERG is augmented with the hERG Central primary screen.
 Full provenance, ChEMBL 36 source dump SHA-256, and per-column non-NaN
 counts are in `labels/MANIFEST.json`.
 
+## `supplementary/` — paper supplementary tables, notes, and figures
+
+The supplementary materials promised in the *Additional files* section of the
+manuscript live here. As of the current release:
+
+| file | what |
+| --- | --- |
+| `supplementary/table_s0_descriptor_spec.csv` | Table S0 — 20-descriptor specification with per-column non-zero fractions and summary statistics over the 334,444-compound production cache |
+| `supplementary/table_s0_descriptor_spec.md` | Same content as a rendered Markdown table |
+| `supplementary/table_s0_summary.json` | Same content as a JSON dump (machine-friendly, includes per-descriptor definitions) |
+
+Notes S1, S2 and Tables S1–S9 (no S4) and Figure S1 will be added in
+subsequent releases. Seethe manuscript's *Additional files* section for the
+full list.
+
 ## Loading example
 
 ```python
