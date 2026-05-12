@@ -4,6 +4,8 @@ Splits, labels, and supplementary artifacts for **CardioSafe: multi-task
 prediction of cardiac ion channel activity with reverse-leak audited
 benchmarking** (Jovanović et al., 2026).
 
+📄 **Preprint:** [biorxiv.org/content/10.64898/2026.05.06.723181v1](https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1)
+
 CardioSafe is a three-branch multi-task neural network that predicts blocker
 status and pIC50 for the four CiPA cardiac ion channels — hERG, Nav1.5,
 Cav1.2, and (exploratory) IKs — trained on the largest publicly reported
@@ -96,8 +98,9 @@ the figures in the manuscript.
   author  = {Jovanović, Mihailo and Weidener, Lukas and Brkić, Marko and
              Ulgac, Emre and Meduri, Aakaash},
   year    = {2026},
-  journal = {(submitted)},
-  url     = {https://github.com/AppliedScientific/CardioSafe-benchmark}
+  journal = {bioRxiv},
+  doi     = {10.64898/2026.05.06.723181},
+  url     = {https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1}
 }
 ```
 
