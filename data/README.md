@@ -114,9 +114,12 @@ manuscript live here. As of the current release:
 | `supplementary/table_s9_curation_sensitivity.csv` | Table S9 — curation sensitivity, strict vs full. AUC + MCC for the 5 binary heads and Pearson r + RMSE for the 3 regression heads, across three curation policies (full pharmacology-aware / exact-only / exact-only-strict) on both splits. Includes per-channel training-pool label-count erosion. |
 | `supplementary/table_s9_curation_sensitivity.md` | Same content rendered as Markdown |
 | `supplementary/table_s9_curation_sensitivity.json` | Same content as JSON |
+| `supplementary/figure_s1_herg_calibration.pdf` | Figure S1 — reliability / calibration curves for hERG across applicability-domain bins on tan70. 2 rows (hERG 10 µM, hERG 1 µM) × 3 cols (max-Tanimoto-to-train bins: 0.0–0.3, 0.3–0.5, 0.5–0.7). Each panel: mean predicted probability vs observed positive rate (deciles), with diagonal reference and ECE annotation. |
+| `supplementary/figure_s1_herg_calibration.png` | Same figure rasterised at 300 dpi |
+| `supplementary/figure_s1_herg_calibration.json` | Underlying decile data (`p_lo`, `p_hi`, `p_mean`, `obs_pos_rate`, `n`) plus per-panel total *n* and ECE |
 
-Notes S1, S2 and Figure S1 will be added in subsequent releases. Seethe
-manuscript's *Additional files* section for the full list.
+Notes S1 and S2 will be added in subsequent releases. Seethe manuscript's
+*Additional files* section for the full list.
 
 ## Loading example
 
