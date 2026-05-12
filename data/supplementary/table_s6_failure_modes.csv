@@ -1,0 +1,95 @@
+split,head,head_id,bucket,bucket_label,kind,smiles,inchikey,true_label,pred_prob,max_tan_to_train,rationale
+tan70,hERG 10 µM,herg_blocker_10um,i_prodrug,(i) Prodrug motif,FN,O=C(CSc1cccc[n+]1[O-])Nc1cccc(S(=O)(=O)NC2=NCCCCC2)c1,YGZXUVCNAKQYOA-UHFFFAOYSA-N,1,0.0384,0.6575,SMARTS:schiff_base
+tan70,hERG 10 µM,herg_blocker_10um,i_prodrug,(i) Prodrug motif,FN,CSCCC(NC(=O)c1ccc(Cl)cc1)C(=O)OCC(C)=O,WXJJBMQTMVGBEQ-UHFFFAOYSA-N,1,0.05,0.6607,SMARTS:carboxylic_ester
+tan70,hERG 10 µM,herg_blocker_10um,i_prodrug,(i) Prodrug motif,FN,CCCCCC(C)OC(=O)COc1ccc(Cl)c2cccnc12,COYBRKAVBMYYSF-UHFFFAOYSA-N,1,0.0534,0.5,SMARTS:carboxylic_ester
+tan70,hERG 10 µM,herg_blocker_10um,iii_label_noise,(iii) Label noise,FP,OC(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,WNZBBTJFOIOEMP-UHFFFAOYSA-N,0,0.9018,0.6346,label=0 but herg_pchembl=5.59 (≥5.5)
+tan70,hERG 10 µM,herg_blocker_10um,iii_label_noise,(iii) Label noise,FP,CCNC(=O)N1CCN(CCCC(c2ccc(F)cc2)c2ccc(F)cc2)CC1,NNAIYOXJNVGUOM-UHFFFAOYSA-N,0,0.8885,0.6154,label=0 but herg_pchembl=7.25 (≥5.5)
+tan70,hERG 10 µM,herg_blocker_10um,v_true_failure,(v) True in-domain model failure,FN,Cc1ccc(S(=O)(=O)NCCCCCC(=O)Nc2c(C)n(C)n(-c3ccccc3)c2=O)cc1,NKQCLEVGPCHUFT-UHFFFAOYSA-N,1,0.0285,0.661,"max_tan=0.661 ≥ 0.50, no liability/noise signal"
+tan70,hERG 10 µM,herg_blocker_10um,v_true_failure,(v) True in-domain model failure,FN,O=C(CC1SC(N/N=C/c2cccs2)=NC1=O)Nc1ccccc1F,NADLEXFDVQSSIA-GIJQJNRQSA-N,1,0.0472,0.6984,"max_tan=0.698 ≥ 0.50, no liability/noise signal"
+tan70,hERG 10 µM,herg_blocker_10um,v_true_failure,(v) True in-domain model failure,FN,Cc1sc2ncnc(SCC(=O)NC(=O)c3cccn3C)c2c1C,WPVFKJYCCHKJTF-UHFFFAOYSA-N,1,0.053,0.5738,"max_tan=0.574 ≥ 0.50, no liability/noise signal"
+tan70,hERG 10 µM,herg_blocker_10um,borderline,Borderline,FP,Cc1cc(CCN2CCN(c3nsc4ccccc34)CC2)cc2c1NC(=O)CC2(C)C,SRAQFALNAGNAQE-UHFFFAOYSA-N,0,0.9237,0.4937,max_tan=0.494 (0.30–0.50 borderline AD)
+tan70,hERG 10 µM,herg_blocker_10um,borderline,Borderline,FN,Cc1ccc(S(=O)(=O)C(C#N)=C2N(C)c3ccccc3N2C)cc1,XNOAMIOOKQJEQB-UHFFFAOYSA-N,1,0.077,0.383,max_tan=0.383 (0.30–0.50 borderline AD)
+tan70,hERG 10 µM,herg_blocker_10um,borderline,Borderline,FN,CC1=CC(=O)C(C(C)C)=CC1=NC(=O)c1ccc(C)cc1,CQZRFXNAGTXDIN-UHFFFAOYSA-N,1,0.0778,0.4314,max_tan=0.431 (0.30–0.50 borderline AD)
+tan70,hERG 1 µM,herg_blocker_1um,i_prodrug,(i) Prodrug motif,FN,CCOC(=O)c1ccc(NC(=O)NNS(=O)(=O)c2cc(OC)ccc2OC)cc1,RYBWVOLXMCRCPS-UHFFFAOYSA-N,1,0.0144,0.625,SMARTS:carboxylic_ester
+tan70,hERG 1 µM,herg_blocker_1um,i_prodrug,(i) Prodrug motif,FN,C=C(C)CN=C(S)NN=C1c2ccccc2-c2ccccc21,NKGPQCKQPBCEIH-UHFFFAOYSA-N,1,0.0542,0.4082,SMARTS:schiff_base
+tan70,hERG 1 µM,herg_blocker_1um,i_prodrug,(i) Prodrug motif,FN,CCCCCCCCOc1ccccc1C(=O)Nc1ccc(C(=O)OCC[N+](C)(CC)CC)cc1,NQHNLNLJPDMBFN-UHFFFAOYSA-O,1,0.0866,0.6316,SMARTS:carboxylic_ester
+tan70,hERG 1 µM,herg_blocker_1um,iii_label_noise,(iii) Label noise,FN,Cc1c(C(=O)NC2CCOC2)oc2c(F)cccc12,WSMVDYUXPGHAHD-UHFFFAOYSA-N,1,0.0753,0.6207,physically inconsistent: 1um=1 but 10um=0
+tan70,hERG 1 µM,herg_blocker_1um,iii_label_noise,(iii) Label noise,FP,CCNC(=O)N1CCN(CCCC(c2ccc(F)cc2)c2ccc(F)cc2)CC1,NNAIYOXJNVGUOM-UHFFFAOYSA-N,0,0.7801,0.6154,label=0 but herg_pchembl=7.25 (≥6.5)
+tan70,hERG 1 µM,herg_blocker_1um,v_true_failure,(v) True in-domain model failure,FN,CCC(Sc1nc(-c2ccccc2)c(-c2ccccc2)[nH]1)C(=O)O,AWXDXVRABYWFCX-UHFFFAOYSA-N,1,0.0341,0.5778,"max_tan=0.578 ≥ 0.50, no liability/noise signal"
+tan70,hERG 1 µM,herg_blocker_1um,v_true_failure,(v) True in-domain model failure,FN,COc1ccc(C(=O)Nc2nnc(C(F)(F)F)s2)cc1,YVFRVCROXKXSAL-UHFFFAOYSA-N,1,0.0359,0.6531,"max_tan=0.653 ≥ 0.50, no liability/noise signal"
+tan70,hERG 1 µM,herg_blocker_1um,v_true_failure,(v) True in-domain model failure,FN,COc1ccc(OC)c(Cc2nc3ccccc3n2CC(=O)Nc2cc(C(C)(C)C)cc(C(C)(C)C)c2)c1,WEHIWGFNWMIJHV-UHFFFAOYSA-N,1,0.0612,0.5065,"max_tan=0.506 ≥ 0.50, no liability/noise signal"
+tan70,hERG 1 µM,herg_blocker_1um,borderline,Borderline,FN,Cc1ccc(S(=O)(=O)C(C#N)=C2N(C)c3ccccc3N2C)cc1,XNOAMIOOKQJEQB-UHFFFAOYSA-N,1,0.0343,0.383,max_tan=0.383 (0.30–0.50 borderline AD)
+tan70,hERG 1 µM,herg_blocker_1um,borderline,Borderline,FN,CN1CCN(C(=O)c2ccc(OCc3cccc(Cl)c3)c(Cl)c2)CC1=O,OBJLWGWCAHHQSO-UHFFFAOYSA-N,1,0.0431,0.473,max_tan=0.473 (0.30–0.50 borderline AD)
+tan70,hERG 1 µM,herg_blocker_1um,borderline,Borderline,FN,O=C1NC(=O)C(Cc2coc3ccc(Cl)cc3c2=O)S1,HFARBHYZTFLIOC-UHFFFAOYSA-N,1,0.066,0.4561,max_tan=0.456 (0.30–0.50 borderline AD)
+tan70,Nav1.5,nav15_blocker,i_prodrug,(i) Prodrug motif,FP,Cc1onc(-c2c(Cl)cccc2Cl)c1N(C)C(=O)OCc1ccc(OC(C)C)nc1,IATGTRYXSNHQJG-UHFFFAOYSA-N,0,0.663,0.6866,SMARTS:carboxylic_ester|carbamate
+tan70,Nav1.5,nav15_blocker,i_prodrug,(i) Prodrug motif,FN,CC(C)(C)OC(=O)N1CCN(c2cccc3c2cnn3-c2ccccc2F)C1=O,WGXUOYQUTHHSEZ-UHFFFAOYSA-N,1,0.3574,0.6032,SMARTS:carboxylic_ester|carbamate
+tan70,Nav1.5,nav15_blocker,i_prodrug,(i) Prodrug motif,FN,CCCC/N=C(/N)NC(=O)c1ccc(C)cc1,ALSYKIYWLYFZIK-UHFFFAOYSA-N,1,0.4823,0.5,SMARTS:schiff_base
+tan70,Nav1.5,nav15_blocker,ii_multi_target,(ii) Multi-target liability,FP,Nc1cncc(Nc2ccc(Oc3ccc(Cl)cc3)cc2)c1,VJJMIHLDIPOSDI-UHFFFAOYSA-N,0,0.8912,0.5952,"also blocker=1 in herg_blocker_10um,herg_blocker_1um"
+tan70,Nav1.5,nav15_blocker,ii_multi_target,(ii) Multi-target liability,FN,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1,JOOXLOJCABQBSG-UHFFFAOYSA-N,1,0.3265,0.4026,"also blocker=1 in herg_blocker_10um,herg_blocker_1um"
+tan70,Nav1.5,nav15_blocker,ii_multi_target,(ii) Multi-target liability,FP,CCC(=N\O)/C(C)=C/c1ccc(F)cc1,HKROEBDHHKMNBZ-CHBKHGQFSA-N,0,0.6449,0.4222,also blocker=1 in cav12_blocker
+tan70,Nav1.5,nav15_blocker,iv_AD,(iv) Outside applicability domain,FN,C[C@H]1C[C@@H](N2C(=N)N[C@](C)(c3cccc(Nc4ccc(C5CC5)nc4)c3Cl)CC2=O)CCO1,NRQARCCHBBGTDO-LCAJTWGOSA-N,1,0.3325,0.2621,max_tan=0.262 < 0.30
+tan70,Nav1.5,nav15_blocker,iv_AD,(iv) Outside applicability domain,FP,CCOc1nc2cccc(C(=O)OC(C)OC(=O)OC3CCCCC3)c2n1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,GHOSNRCGJFBJIB-UHFFFAOYSA-N,0,0.65,0.2955,max_tan=0.295 < 0.30
+tan70,Nav1.5,nav15_blocker,v_true_failure,(v) True in-domain model failure,FP,O=C(c1ccc(C(F)(F)F)cc1)N1CCC2(CCc3ccccc3O2)CC1,QYZZTCYPDDNZDI-UHFFFAOYSA-N,0,0.9271,0.5455,"max_tan=0.545 ≥ 0.50, no liability/noise signal"
+tan70,Nav1.5,nav15_blocker,v_true_failure,(v) True in-domain model failure,FP,Cc1nc(C(F)(F)F)n2cc(-c3ccc(OC(F)(F)F)cc3)ccc12,IVXSNVZBSOJWTN-UHFFFAOYSA-N,0,0.9218,0.5778,"max_tan=0.578 ≥ 0.50, no liability/noise signal"
+tan70,Nav1.5,nav15_blocker,v_true_failure,(v) True in-domain model failure,FP,FC(F)(F)Oc1ccc(-c2ccn3c(C(F)(F)F)nnc3c2)cc1,ISFOQZMECBLUGO-UHFFFAOYSA-N,0,0.904,0.6667,"max_tan=0.667 ≥ 0.50, no liability/noise signal"
+tan70,Nav1.5,nav15_blocker,borderline,Borderline,FP,Cc1cc(C#N)cc(C)c1Oc1nc(Nc2ccc(C#N)cc2)nc(N)c1Br,PYGWGZALEOIKDF-UHFFFAOYSA-N,0,0.7476,0.339,max_tan=0.339 (0.30–0.50 borderline AD)
+tan70,Nav1.5,nav15_blocker,borderline,Borderline,FP,FC(F)(F)Oc1ccc(-c2ccn3nccc3c2)cc1,FHOXJMONASWIJU-UHFFFAOYSA-N,0,0.7427,0.44,max_tan=0.440 (0.30–0.50 borderline AD)
+tan70,Nav1.5,nav15_blocker,borderline,Borderline,FP,CSc1c(C#N)c(=O)c2ccc(F)cc2n1-c1c(Cl)cccc1Cl,AWQZXHDLUBADMM-UHFFFAOYSA-N,0,0.722,0.3692,max_tan=0.369 (0.30–0.50 borderline AD)
+tan70,Cav1.2,cav12_blocker,i_prodrug,(i) Prodrug motif,FP,CCOC(=O)c1c(C)nc(C)c(C(=O)OCC)c1-c1c(-c2ccccc2)noc1C,YAJHDFKCHQMQDM-UHFFFAOYSA-N,0,0.9769,0.6744,SMARTS:carboxylic_ester
+tan70,Cav1.2,cav12_blocker,i_prodrug,(i) Prodrug motif,FP,CCCCCCOC(=O)[C@H](CCC(=O)NCCC1CCN(Cc2ccccc2)CC1)NC(=O)c1ccccc1,XFEJPTLRXOZZDA-LJAQVGFWSA-N,0,0.7303,0.5205,SMARTS:carboxylic_ester
+tan70,Cav1.2,cav12_blocker,i_prodrug,(i) Prodrug motif,FP,CCOC(=O)CC[C@H](NC(=O)OCc1ccccc1)C(=O)NCCC1CCN(Cc2ccccc2)CC1,TXMSSTXNRQZQDT-SANMLTNESA-N,0,0.5745,0.5303,SMARTS:carboxylic_ester|carbamate
+tan70,Cav1.2,cav12_blocker,ii_multi_target,(ii) Multi-target liability,FN,Clc1ccccc1C(c1ccccc1)(c1ccccc1)n1ccnc1,VNFPBHJOKIVQEB-UHFFFAOYSA-N,1,0.2695,0.359,also blocker=1 in herg_blocker_10um
+tan70,Cav1.2,cav12_blocker,ii_multi_target,(ii) Multi-target liability,FP,N#Cc1ccc(Cn2ccc(NC(=O)Cc3ccc(C4(C(F)(F)F)CC4)cc3)n2)nc1,LSYANGLAZUZYFX-UHFFFAOYSA-N,0,0.689,0.6351,also blocker=1 in herg_blocker_10um
+tan70,Cav1.2,cav12_blocker,ii_multi_target,(ii) Multi-target liability,FN,CC(CC(c1ccccc1)c1ccccc1)NC(C)(C)C,UISARWKNNNHPGI-UHFFFAOYSA-N,1,0.3211,0.3947,"also blocker=1 in herg_blocker_10um,herg_blocker_1um,nav15_blocker"
+tan70,Cav1.2,cav12_blocker,iv_AD,(iv) Outside applicability domain,FN,C[C@@H](O)[C@H]1C(=O)N2C(C(=O)O)=C(S[C@@H]3CN[C@H](CNS(N)(=O)=O)C3)[C@H](C)[C@H]12,AVAACINZEOAHHE-VFZPANTDSA-N,1,0.017,0.2222,max_tan=0.222 < 0.30
+tan70,Cav1.2,cav12_blocker,iv_AD,(iv) Outside applicability domain,FP,Cn1nc(C(=O)OCCCCNC[C@H](O)c2ccc(O)c3[nH]c(=O)ccc23)cc1COc1cccc([C@@H](NC(=O)O[C@H]2CN3CCC2CC3)c2ccccc2)c1,YWSIONULMMKTSJ-UZGNFBRWSA-N,0,0.6061,0.2909,max_tan=0.291 < 0.30
+tan70,Cav1.2,cav12_blocker,v_true_failure,(v) True in-domain model failure,FN,FC(F)(F)Cc1nc2c(C(F)(F)F)cc(C(F)(F)F)cc2[nH]1,MUNZXFZFXQVULL-UHFFFAOYSA-N,1,0.0979,0.675,"max_tan=0.675 ≥ 0.50, no liability/noise signal"
+tan70,Cav1.2,cav12_blocker,v_true_failure,(v) True in-domain model failure,FP,CCNc1ccc(C(F)(F)F)c(Nc2c(CC)cccc2CC)n1,SKJCADOMDOUOFV-UHFFFAOYSA-N,0,0.791,0.5952,"max_tan=0.595 ≥ 0.50, no liability/noise signal"
+tan70,Cav1.2,cav12_blocker,v_true_failure,(v) True in-domain model failure,FP,CN(CC(N)=O)[C@H](COCc1cc(C(F)(F)F)cc(C(F)(F)F)c1)c1ccccc1,YVLZVIUUVUBKNC-QGZVFWFLSA-N,0,0.7578,0.6071,"max_tan=0.607 ≥ 0.50, no liability/noise signal"
+tan70,Cav1.2,cav12_blocker,borderline,Borderline,FN,CC(C)CC(CN)CC(=O)O,AYXYPKUFHZROOJ-UHFFFAOYSA-N,1,0.0306,0.4231,max_tan=0.423 (0.30–0.50 borderline AD)
+tan70,Cav1.2,cav12_blocker,borderline,Borderline,FP,CC1=C(C#N)C(c2ccc3[nH]nc(C)c3c2)C(C#N)=C(C)N1,QKVFMAAIXZONRN-UHFFFAOYSA-N,0,0.8862,0.3889,max_tan=0.389 (0.30–0.50 borderline AD)
+tan70,Cav1.2,cav12_blocker,borderline,Borderline,FN,CCC(=N\O)/C(C)=C/c1ccc(F)cc1,HKROEBDHHKMNBZ-CHBKHGQFSA-N,1,0.2491,0.4222,max_tan=0.422 (0.30–0.50 borderline AD)
+tan70,IKs,iks_blocker,v_true_failure,(v) True in-domain model failure,FN,c1cncc(C(Cc2ccccc2-c2cncc3ccccc23)c2cccnc2)c1,RFBUSCZCNWSVLS-UHFFFAOYSA-N,1,0.176,0.6429,"max_tan=0.643 ≥ 0.50, no liability/noise signal"
+tan70,IKs,iks_blocker,v_true_failure,(v) True in-domain model failure,FP,OC(Cc1cccnc1-c1cccc(C(F)(F)F)c1)(c1cccnc1F)c1cccnc1F,ITQAKSHSWVNJKB-UHFFFAOYSA-N,0,0.6421,0.5088,"max_tan=0.509 ≥ 0.50, no liability/noise signal"
+tan60,hERG 10 µM,herg_blocker_10um,i_prodrug,(i) Prodrug motif,FP,CC1(C)N=C(N)N=C(N)N1c1ccc(Oc2ccc(Cl)cc2)c(Cl)c1,DQGSSSLXBXDNFM-UHFFFAOYSA-N,0,0.9171,0.5625,SMARTS:schiff_base
+tan60,hERG 10 µM,herg_blocker_10um,i_prodrug,(i) Prodrug motif,FP,CCOC(=O)c1cnc(NC2CCN(Cc3ccc(C(=O)NC)cc3)CC2)nc1Oc1c(C)cc(-c2ccc(C#N)cc2)cc1C,YEWZMNNOZHLTLI-UHFFFAOYSA-N,0,0.8979,0.587,SMARTS:carboxylic_ester
+tan60,hERG 10 µM,herg_blocker_10um,i_prodrug,(i) Prodrug motif,FN,Cc1cc(SCC(=O)OCC(=O)NCC2CCCO2)c(C)cc1Br,ASYZLBIEPVJEGA-UHFFFAOYSA-N,1,0.1102,0.5902,SMARTS:carboxylic_ester
+tan60,hERG 10 µM,herg_blocker_10um,iv_AD,(iv) Outside applicability domain,FP,[Hg+2],BQPIGGFYSBELGY-UHFFFAOYSA-N,0,0.9708,0.0526,max_tan=0.053 < 0.30
+tan60,hERG 10 µM,herg_blocker_10um,iv_AD,(iv) Outside applicability domain,FP,[Cd+2],WLZRMCYVCSSEQC-UHFFFAOYSA-N,0,0.9696,0.0667,max_tan=0.067 < 0.30
+tan60,hERG 10 µM,herg_blocker_10um,v_true_failure,(v) True in-domain model failure,FN,CCCN(Cc1ccccc1)C(S)=Nc1cccc(C)c1C,ROMRJAYEVSBOHA-UHFFFAOYSA-N,1,0.0538,0.5833,"max_tan=0.583 ≥ 0.50, no liability/noise signal"
+tan60,hERG 10 µM,herg_blocker_10um,v_true_failure,(v) True in-domain model failure,FN,CCCN(C(=O)CN1C(=O)NC2(CCCCCC2)C1=O)C1CCS(=O)(=O)C1,YAARIRMHVLEMFU-UHFFFAOYSA-N,1,0.0709,0.5672,"max_tan=0.567 ≥ 0.50, no liability/noise signal"
+tan60,hERG 10 µM,herg_blocker_10um,v_true_failure,(v) True in-domain model failure,FP,C[n+]1c(-c2ccccc2)cc(CCCCc2cc(-c3ccccc3)[n+](C)c(-c3ccccc3)c2)cc1-c1ccccc1.[O-][Cl+3]([O-])([O-])O,FXGRNAWYDAMLAC-UHFFFAOYSA-N,0,0.9264,0.525,"max_tan=0.525 ≥ 0.50, no liability/noise signal"
+tan60,hERG 10 µM,herg_blocker_10um,borderline,Borderline,FN,CC1=CC(=O)C(C(C)C)=CC1=NC(=O)c1ccc(C)cc1,CQZRFXNAGTXDIN-UHFFFAOYSA-N,1,0.0908,0.4314,max_tan=0.431 (0.30–0.50 borderline AD)
+tan60,hERG 10 µM,herg_blocker_10um,borderline,Borderline,FP,O=S1(=O)N(CCN2CC=C(c3c[nH]c4cc(F)ccc34)CC2)c2cccc3c2N1CCC3,BJIPVHLRWSDKOS-UHFFFAOYSA-N,0,0.9014,0.4205,max_tan=0.420 (0.30–0.50 borderline AD)
+tan60,hERG 10 µM,herg_blocker_10um,borderline,Borderline,FP,CCN(CC)CCCC(C)N=c1cc(C=Cc2ccccc2Cl)[nH]c2cc(Cl)ccc12,CMLVHSVFSYNMGM-UHFFFAOYSA-N,0,0.8979,0.375,max_tan=0.375 (0.30–0.50 borderline AD)
+tan60,hERG 1 µM,herg_blocker_1um,i_prodrug,(i) Prodrug motif,FN,CC(=O)NC(=O)C1CCC(C2N=CC(c3cccc(Br)c3)=N2)CC1,HPXOJFQLTBFAHD-UHFFFAOYSA-N,1,0.0937,0.3684,SMARTS:schiff_base
+tan60,hERG 1 µM,herg_blocker_1um,i_prodrug,(i) Prodrug motif,FP,CC1(C)N=C(N)N=C(N)N1c1ccc(Oc2ccc(Cl)cc2)c(Cl)c1,DQGSSSLXBXDNFM-UHFFFAOYSA-N,0,0.8168,0.5625,SMARTS:schiff_base
+tan60,hERG 1 µM,herg_blocker_1um,i_prodrug,(i) Prodrug motif,FN,CC/C=C(\C(=O)N[C@@H]1C(=O)N2C(C(=O)OCOC(=O)C(C)(C)C)=C(COC(N)=O)CS[C@H]12)c1csc(N)n1,WVPAABNYMHNFJG-QDVBXLKVSA-N,1,0.2022,0.5109,SMARTS:carboxylic_ester|carbamate
+tan60,hERG 1 µM,herg_blocker_1um,ii_multi_target,(ii) Multi-target liability,FP,Oc1cccc(N2[C@@H]3CC[C@H]2CN(CCCc2ccccc2)C3)c1,PEXKBSSCTUNEBX-BGYRXZFFSA-N,0,0.7775,0.4468,also blocker=1 in nav15_blocker
+tan60,hERG 1 µM,herg_blocker_1um,iii_label_noise,(iii) Label noise,FN,c1ccc(OCc2cccc(COc3ccccc3)n2)cc1,GGMVMHVPZZUXBS-UHFFFAOYSA-N,1,0.0948,0.5455,physically inconsistent: 1um=1 but 10um=0
+tan60,hERG 1 µM,herg_blocker_1um,iii_label_noise,(iii) Label noise,FN,Cc1ccc(Cc2cccc(COc3ccc(C)cc3)n2)cc1,XRNKKDKAXAGLDX-UHFFFAOYSA-N,1,0.2021,0.5366,physically inconsistent: 1um=1 but 10um=0
+tan60,hERG 1 µM,herg_blocker_1um,iv_AD,(iv) Outside applicability domain,FP,[Cd+2],WLZRMCYVCSSEQC-UHFFFAOYSA-N,0,0.8053,0.0667,max_tan=0.067 < 0.30
+tan60,hERG 1 µM,herg_blocker_1um,iv_AD,(iv) Outside applicability domain,FP,[Hg+2],BQPIGGFYSBELGY-UHFFFAOYSA-N,0,0.8052,0.0526,max_tan=0.053 < 0.30
+tan60,hERG 1 µM,herg_blocker_1um,v_true_failure,(v) True in-domain model failure,FN,CCC(Sc1nc(-c2ccccc2)c(-c2ccccc2)[nH]1)C(=O)O,AWXDXVRABYWFCX-UHFFFAOYSA-N,1,0.0307,0.5778,"max_tan=0.578 ≥ 0.50, no liability/noise signal"
+tan60,hERG 1 µM,herg_blocker_1um,v_true_failure,(v) True in-domain model failure,FN,Cc1ccsc1/C=N/N(C)c1cnc2ccccc2n1,HSOGRXYJWDCVNZ-RQZCQDPDSA-N,1,0.0551,0.5882,"max_tan=0.588 ≥ 0.50, no liability/noise signal"
+tan60,hERG 1 µM,herg_blocker_1um,v_true_failure,(v) True in-domain model failure,FN,COc1ccc(C(NC(=O)c2cnc(-n3cccn3)nc2O)c2ccc(OC)cc2)cc1,USZAFFTYZMCNKA-UHFFFAOYSA-N,1,0.06,0.5968,"max_tan=0.597 ≥ 0.50, no liability/noise signal"
+tan60,hERG 1 µM,herg_blocker_1um,borderline,Borderline,FN,N/N=c1\[nH][nH]/c(=N\N)c2ccccc12,VQKLRVZQQYVIJW-UHFFFAOYSA-N,1,0.0399,0.3333,max_tan=0.333 (0.30–0.50 borderline AD)
+tan60,hERG 1 µM,herg_blocker_1um,borderline,Borderline,FN,O=C1NC(=O)C(Cc2coc3ccc(Cl)cc3c2=O)S1,HFARBHYZTFLIOC-UHFFFAOYSA-N,1,0.0887,0.4561,max_tan=0.456 (0.30–0.50 borderline AD)
+tan60,hERG 1 µM,herg_blocker_1um,borderline,Borderline,FP,Clc1ccc(Cn2c(/C=C/C3CCN(CC4CCCCC4)C3)nc3cc(Br)ccc32)cc1,XDLPKLHZFXXHFQ-MDWZMJQESA-N,0,0.8753,0.4595,max_tan=0.460 (0.30–0.50 borderline AD)
+tan60,Nav1.5,nav15_blocker,ii_multi_target,(ii) Multi-target liability,FN,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1,JOOXLOJCABQBSG-UHFFFAOYSA-N,1,0.3777,0.4026,"also blocker=1 in herg_blocker_10um,herg_blocker_1um"
+tan60,Nav1.5,nav15_blocker,iv_AD,(iv) Outside applicability domain,FN,N=C1N[C@@]23[C@H]([C@H]4NC(=N)N2C[C@](OS(=O)(=O)O)(C[C@H]2[C@@H](CO)CON2C4=O)C3(O)O)N1COC(=O)NO,BJJIKPMJNDTIHW-FGWFJEOOSA-N,1,0.1805,0.2316,max_tan=0.232 < 0.30
+tan60,Nav1.5,nav15_blocker,v_true_failure,(v) True in-domain model failure,FP,Cc1nc(C(F)(F)F)n2cc(-c3ccc(OC(F)(F)F)cc3)ccc12,IVXSNVZBSOJWTN-UHFFFAOYSA-N,0,0.8212,0.5778,"max_tan=0.578 ≥ 0.50, no liability/noise signal"
+tan60,Nav1.5,nav15_blocker,v_true_failure,(v) True in-domain model failure,FP,FC(F)(F)Oc1ccc(-c2ccc3nc(C(F)(F)F)nn3c2)cc1,HTDIUSNAZRHFAD-UHFFFAOYSA-N,0,0.7112,0.5455,"max_tan=0.545 ≥ 0.50, no liability/noise signal"
+tan60,Nav1.5,nav15_blocker,v_true_failure,(v) True in-domain model failure,FP,CCNc1ccc(C(F)(F)F)c(Nc2c(CC)cccc2CC)n1,SKJCADOMDOUOFV-UHFFFAOYSA-N,0,0.6607,0.5952,"max_tan=0.595 ≥ 0.50, no liability/noise signal"
+tan60,Nav1.5,nav15_blocker,borderline,Borderline,FP,FC(F)(F)Oc1ccc(-c2ccn3nccc3c2)cc1,FHOXJMONASWIJU-UHFFFAOYSA-N,0,0.6555,0.4894,max_tan=0.489 (0.30–0.50 borderline AD)
+tan60,Nav1.5,nav15_blocker,borderline,Borderline,FP,N=C(N)NCCC[C@@H]1NC(=O)[C@H](CO)NC(=O)[C@H](Cc2c[nH]cn2)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H]2CSSC[C@@H]3NC(=O)[C@@H](N)CSSC[C@H](NC1=O)C(=O)N[C@H](C(=O)O)CSSC[C@H](NC(=O)[C@H](CC(N)=O)NC3=O)C(=O)N[C@@H](CO)C(=O)N[C@@H](CO)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](Cc1c[nH]c3ccccc13)C(=O)N2,RBQRPVYHDUYUMZ-HXUJBDNLSA-N,0,0.6545,0.4583,max_tan=0.458 (0.30–0.50 borderline AD)
+tan60,Nav1.5,nav15_blocker,borderline,Borderline,FP,CSc1c(C#N)c(=O)c2ccc(F)cc2n1-c1c(Cl)cccc1Cl,AWQZXHDLUBADMM-UHFFFAOYSA-N,0,0.6082,0.3692,max_tan=0.369 (0.30–0.50 borderline AD)
+tan60,Cav1.2,cav12_blocker,i_prodrug,(i) Prodrug motif,FP,CCCCCCOC(=O)[C@H](CCC(=O)NCCC1CCN(Cc2ccccc2)CC1)NC(=O)c1ccccc1,XFEJPTLRXOZZDA-LJAQVGFWSA-N,0,0.5098,0.5205,SMARTS:carboxylic_ester
+tan60,Cav1.2,cav12_blocker,iv_AD,(iv) Outside applicability domain,FP,Cn1nc(C(=O)OCCCCNC[C@H](O)c2ccc(O)c3[nH]c(=O)ccc23)cc1COc1cccc([C@@H](NC(=O)O[C@H]2CN3CCC2CC3)c2ccccc2)c1,YWSIONULMMKTSJ-UZGNFBRWSA-N,0,0.6015,0.2909,max_tan=0.291 < 0.30
+tan60,Cav1.2,cav12_blocker,v_true_failure,(v) True in-domain model failure,FN,COc1ccc([C@H](CN(C)C)[Si]2(O)CCCCC2)cc1,KIXBFSFRCBHKLN-INIZCTEOSA-N,1,0.1687,0.5217,"max_tan=0.522 ≥ 0.50, no liability/noise signal"
+tan60,Cav1.2,cav12_blocker,v_true_failure,(v) True in-domain model failure,FN,COc1ccc(CN2CCN(C(=O)CCn3cc(C)c4ccccc43)CC2)cc1OCc1ccccc1,RXWYCJKVGBGHNC-UHFFFAOYSA-N,1,0.3826,0.5714,"max_tan=0.571 ≥ 0.50, no liability/noise signal"
+tan60,Cav1.2,cav12_blocker,v_true_failure,(v) True in-domain model failure,FP,CCNc1ccc(C(F)(F)F)c(Nc2c(CC)cccc2CC)n1,SKJCADOMDOUOFV-UHFFFAOYSA-N,0,0.5937,0.5952,"max_tan=0.595 ≥ 0.50, no liability/noise signal"
+tan60,Cav1.2,cav12_blocker,borderline,Borderline,FN,C[C@H]1CN(C[C@H](Cc2ccccc2)C(=O)NCC(=O)O)CC[C@@]1(C)c1cccc(O)c1,UPNUIXSCZBYVBB-JVFUWBCBSA-N,1,0.2276,0.4878,max_tan=0.488 (0.30–0.50 borderline AD)
+tan60,Cav1.2,cav12_blocker,borderline,Borderline,FP,CC1=C(C#N)C(c2ccc3[nH]nc(C)c3c2)C(C#N)=C(C)N1,QKVFMAAIXZONRN-UHFFFAOYSA-N,0,0.7213,0.4375,max_tan=0.438 (0.30–0.50 borderline AD)
+tan60,Cav1.2,cav12_blocker,borderline,Borderline,FN,CCCOc1ccc(CCc2nc3cc(-c4c(C)noc4C)ccc3n2CCN2CCOCC2)cc1,CGWBJJZOKGZCSJ-UHFFFAOYSA-N,1,0.4084,0.4051,max_tan=0.405 (0.30–0.50 borderline AD)
+tan60,IKs,iks_blocker,borderline,Borderline,FN,CN(C)C(=O)c1cccc(-c2ncccc2CC(c2ccnc(N)n2)c2cccnc2F)c1,UEIZNZXTHCTNBI-UHFFFAOYSA-N,1,0.2608,0.4384,max_tan=0.438 (0.30–0.50 borderline AD)

@@ -102,8 +102,11 @@ manuscript live here. As of the current release:
 | `supplementary/table_s5_drug_panel_tan60.csv` | Table S5 — the 11-drug case-study panel from main-text Table 5 (tan70), evaluated on the stricter tan60 split. Same schema and same drugs. |
 | `supplementary/table_s5_drug_panel_tan60.md` | Same content rendered as Markdown |
 | `supplementary/table_s5_drug_panel_tan60.json` | Same content as JSON |
+| `supplementary/table_s6_failure_modes.csv` | Table S6 — 94 representative SMILES drawn from the top-confident false predictions across 5 binary heads × 2 splits, classified into 6 failure-mode buckets (prodrug, multi-target, label noise, out-of-AD, true in-domain failure, borderline) with rationale per compound |
+| `supplementary/table_s6_failure_modes.md` | Same content rendered as Markdown |
+| `supplementary/table_s6_failure_modes.json` | Same content as JSON |
 
-Notes S1, S2 and Tables S6–S9 and Figure S1 will be added in subsequent
+Notes S1, S2 and Tables S7–S9 and Figure S1 will be added in subsequent
 releases. Seethe manuscript's *Additional files* section for the full list.
 
 ## Loading example
