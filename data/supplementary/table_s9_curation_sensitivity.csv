@@ -1,0 +1,49 @@
+split,policy,policy_label,head,head_id,kind,training_pool_n_labels,n_test,auc,mcc,sensitivity,specificity,pearson_r,spearman_r,rmse,mae,r2
+tan70,full,Full (deployed),hERG 10 µM,herg_blocker_10um,classification,331127,46120,0.916929,0.465703,0.640342,0.976319,,,,,
+tan70,full,Full (deployed),hERG 1 µM,herg_blocker_1um,classification,330541,46042,0.958738,0.380552,0.563107,0.992888,,,,,
+tan70,full,Full (deployed),Nav1.5,nav15_blocker,classification,3160,218,0.830636,0.451377,0.704918,0.77707,,,,,
+tan70,full,Full (deployed),Cav1.2,cav12_blocker,classification,1138,160,0.841105,0.488473,0.704545,0.810345,,,,,
+tan70,full,Full (deployed),IKs,iks_blocker,classification,115,14,0.384615,-0.0769231,0,0.923077,,,,,
+tan70,full,Full (deployed),hERG pChEMBL,herg_pchembl,regression,23787,2263,,,,,0.552506,0.552869,0.721222,0.516064,0.165254
+tan70,full,Full (deployed),Nav1.5 pChEMBL,nav15_pchembl,regression,2855,184,,,,,0.557866,0.592391,0.571679,0.393307,0.274064
+tan70,full,Full (deployed),Cav1.2 pChEMBL,cav12_pchembl,regression,997,124,,,,,0.689133,0.560213,0.814586,0.563658,0.469337
+tan70,exactonly,Exact-only,hERG 10 µM,herg_blocker_10um,classification,23787,2273,0.778317,0.426743,0.682339,0.750178,,,,,
+tan70,exactonly,Exact-only,hERG 1 µM,herg_blocker_1um,classification,23787,2272,0.797592,0.357694,0.541237,0.899904,,,,,
+tan70,exactonly,Exact-only,Nav1.5,nav15_blocker,classification,2855,190,0.789935,0.418361,0.655738,0.775194,,,,,
+tan70,exactonly,Exact-only,Cav1.2,cav12_blocker,classification,997,131,0.768809,0.374824,0.704545,0.689655,,,,,
+tan70,exactonly,Exact-only,IKs,iks_blocker,classification,115,14,0,-0.144841,0,0.769231,,,,,
+tan70,exactonly,Exact-only,hERG pChEMBL,herg_pchembl,regression,23787,2263,,,,,0.552756,0.546609,0.686008,0.4881,0.244776
+tan70,exactonly,Exact-only,Nav1.5 pChEMBL,nav15_pchembl,regression,2855,184,,,,,0.528376,0.55995,0.586619,0.406035,0.235624
+tan70,exactonly,Exact-only,Cav1.2 pChEMBL,cav12_pchembl,regression,997,124,,,,,0.632633,0.517424,0.891909,0.597531,0.363812
+tan70,exactonly_strict,Exact-only-strict,hERG 10 µM,herg_blocker_10um,classification,12746,837,0.737373,0.344576,0.781431,0.55625,,,,,
+tan70,exactonly_strict,Exact-only-strict,hERG 1 µM,herg_blocker_1um,classification,12746,837,0.788448,0.34534,0.548872,0.84233,,,,,
+tan70,exactonly_strict,Exact-only-strict,Nav1.5,nav15_blocker,classification,1579,111,0.694077,0.24268,0.707317,0.542857,,,,,
+tan70,exactonly_strict,Exact-only-strict,Cav1.2,cav12_blocker,classification,294,54,0.744361,0.324184,0.842105,0.485714,,,,,
+tan70,exactonly_strict,Exact-only-strict,IKs,iks_blocker,classification,66,8,0.285714,-0.218218,0,0.714286,,,,,
+tan70,exactonly_strict,Exact-only-strict,hERG pChEMBL,herg_pchembl,regression,12746,831,,,,,0.519531,0.497063,0.718244,0.539688,0.176041
+tan70,exactonly_strict,Exact-only-strict,Nav1.5 pChEMBL,nav15_pchembl,regression,1579,107,,,,,0.352997,0.374726,0.706923,0.502547,0.0232607
+tan70,exactonly_strict,Exact-only-strict,Cav1.2 pChEMBL,cav12_pchembl,regression,294,49,,,,,0.682529,0.507004,0.889746,0.594147,0.376191
+tan60,full,Full (deployed),hERG 10 µM,herg_blocker_10um,classification,331127,13831,0.898338,0.390684,0.672811,0.93827,,,,,
+tan60,full,Full (deployed),hERG 1 µM,herg_blocker_1um,classification,330541,13767,0.932202,0.308428,0.555556,0.981709,,,,,
+tan60,full,Full (deployed),Nav1.5,nav15_blocker,classification,3160,86,0.792271,0.460267,0.652174,0.825397,,,,,
+tan60,full,Full (deployed),Cav1.2,cav12_blocker,classification,1138,59,0.765957,0.108427,0.25,0.851064,,,,,
+tan60,full,Full (deployed),IKs,iks_blocker,classification,115,11,0.5,0,0,1,,,,,
+tan60,full,Full (deployed),hERG pChEMBL,herg_pchembl,regression,23787,1205,,,,,0.330858,0.456717,1.00116,0.597874,-0.63215
+tan60,full,Full (deployed),Nav1.5 pChEMBL,nav15_pchembl,regression,2855,64,,,,,0.197037,0.579738,0.837568,0.470371,-0.00742328
+tan60,full,Full (deployed),Cav1.2 pChEMBL,cav12_pchembl,regression,997,40,,,,,0.56939,0.312656,0.893975,0.714338,0.189124
+tan60,exactonly,Exact-only,hERG 10 µM,herg_blocker_10um,classification,23787,1215,0.767052,0.407806,0.665012,0.756158,,,,,
+tan60,exactonly,Exact-only,hERG 1 µM,herg_blocker_1um,classification,23787,1215,0.771471,0.270495,0.457447,0.890277,,,,,
+tan60,exactonly,Exact-only,Nav1.5,nav15_blocker,classification,2855,70,0.792784,0.391784,0.608696,0.787234,,,,,
+tan60,exactonly,Exact-only,Cav1.2,cav12_blocker,classification,997,45,0.69697,0.0909091,0.333333,0.757576,,,,,
+tan60,exactonly,Exact-only,IKs,iks_blocker,classification,115,11,0.5,0,0,1,,,,,
+tan60,exactonly,Exact-only,hERG pChEMBL,herg_pchembl,regression,23787,1205,,,,,0.381066,0.466874,0.83497,0.533324,-0.135251
+tan60,exactonly,Exact-only,Nav1.5 pChEMBL,nav15_pchembl,regression,2855,64,,,,,0.292599,0.589537,0.819833,0.456376,0.0347879
+tan60,exactonly,Exact-only,Cav1.2 pChEMBL,cav12_pchembl,regression,997,40,,,,,0.488827,0.279784,0.994078,0.766113,-0.00263846
+tan60,exactonly_strict,Exact-only-strict,hERG 10 µM,herg_blocker_10um,classification,12746,390,0.688144,0.258411,0.665198,0.595092,,,,,
+tan60,exactonly_strict,Exact-only-strict,hERG 1 µM,herg_blocker_1um,classification,12746,390,0.747059,0.27974,0.5,0.829341,,,,,
+tan60,exactonly_strict,Exact-only-strict,Nav1.5,nav15_blocker,classification,1579,47,0.731203,0.338309,0.736842,0.607143,,,,,
+tan60,exactonly_strict,Exact-only-strict,Cav1.2,cav12_blocker,classification,294,16,0.428571,-0.152894,0.5,0.285714,,,,,
+tan60,exactonly_strict,Exact-only-strict,IKs,iks_blocker,classification,66,2,,0,0,1,,,,,
+tan60,exactonly_strict,Exact-only-strict,hERG pChEMBL,herg_pchembl,regression,12746,385,,,,,0.442903,0.403636,0.738367,0.549891,0.115199
+tan60,exactonly_strict,Exact-only-strict,Nav1.5 pChEMBL,nav15_pchembl,regression,1579,44,,,,,0.32492,0.440771,0.917532,0.576376,0.0987659
+tan60,exactonly_strict,Exact-only-strict,Cav1.2 pChEMBL,cav12_pchembl,regression,294,14,,,,,0.0428608,0.0857143,0.934562,0.782114,-1.47216

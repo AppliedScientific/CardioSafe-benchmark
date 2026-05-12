@@ -111,9 +111,12 @@ manuscript live here. As of the current release:
 | `supplementary/table_s8_l1000_threshold_sweep.csv` | Table S8 — L1000 threshold sensitivity sweep: how headline AUC and MCC change when the L1000 encoder's co-expression edge-density threshold *r* moves from the deployed default (0.40) to 0.30 or 0.50, on all 5 heads × 2 splits. Includes per-seed AUC variance and confusion-matrix entries per cell. |
 | `supplementary/table_s8_l1000_threshold_sweep.md` | Same content rendered as Markdown, plus the predicted-output graph density vs threshold table that supports the manuscript's "29× denser than training graph" claim |
 | `supplementary/table_s8_l1000_threshold_sweep.json` | Same content as JSON |
+| `supplementary/table_s9_curation_sensitivity.csv` | Table S9 — curation sensitivity, strict vs full. AUC + MCC for the 5 binary heads and Pearson r + RMSE for the 3 regression heads, across three curation policies (full pharmacology-aware / exact-only / exact-only-strict) on both splits. Includes per-channel training-pool label-count erosion. |
+| `supplementary/table_s9_curation_sensitivity.md` | Same content rendered as Markdown |
+| `supplementary/table_s9_curation_sensitivity.json` | Same content as JSON |
 
-Notes S1, S2 and Table S9 and Figure S1 will be added in subsequent
-releases. Seethe manuscript's *Additional files* section for the full list.
+Notes S1, S2 and Figure S1 will be added in subsequent releases. Seethe
+manuscript's *Additional files* section for the full list.
 
 ## Loading example
 
