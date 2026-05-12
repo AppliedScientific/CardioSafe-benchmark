@@ -117,8 +117,10 @@ manuscript live here. As of the current release:
 | `supplementary/figure_s1_herg_calibration.pdf` | Figure S1 — reliability / calibration curves for hERG across applicability-domain bins on tan70. 2 rows (hERG 10 µM, hERG 1 µM) × 3 cols (max-Tanimoto-to-train bins: 0.0–0.3, 0.3–0.5, 0.5–0.7). Each panel: mean predicted probability vs observed positive rate (deciles), with diagonal reference and ECE annotation. |
 | `supplementary/figure_s1_herg_calibration.png` | Same figure rasterised at 300 dpi |
 | `supplementary/figure_s1_herg_calibration.json` | Underlying decile data (`p_lo`, `p_hi`, `p_mean`, `obs_pos_rate`, `n`) plus per-panel total *n* and ECE |
+| `supplementary/note_s1_yrand_mechanism.md` | Note S1 — Y-randomization mechanism + per-MW-stratum analysis explaining the elevated unstratified hERG Y-randomized AUC (~0.70) as a molecular-weight prevalence confound. Includes the unconfounded controls (regression *r* and MCC) collapsing to ~0. |
+| `supplementary/note_s1_yrand_data.json` | Underlying data behind Note S1 — V6 and Stage 2 Y-randomized overall AUCs, per-MW-bin metrics, seed-42 unconfounded controls, prevalence-controlled subsample |
 
-Notes S1 and S2 will be added in subsequent releases. Seethe manuscript's
+Note S2 will be added in a subsequent release. Seethe manuscript's
 *Additional files* section for the full list.
 
 ## Loading example
