@@ -33,6 +33,7 @@ figure promised in the *Additional files* section of the manuscript.
 | `data/splits/tan60.csv` | tan60 split indices (Tanimoto ≥ 0.60 cutoff) — stricter secondary benchmark |
 | `data/supplementary/` | Notes S1–S2, Tables S0–S9 (no S4), Figure S1, plus the per-split cliff manifests |
 | `data/comparators/` | CToxPred2 and CardioGenAI predictions on the tan70 test fold — the inputs to the reverse-leak audit and the head-to-head comparison in Tables 3 / 3b / S2 / S3 / Figure 4 |
+| `scripts/audit_tanimoto_leak.py` | Exhaustive O(n_train × n_other) Tanimoto leakage audit — verifies no cross-fold Morgan-r2-2048 edges at or above the cutoff. See[`scripts/README.md`](scripts/README.md). |
 
 See [`data/README.md`](data/README.md) for the schema, fold counts, and per-file documentation.
 

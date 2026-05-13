@@ -32,6 +32,12 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Chemistry",
 ]
 
+[project.optional-dependencies]
+audit = [
+    "rdkit>=2025.9.6",
+    "numpy>=2.0",
+]
+
 [project.urls]
 Homepage = "https://github.com/AppliedScientific/CardioSafe-benchmark"
 Paper = "https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1"
