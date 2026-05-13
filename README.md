@@ -17,11 +17,14 @@ repository hosts the **data deposit** for the paper: the curated label
 matrix, Tanimoto-controlled splits, and supplementary tables / notes /
 figure promised in the *Additional files* section of the manuscript.
 
-> **Status:** initial release. This repository is a **data deposit**.
-> Inference is available at
+> **Status:** initial release. The repository ships the curated dataset
+> + Tanimoto-controlled splits + supplementary tables / notes / figure,
+> together with the paper-faithful reference architecture, training-step
+> reference code, and the exhaustive O(n²) Tanimoto leakage audit script
+> that drove the v1.1 correction. Inference for the deployed CardioSafe
+> ensemble is available at
 > [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
-> Researchers with benchmarking-study questions can contact the
-> corresponding author (lukas@appliedscientific.ai).
+> Questions: lukas@appliedscientific.ai or mihailo@appliedscientific.ai.
 
 ## What's in the box
 
