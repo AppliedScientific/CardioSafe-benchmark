@@ -1,10 +1,13 @@
 # CardioSafe-benchmark
 
+[![License: MIT + CC-BY-4.0](https://img.shields.io/badge/license-MIT_%2B_CC--BY--4.0-blue.svg)](LICENSE)
+[![Preprint: bioRxiv](https://img.shields.io/badge/preprint-bioRxiv-b31b1b.svg)](https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1)
+[![Inference: ASI Platform](https://img.shields.io/badge/inference-platform.appliedscientific.ai-2ea44f.svg)](https://platform.appliedscientific.ai/cardiosafe)
+[![Applied Scientific Intelligence](https://img.shields.io/badge/lab-appliedscientific.ai-000000.svg)](https://appliedscientific.ai)
+
 Splits, labels, and supplementary artifacts for **CardioSafe: multi-task
 prediction of cardiac ion channel activity with reverse-leak audited
 benchmarking** (Jovanović et al., 2026).
-
-📄 **Preprint:** [biorxiv.org/content/10.64898/2026.05.06.723181v1](https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1)
 
 CardioSafe is a three-branch multi-task neural network that predicts blocker
 status and pIC50 for the four CiPA cardiac ion channels — hERG, Nav1.5,
