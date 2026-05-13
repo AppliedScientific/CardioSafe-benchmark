@@ -37,6 +37,16 @@ audit = [
     "rdkit>=2025.9.6",
     "numpy>=2.0",
 ]
+model = [
+    "torch>=2.6",
+    "torch-geometric>=2.6",
+    "transformers>=4.51",
+    "numpy>=2.0",
+]
+train = [
+    "cardiosafe-benchmark[model]",
+    "rdkit>=2025.9.6",
+]
 
 [project.urls]
 Homepage = "https://github.com/AppliedScientific/CardioSafe-benchmark"
