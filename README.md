@@ -14,9 +14,11 @@ CardioSafe is a three-branch multi-task neural network that predicts blocker
 status and pIC50 for the four CiPA cardiac ion channels — hERG, Nav1.5,
 Cav1.2, and (exploratory) IKs — trained on the largest publicly reported
 multi-channel cardiac ion channel dataset (ChEMBL 36 + hERG Central). This
-repository hosts the **data deposit** for the paper: the curated label
-matrix, Tanimoto-controlled splits, and supplementary tables / notes /
-figure promised in the *Additional files* section of the manuscript.
+repository is the public deposit for the paper: the curated label
+matrix, Tanimoto-controlled splits, supplementary tables / notes / figure
+promised in the *Additional files* section of the manuscript, the
+exhaustive Tanimoto leakage audit, the reference model + training-step
+code, and the v1.0 / v1.1 ensemble weights with runnable inference.
 
 > **Status:** initial release. The repository ships the curated dataset
 > + Tanimoto-controlled splits + supplementary tables / notes / figure,
@@ -38,7 +40,7 @@ figure promised in the *Additional files* section of the manuscript.
 | `data/labels/labels_v1.csv` + `MANIFEST.json` | The 8-task curated label matrix and its provenance manifest |
 | `data/splits/tan70.csv`, `tan60.csv` | v1.0 splits — Tanimoto ≥ 0.70 / 0.60 cutoffs, as used in the bioRxiv preprint |
 | `data/splits/tan70_v1_1.csv`, `tan60_v1_1.csv` | **v1.1** splits — audit-clean (cardiac-cliff cluster fully force-routed to val). Test fold identical to v1.0. See `data/splits/CHANGELOG.md`. |
-| `data/supplementary/` | Notes S1–S2, Tables S0–S9 (no S4), Figure S1, plus the per-split cliff manifests |
+| `data/supplementary/` | Notes S1–S3, Tables S0–S9 (no S4), Figure S1, plus the per-split cliff manifests |
 | `data/comparators/` | CToxPred2 and CardioGenAI predictions on the tan70 test fold — the inputs to the reverse-leak audit and the head-to-head comparison in Tables 3 / 3b / S2 / S3 / Figure 4 |
 | `scripts/audit_tanimoto_leak.py` | Exhaustive O(n_train × n_other) Tanimoto leakage audit — verifies no cross-fold Morgan-r2-2048 edges at or above the cutoff. See [`scripts/README.md`](scripts/README.md). |
 | `model/` | Reference architecture (`CrossAttnIonChannelPredictor`, ChemBERTa adapter, L1000 encoder) + `MODEL_CARD.md`. |
@@ -80,9 +82,10 @@ Two Tanimoto-controlled splits are released in two versions:
 
 Both versions force-route terfenadine and fexofenadine to `val` so the
 canonical cardiac activity cliff is available as a held-out case study.
-v1.1 additionally force-routes 2-3 hydroxymethyl-terfenadine analogs in
-the same cluster (caught by `scripts/audit_tanimoto_leak.py`); test fold
-is identical between versions. Use v1.1 for new work; v1.0 is retained
+v1.1 additionally force-routes 2 hydroxymethyl-terfenadine analogs on
+tan70 and 3 on tan60 in the same cluster (caught by
+`scripts/audit_tanimoto_leak.py`); test fold is identical between
+versions. Use v1.1 for new work; v1.0 is retained
 so the bioRxiv preprint numbers stay reproducible. See
 [`data/splits/CHANGELOG.md`](data/splits/CHANGELOG.md) and Note S3
 ([`data/supplementary/note_s3_v1_1_audit_correction.md`](data/supplementary/note_s3_v1_1_audit_correction.md)).
@@ -123,9 +126,11 @@ Everything the manuscript's *Additional files* section promises is in
 [`data/supplementary/`](data/supplementary/), with three formats per
 table (CSV / Markdown / JSON) where applicable:
 
-- **Notes S1, S2** — Y-randomization mechanism, activity-cliff curation
-  provenance + 25-source bibliography + per-`pair_id` composition +
-  per-split filtered cliff manifests
+- **Notes S1, S2, S3** — Y-randomization mechanism; activity-cliff
+  curation provenance + 25-source bibliography + per-`pair_id`
+  composition + per-split filtered cliff manifests; audit-driven v1.1
+  correction with retrain metrics and terfenadine / fexofenadine
+  case-study re-evaluation
 - **Tables S0, S1, S2, S3, S5, S6, S7, S8, S9** — descriptor spec,
   per-head confusion matrices, comparator panels pre/post de-leak, tan60
   drug panel, failure-mode SMILES, AD per-bin metrics, L1000 threshold
