@@ -1,11 +1,15 @@
 # Training reference
 
 Reference implementations of the losses + training steps described in the
-Methods section of Jovanović et al. 2026. **No trained weights are
-released.** These files exist so an outside group can verify that the
-paper's recipe is internally consistent and re-train a model from the
-public data deposit, the published architecture, and their own L1000
-prior.
+Methods section of Jovanović et al. 2026. The deployed paper-snapshot
+weights (Stage 2 ensemble for both v1.0 and v1.1) and the L1000 encoder
+are shipped via the
+[GitHub Releases](https://github.com/AppliedScientific/CardioSafe-benchmark/releases) —
+see [`inference/README.md`](../inference/README.md) to score SMILES with
+them. The files in this directory exist so an outside group can verify
+that the paper's recipe is internally consistent and re-train a model
+from the public data, the published architecture, and the shipped L1000
+encoder (or their own L1000 prior).
 
 | File | Paper anchor |
 | --- | --- |
@@ -75,9 +79,10 @@ All hyperparameters default to the paper's recipe values (printed in
   The trained L1000 encoder weights *are* shipped (Releases tag
   `l1000-encoder-v1`); to retrain the encoder from scratch, see paper
   Methods and GEO accessions GSE92742 / GSE70138.
-- **The Stage 1 trunk's end-to-end runner** (data loaders, NoamLR
-  scheduler, early-stopping driver). All hyperparameters are in the
-  paper; a clean driver around `stage1_step.py` is a 50-line exercise.
+- **A runnable Stage 1 trainer.** `stage1_step.py` is the per-batch
+  reference; data loaders, the NoamLR schedule, and the early-stopping
+  driver are not shipped. Hyperparameters are documented in the paper
+  Methods section.
 - **Ablation runners** (the Y-randomization, exact-only-curation, L1000
   threshold sweep, bio-zero, ChemBERTa-zero variants). Their headline
   numbers are in supplementary Tables S8, S9 and Note S1 with the data

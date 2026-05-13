@@ -3,7 +3,9 @@
 Reference implementation of the network described in the Methods section
 of Jovanovic et al. 2026 ("CardioSafe: multi-task prediction of cardiac
 ion channel activity with reverse-leak audited benchmarking"). Forward
-pass only; no losses, no training loop, no weights.
+pass only; losses live in `train/losses.py`, and the Stage 2 ensemble
+weights (v1.0 + v1.1) ship via the repository's GitHub Releases — see
+`inference/` for the loader.
 
 Three modality branches feed a per-channel cross-attention head:
 
