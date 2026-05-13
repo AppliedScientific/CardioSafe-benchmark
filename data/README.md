@@ -143,6 +143,9 @@ manuscript live here. As of the current release:
 | `supplementary/note_s2_source_bibliography.csv` | 25 source citation keys with per-source compound counts and citation stubs (full citations to be completed by author at proof stage) |
 | `supplementary/note_s2_cliff_set_tan70.csv` | Per-split filtered cliff manifest for tan70 (48 compounds surviving Stage B of the curation) |
 | `supplementary/note_s2_cliff_set_tan60.csv` | Per-split filtered cliff manifest for tan60 (51 compounds surviving Stage B) |
+| `supplementary/note_s3_v1_1_audit_correction.md` | Note S3 — audit-driven correction: documents the 12 (tan70) / 15 (tan60) cliff-cluster train ↔ val edges caught by `scripts/audit_tanimoto_leak.py`, the v1.1 patch (2 compounds moved to val on tan70; 3 on tan60), updated fold counts, the v1.1 retrain on tan70_v1_1, headline test-fold metric shifts, and the terfenadine/fexofenadine case-study re-evaluation (qualitative narrative preserved). Test fold is unchanged in both splits. |
+| `supplementary/note_s3_v1_1_test_metrics.json` | Per-head v1.1 test-fold metrics on tan70_v1_1 (5-seed ensemble, Stage 1 + Stage 2, plus per-seed min/max). |
+| `supplementary/note_s3_v1_1_case_study.json` | Per-compound v1.0 vs v1.1 predictions for terfenadine + fexofenadine: pIC50 with inter-seed σ, classification CO at 10 µM and 1 µM, per-compound Δ, and the predicted cliff comparison. |
 | `comparators/ctoxpred2_tan70_predictions.csv` | CToxPred2 per-compound block probabilities on the tan70 test fold — input to the reverse-leak audit and head-to-head comparison (Tables 3 / 3b / S2 / S3 / Figure 4) |
 | `comparators/cardiogenai_tan70_predictions.csv` | CardioGenAI per-compound block probabilities on the tan70 test fold |
 | `comparators/README.md` | Schema, citations, coverage notes, and rationale for shipping these CSVs alongside the data deposit |

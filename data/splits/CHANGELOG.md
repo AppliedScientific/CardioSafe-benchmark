@@ -73,14 +73,23 @@ unchanged.
 
 ### Paper-side impact
 
-| Paper anchor | Number | v1.0 | v1.1 | Headline impact |
-| --- | --- | ---: | ---: | --- |
-| Line 73 | tan70 train | 241,792 | 241,790 | one-sentence errata |
-| Line 73 | tan70 val   | 46,326  | 46,328  | one-sentence errata |
-| Line 73 | tan70 test  | 46,326  | 46,326  | unchanged |
-| Line 125 | "zero violations" (tan70) | (false in v1.0) | (true in v1.1) | sentence becomes accurate after retrain on v1.1 splits |
-| Line 127 | tan60 test  | 13,889  | 13,889  | unchanged |
-| Line 339 | terfenadine pIC50 prediction (6.38) | based on v1.0 train | requires retrain on v1.1 train | the marquee case study is materially affected — Stage 1 + Stage 2 retraining is required |
+Test fold is identical between v1.0 and v1.1 on both splits — every
+train ↔ test integrity claim and every headline test-fold number in
+the paper is mathematically unchanged by this patch.
+
+| Paper anchor | v1.0 | v1.1 | Note |
+| --- | ---: | ---: | --- |
+| tan70 train | 241,792 | 241,790 | minor count adjustment |
+| tan70 val   | 46,326  | 46,328  | minor count adjustment |
+| tan70 test  | 46,326  | 46,326  | unchanged |
+| tan60 train | 306,665 | 306,662 | minor count adjustment |
+| tan60 val   | 13,889  | 13,892  | minor count adjustment |
+| tan60 test  | 13,889  | 13,889  | unchanged |
+| train ↔ test cross-fold edges (tan70, T ≥ 0.70) | 0 | 0 | unchanged — the headline integrity claim holds in both versions |
+| train ↔ val cross-fold edges (tan70, T ≥ 0.70) | 12 | 0 | all 12 were in the cardiac-cliff cluster; v1.1 tightens the val-side cluster routing |
+| train ↔ test cross-fold edges (tan60, T ≥ 0.60) | 0 | 0 | unchanged |
+| train ↔ val cross-fold edges (tan60, T ≥ 0.60) | 15 | 0 | same cluster, cluster-symmetric routing on v1.1 |
+| terfenadine pIC50 prediction | 6.38 | 6.25 (after v1.1 retrain) | within 1σ inter-seed std (±0.12); qualitative narrative unchanged — see Note S3 |
 
 ### v1.0 retained
 

@@ -1,0 +1,60 @@
+{
+  "description": "Comparison of CardioSafe v1.0 (preprint) vs v1.1 (audit-clean retrain) on the two canonical cardiac-cliff anchor compounds (terfenadine, fexofenadine) that the paper force-routes to the validation fold. Both compounds remain in tan70 val under v1.1; the v1.1 retrain removes the 2 hydroxymethyl-terfenadine analogs (rows 317153, 331406) from the training fold that were near-neighbors at Morgan-r2-2048 Tanimoto >= 0.82.",
+  "paper_anchor": {
+    "section": "Terfenadine/fexofenadine case study",
+    "line_in_preprint": 339,
+    "manuscript_doi": "10.64898/2026.05.06.723181"
+  },
+  "compounds": {
+    "terfenadine": {
+      "smiles": "CC(C)(C)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+      "v1_0": {
+        "herg_pchembl": 6.38125467300415,
+        "herg_pchembl_std": 0.11912540346384048,
+        "herg_blocker_10um_co": 0.8947585821151733,
+        "herg_blocker_1um_co": 0.7634297609329224
+      },
+      "v1_1": {
+        "herg_pchembl": 6.247394561767578,
+        "herg_pchembl_std": 0.1188938319683075,
+        "herg_blocker_10um_co": 0.9001049995422363,
+        "herg_blocker_1um_co": 0.7690807580947876
+      },
+      "delta_v1_1_minus_v1_0": {
+        "herg_pchembl": -0.13386011123657227,
+        "herg_blocker_10um_co": 0.005346417427062988,
+        "herg_blocker_1um_co": 0.005650997161865234
+      }
+    },
+    "fexofenadine": {
+      "smiles": "CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+      "v1_0": {
+        "herg_pchembl": 4.798864364624023,
+        "herg_pchembl_std": 0.21163195371627808,
+        "herg_blocker_10um_co": 0.6829999685287476,
+        "herg_blocker_1um_co": 0.38935619592666626
+      },
+      "v1_1": {
+        "herg_pchembl": 4.5117974281311035,
+        "herg_pchembl_std": 0.19782103598117828,
+        "herg_blocker_10um_co": 0.6555367708206177,
+        "herg_blocker_1um_co": 0.3344748318195343
+      },
+      "delta_v1_1_minus_v1_0": {
+        "herg_pchembl": -0.2870669364929199,
+        "herg_blocker_10um_co": -0.027463197708129883,
+        "herg_blocker_1um_co": -0.05488136410713196
+      }
+    }
+  },
+  "predicted_cliff": {
+    "v1_0_terfenadine_minus_fexofenadine_pic50": 1.582390308380127,
+    "v1_1_terfenadine_minus_fexofenadine_pic50": 1.7355971336364746,
+    "labelled_cliff": 3.59,
+    "labels_pchembl": {
+      "terfenadine": 7.55,
+      "fexofenadine": 3.96
+    },
+    "note": "Both versions preserve the rank ordering and the qualitative direction; v1.1 predicts a slightly larger cliff than v1.0 (closer to the labelled value)."
+  }
+}
