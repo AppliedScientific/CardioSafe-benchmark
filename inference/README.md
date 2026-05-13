@@ -26,9 +26,15 @@ This pulls in `torch`, `torch-geometric`, `transformers`, `rdkit`,
 
 7 of the 20 descriptors used by CardioSafe (`pka_acidic`, `pka_basic`,
 `logd_7_4`, `frac_cation`, `frac_anion`, `frac_zwitterion`, `frac_neutral`)
-are derived from site-level pKa predictions produced by MolGpKa
-(Pan et al., *J. Cheminf.* 2021). MolGpKa is not on PyPI; clone it and
-point `MOLGPKA_SRC` at its `src/` directory:
+are derived from site-level pKa predictions produced by **MolGpka**
+(Pan, Wang, Li, Zhang, Ji. *J. Chem. Inf. Model.* **2021**, 61(7),
+3159-3165, [doi:10.1021/acs.jcim.1c00075](https://doi.org/10.1021/acs.jcim.1c00075);
+MIT-licensed, [github.com/Xundrug/MolGpKa](https://github.com/Xundrug/MolGpKa)).
+**Please cite Pan et al. (2021) if you publish predictions made with this
+inference pipeline.**
+
+MolGpKa is not on PyPI; clone it and point `MOLGPKA_SRC` at its `src/`
+directory:
 
 ```bash
 git clone https://github.com/Xundrug/MolGpKa.git ~/MolGpKa
@@ -135,3 +141,37 @@ If you use the published weights, please cite the paper and this repository:
   url     = {https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1}
 }
 ```
+
+### Third-party inference dependencies
+
+If you publish predictions made with this pipeline, please also cite the
+upstream methods CardioSafe consumes at inference time:
+
+```bibtex
+@article{molgpka2021,
+  title   = {MolGpka: A Web Server for Small Molecule pKa Prediction
+             Using a Graph-Convolutional Neural Network},
+  author  = {Pan, Xiaolin and Wang, Hao and Li, Cuiyu and Zhang, John Z. H.
+             and Ji, Changge},
+  journal = {Journal of Chemical Information and Modeling},
+  volume  = {61},
+  number  = {7},
+  pages   = {3159--3165},
+  year    = {2021},
+  doi     = {10.1021/acs.jcim.1c00075}
+}
+
+@article{chemberta2_2022,
+  title   = {ChemBERTa-2: Towards Chemical Foundation Models},
+  author  = {Ahmad, Walid and Simon, Elana and Chithrananda, Seyone and
+             Grand, Gabriel and Ramsundar, Bharath},
+  journal = {arXiv preprint arXiv:2209.01712},
+  year    = {2022}
+}
+```
+
+(The `DeepChem/ChemBERTa-77M-MTR` HuggingFace checkpoint used by
+`model/chemberta_encoder.py` is the multi-task-regression variant trained
+in Ahmad et al. 2022; the 77M-PubChem pretraining corpus originated in
+the earlier Chithrananda et al. 2020 paper, but the MTR-objective
+checkpoint specifically is from ChemBERTa-2.)

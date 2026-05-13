@@ -1,9 +1,11 @@
 """ChemBERTa sentence-embedding adapter.
 
-Loads `DeepChem/ChemBERTa-77M-MTR` (Chithrananda et al., 2020) and returns
-mean-pooled 384-dim sentence embeddings of SMILES. The transformer is
-frozen and used purely as a featurizer, exactly as described in the
-Methods section of Jovanovic et al. 2026.
+Loads `DeepChem/ChemBERTa-77M-MTR` (the multi-task regression variant
+from ChemBERTa-2: Ahmad, Simon, Chithrananda, Grand, Ramsundar.
+*ChemBERTa-2: Towards Chemical Foundation Models*. arXiv:2209.01712,
+2022) and returns mean-pooled 384-dim sentence embeddings of SMILES.
+The transformer is frozen and used purely as a featurizer, exactly as
+described in the Methods section of Jovanovic et al. 2026.
 
 Mean pooling is attention-mask-weighted: padding positions are excluded
 from the mean. SMILES inputs are tokenised with the model's tokenizer

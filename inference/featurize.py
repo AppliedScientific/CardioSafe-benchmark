@@ -16,10 +16,17 @@ training-fold scaler stats.
 The 20 descriptors are computed exactly as in
 `data/supplementary/table_s0_descriptor_spec.csv`. Descriptors 13-19
 (pka_acidic, pka_basic, logd_7_4, frac_cation/anion/zwitterion/neutral)
-require MolGpKa (Pan et al. 2021) for site-level pKa prediction. See
-`inference/README.md` for setup. Sentinels (acidic=14.0, basic=0.0) are
-used when no ionizable site is detected; Henderson-Hasselbalch derivation
-of logD_7.4 and microstate fractions is pure NumPy.
+require MolGpka for site-level pKa prediction:
+
+    Pan, Wang, Li, Zhang, Ji. MolGpka: A Web Server for Small Molecule
+    pKa Prediction Using a Graph-Convolutional Neural Network. J. Chem.
+    Inf. Model. 2021, 61(7), 3159-3165. doi:10.1021/acs.jcim.1c00075
+
+Please cite Pan et al. (2021) if you publish predictions made with this
+pipeline. See `inference/README.md` for setup. Sentinels (acidic=14.0,
+basic=0.0) are used when no ionizable site is detected;
+Henderson-Hasselbalch derivation of logD_7.4 and microstate fractions
+is pure NumPy.
 """
 
 from __future__ import annotations
