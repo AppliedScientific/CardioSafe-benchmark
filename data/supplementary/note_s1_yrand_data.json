@@ -12,7 +12,7 @@
     "cav12_pchembl_r": -0.28844664160531364,
     "n_test_herg_10um": 46137
   },
-  "earlier_yrand_tan70_seed42_note": "These are the paper-quoted per-head MCC and Pearson r values (manuscript line 145). They come from the architecture-V2 yrand checkpoint at stage3 (15-dim descriptor block), not the Stage 1 yrand at stage6. Architecture is otherwise identical (CrossAttnIonChannelPredictor).",
+  "earlier_yrand_tan70_seed42_note": "These are the paper-quoted per-head MCC and Pearson r values (manuscript line 145). They come from an earlier architecture variant trained with a 15-dimensional descriptor block, not the deployed model's 20-dim block. The cross-attention multi-task structure is otherwise identical.",
   "stage1_overall_yrand_herg10_auc": {
     "tan70": 0.7011104208473116
   },

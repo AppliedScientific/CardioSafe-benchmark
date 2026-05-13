@@ -89,7 +89,7 @@ identical to v1.0.
 
 ## 3. v1.1 retrain — tan70 only
 
-Stage 1 (Stage 1) was retrained from scratch on the `tan70_v1_1` split
+Stage 1 was retrained from scratch on the `tan70_v1_1` split
 for all five paper seeds (42, 43, 44, 45, 46). Hyperparameters and
 recipe are paper-faithful (Methods §"Two-stage training", line 109):
 `--model-kind crossattn --epochs 100 --patience 20 --early-stop herg
@@ -100,7 +100,7 @@ cliff weight 8, AdamW lr=1e-5 — matching paper line 111. tan60 was
 **not** retrained in this round (the marquee case study is anchored on
 tan70).
 
-### Stage 1 (Stage 1) per-seed training summary
+### Stage 1 per-seed training summary
 
 | Seed | Epochs (early-stop) | Best val hERG-10µM AUC |
 | ---: | ---: | ---: |
@@ -112,7 +112,7 @@ tan70).
 
 Early-stopping epochs are within the v1.0 range (23–34).
 
-### Headline tan70 test-fold metrics (5-seed ensemble, Stage 2)
+### Headline tan70 test-fold metrics (5-seed ensemble, Stage 2 cliff fine-tune)
 
 | Head | v1.0 (paper) | v1.1 | Δ | n |
 | --- | ---: | ---: | ---: | ---: |
@@ -136,7 +136,7 @@ leads on the data-rich hERG head, and is statistically indistinguishable
 from comparators on the smaller Nav1.5 and Cav1.2 heads pre-de-leak —
 are preserved.**
 
-Full per-head metrics (Stage 1 + Stage 2, per-seed min/max, sens, spec,
+Full per-head metrics (Stage 1 + Stage 2 cliff fine-tune, per-seed min/max, sens, spec,
 confusion-matrix entries) are in
 `note_s3_v1_1_test_metrics.json`.
 
@@ -169,7 +169,7 @@ Predicted cliff (terfenadine − fexofenadine pIC50):
 
 The terfenadine prediction is **not** load-bearing on the HMT-analog
 memorisation. The v1.1 ensemble — which has never seen the HMT analogues
-during Stage 1 base training nor during Stage 2 cliff fine-tuning —
+during Stage 1 training nor during Stage 2 cliff fine-tuning —
 still correctly classifies terfenadine as a strong hERG blocker (pIC50
 6.25; CO@10 µM = 0.900; CO@1 µM = 0.769) and fexofenadine as a
 borderline non-blocker (pIC50 4.51; CO@10 µM = 0.656; CO@1 µM = 0.334).
@@ -202,7 +202,7 @@ python scripts/audit_tanimoto_leak.py --split tan60_v1_1
 For the v1.1 retrain itself: the architecture in `model/` and the loss /
 training-step references in `train/` are exact PyTorch counterparts of
 the recipe described in the paper's Methods section. Re-deriving the
-ensemble requires bringing your own feature caches, Stage 1 base
+ensemble requires bringing your own feature caches, Stage 1
 checkpoints, and the cliff features NPZ described in `train/README.md`.
 
 ## 6. What did not change

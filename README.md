@@ -74,8 +74,8 @@ canonical cardiac activity cliff is available as a held-out case study.
 v1.1 additionally force-routes 2-3 hydroxymethyl-terfenadine analogs in
 the same cluster (caught by `scripts/audit_tanimoto_leak.py`); test fold
 is identical between versions. Use v1.1 for new work; v1.0 is retained
-so the bioRxiv preprint numbers stay reproducible.See
-See Note S3
+so the bioRxiv preprint numbers stay reproducible. See
+[`data/splits/CHANGELOG.md`](data/splits/CHANGELOG.md) and Note S3
 ([`data/supplementary/note_s3_v1_1_audit_correction.md`](data/supplementary/note_s3_v1_1_audit_correction.md)).
 
 ## Labels

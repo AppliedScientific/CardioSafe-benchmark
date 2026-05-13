@@ -136,7 +136,7 @@ manuscript live here. As of the current release:
 | `supplementary/figure_s1_herg_calibration.png` | Same figure rasterised at 300 dpi |
 | `supplementary/figure_s1_herg_calibration.json` | Underlying decile data (`p_lo`, `p_hi`, `p_mean`, `obs_pos_rate`, `n`) plus per-panel total *n* and ECE |
 | `supplementary/note_s1_yrand_mechanism.md` | Note S1 — Y-randomization mechanism + per-MW-stratum analysis explaining the elevated unstratified hERG Y-randomized AUC (~0.70) as a molecular-weight prevalence confound. Includes the unconfounded controls (regression *r* and MCC) collapsing to ~0. |
-| `supplementary/note_s1_yrand_data.json` | Underlying data behind Note S1 — V6 and Stage 2 Y-randomized overall AUCs, per-MW-bin metrics, seed-42 unconfounded controls, prevalence-controlled subsample |
+| `supplementary/note_s1_yrand_data.json` | Underlying data behind Note S1 — Stage 1 and Stage 2 cliff fine-tune Y-randomized overall AUCs, per-MW-bin metrics, seed-42 unconfounded controls, prevalence-controlled subsample |
 | `supplementary/note_s2_cliff_curation.md` | Note S2 — prose documenting the two-stage activity-cliff curation pipeline (manual literature curation + automated Tanimoto leak-prevention filter), with the 25-source bibliography and the 30-`pair_id` composition table |
 | `supplementary/note_s2_pair_id_composition.csv` | Per-`pair_id` table: therapeutic class, blocker members, safer members, sources, ranking-pair eligibility per split |
 | `supplementary/note_s2_per_split_manifest.csv` | One row per cliff compound × split with include / exclude status, literature IC50, and herg_1um / herg_10um block flags |
@@ -144,13 +144,13 @@ manuscript live here. As of the current release:
 | `supplementary/note_s2_cliff_set_tan70.csv` | Per-split filtered cliff manifest for tan70 (48 compounds surviving Stage B of the curation) |
 | `supplementary/note_s2_cliff_set_tan60.csv` | Per-split filtered cliff manifest for tan60 (51 compounds surviving Stage B) |
 | `supplementary/note_s3_v1_1_audit_correction.md` | Note S3 — audit-driven correction: documents the 12 (tan70) / 15 (tan60) cliff-cluster train ↔ val edges caught by `scripts/audit_tanimoto_leak.py`, the v1.1 patch (2 compounds moved to val on tan70; 3 on tan60), updated fold counts, the v1.1 retrain on tan70_v1_1, headline test-fold metric shifts, and the terfenadine/fexofenadine case-study re-evaluation (qualitative narrative preserved). Test fold is unchanged in both splits. |
-| `supplementary/note_s3_v1_1_test_metrics.json` | Per-head v1.1 test-fold metrics on tan70_v1_1 (5-seed ensemble, Stage 1 + Stage 2, plus per-seed min/max). |
+| `supplementary/note_s3_v1_1_test_metrics.json` | Per-head v1.1 test-fold metrics on tan70_v1_1 (5-seed ensemble, Stage 1 + Stage 2 cliff fine-tune, plus per-seed min/max). |
 | `supplementary/note_s3_v1_1_case_study.json` | Per-compound v1.0 vs v1.1 predictions for terfenadine + fexofenadine: pIC50 with inter-seed σ, classification CO at 10 µM and 1 µM, per-compound Δ, and the predicted cliff comparison. |
 | `comparators/ctoxpred2_tan70_predictions.csv` | CToxPred2 per-compound block probabilities on the tan70 test fold — input to the reverse-leak audit and head-to-head comparison (Tables 3 / 3b / S2 / S3 / Figure 4) |
 | `comparators/cardiogenai_tan70_predictions.csv` | CardioGenAI per-compound block probabilities on the tan70 test fold |
 | `comparators/README.md` | Schema, citations, coverage notes, and rationale for shipping these CSVs alongside the data deposit |
 
-All paper-promised supplementary materials are now in this directory.See
+All paper-promised supplementary materials are now in this directory. See
 the manuscript's *Additional files* section for the original list and the
 context in which each item is cited.
 

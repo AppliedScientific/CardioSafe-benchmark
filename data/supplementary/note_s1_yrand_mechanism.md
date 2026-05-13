@@ -26,11 +26,11 @@ regression Pearson *r* values collapsed near zero:
 | Nav1.5     | Pearson *r* | +0.019 | +0.558 |
 | Cav1.2     | Pearson *r* | -0.288 | +0.689 |
 
-(Source: architecture-V2 Y-randomization checkpoint at
-`[staging]/[earlier-architecture-yrand]_tan70/seed_42`, evaluated on the tan70 test
-fold — n = 46,137. The V2 architecture uses a 15-dim descriptor block instead
-of the deployed 20-dim block; the cross-attention multi-task structure is
-identical to the deployed model.)
+(Source: an earlier-architecture Y-randomization checkpoint with a
+15-dimensional descriptor block, evaluated on the tan70 test fold —
+n = 46,137. The cross-attention multi-task structure is identical to the
+deployed model; only the descriptor count differs from the deployed
+20-dim block.)
 
 ## But hERG 10 µM Y-randomized AUC is *not* near 0.5
 
@@ -74,7 +74,7 @@ Compare against the *unstratified* AUC of 0.701 on the same
 fold: the stratification removes the MW carrier and the AUC collapses to the
 chance interval, exactly as expected.
 
-### Same stratification on Stage 2 (deployed) for completeness
+### Same stratification on Stage 2 for completeness
 
 | MW bin (g/mol) | tan70 Y-rand AUC | tan60 Y-rand AUC |
 | :-- | --: | --: |

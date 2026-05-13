@@ -1,4 +1,4 @@
-"""Stage 1 (Stage 1) training step -- the paper Methods recipe as one
+"""Stage 1 training step -- the paper Methods recipe as one
 function.
 
 This is a *reference* train step, not a runnable end-to-end trainer:
@@ -55,7 +55,7 @@ def stage1_train_step(
     focal_gamma: float = 2.0,
     grad_clip_norm: float = 1.0,
 ) -> dict[str, float]:
-    """One Stage 1 (Stage 1) training step.
+    """One Stage 1 training step.
 
     Args
     ----

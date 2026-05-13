@@ -2,7 +2,7 @@
 labelled "Stage 2: cliff fine-tune").
 
 For each of the five seeds 42-46:
-  - Load the Stage 1 (Stage 1) checkpoint plus its descriptor and L1000
+  - Load the Stage 1 checkpoint plus its descriptor and L1000
     scaler statistics; these are inherited unchanged.
   - For each of 9 epochs of 120 mini-batches:
       * Sample 512 ChEMBL training rows (random with replacement across

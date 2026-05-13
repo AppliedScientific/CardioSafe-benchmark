@@ -10,7 +10,7 @@ prior.
 | File | Paper anchor |
 | --- | --- |
 | `losses.py` | Focal-BCE (Methods: "Stage 1 trained with focal loss, γ = 2.0…") and the margin ranking loss (Methods: "max(0, 1.5 − (logit_blocker − logit_safer))"). |
-| `stage1_step.py` | One Stage 1 (Stage 1) train step. Per-head NaN masking, focal-BCE on the 5 classification heads, MSE on the 3 regression heads (training-fold z-scored), uniform mean across active heads, Adam(weight_decay=1e-5), grad-clip 1.0. The caller owns data loading, the NoamLR schedule, validation, and early stopping. |
+| `stage1_step.py` | One Stage 1 train step. Per-head NaN masking, focal-BCE on the 5 classification heads, MSE on the 3 regression heads (training-fold z-scored), uniform mean across active heads, Adam(weight_decay=1e-5), grad-clip 1.0. The caller owns data loading, the NoamLR schedule, validation, and early stopping. |
 | `stage2.py` | Runnable Stage 2 cliff fine-tune. For each seed 42-46: 9 epochs × 120 mini-batches of 512 ChEMBL rows + the curated cliff rows (cliff weight 8.0); pairwise margin ranking loss with λ = 0.3 on the two hERG heads; AdamW (lr 1e-5, weight_decay 1e-5); grad-clip 1.0. Inputs (feature caches, labels matrix, splits NPZ, cliff NPZ, Stage 1 checkpoints) are all passed as CLI paths. |
 
 ## What you need to bring
