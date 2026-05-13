@@ -65,14 +65,20 @@ All hyperparameters default to the paper's recipe values (printed in
 
 ## What is *not* shipped
 
-- Trained weights (Stage 1 ensemble, Stage 2 CardioSafe ensemble) —
-  inference at [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
-- The raw L1000 signatures or their training script — see paper Methods
-  and GEO accessions GSE92742 / GSE70138 to rebuild the encoder yourself.
-- The Stage 1 trunk's end-to-end runner (data loaders, NoamLR scheduler,
-  early-stopping driver). All hyperparameters are in the paper; a clean
-  driver around `stage1_step.py` is a 50-line exercise.
-- Ablation runners (the Y-randomization, exact-only-curation, L1000
+- **Stage 1 base-ensemble checkpoints.** The Stage 2 cliff-fine-tuned
+  ensemble (the deployed / published variant) is shipped for both
+  v1.0 and v1.1 via the [GitHub Releases](https://github.com/AppliedScientific/CardioSafe-benchmark/releases) —
+  see [`inference/README.md`](../inference/README.md). The intermediate
+  Stage 1 weights are not deposited; to use `stage2.py` end-to-end you
+  need your own Stage 1 ensemble.
+- **The raw L1000 signatures and the L1000 encoder training script.**
+  The trained L1000 encoder weights *are* shipped (Releases tag
+  `l1000-encoder-v1`); to retrain the encoder from scratch, see paper
+  Methods and GEO accessions GSE92742 / GSE70138.
+- **The Stage 1 trunk's end-to-end runner** (data loaders, NoamLR
+  scheduler, early-stopping driver). All hyperparameters are in the
+  paper; a clean driver around `stage1_step.py` is a 50-line exercise.
+- **Ablation runners** (the Y-randomization, exact-only-curation, L1000
   threshold sweep, bio-zero, ChemBERTa-zero variants). Their headline
   numbers are in supplementary Tables S8, S9 and Note S1 with the data
   needed to recompute them.
