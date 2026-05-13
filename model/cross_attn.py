@@ -18,6 +18,7 @@ Three modality branches feed a per-channel cross-attention head:
     Cross-attention: 4 learnable channel queries x 3 modality K/V tokens.
         attn_dim = 128, n_heads = 2, attention dropout = 0.1
         Query init: torch.randn(4, 128) * 0.02
+        Post-attention LayerNorm applied to the (B, 4, 128) context.
 
     Per-channel head: [attn_context (128) || chem_residual (256)] -> 384
         Linear(384, 128) -> ReLU -> Dropout(0.3) -> Linear(128, 1)
@@ -180,6 +181,7 @@ class CrossAttnIonChannelPredictor(nn.Module):
             dropout=attn_dropout,
             batch_first=True,
         )
+        self.attn_norm = nn.LayerNorm(attn_dim)
 
         # Per-channel heads: [attn_context || chem_residual].
         head_in_dim = attn_dim + chem_out
@@ -204,6 +206,7 @@ class CrossAttnIonChannelPredictor(nn.Module):
         q = self.queries.unsqueeze(0).expand(batch, -1, -1)  # (B, 4, attn_dim)
 
         ctx, _ = self.attn(q, kv, kv)                # (B, 4, attn_dim)
+        ctx = self.attn_norm(ctx)
 
         out: dict[str, Tensor] = {}
         for name in ALL_HEADS:

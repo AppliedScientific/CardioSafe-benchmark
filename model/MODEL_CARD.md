@@ -2,9 +2,13 @@
 
 Reference architecture from **CardioSafe: multi-task prediction of cardiac
 ion channel activity with reverse-leak audited benchmarking** (Jovanović
-et al., 2026). Forward-pass code only — no weights, no training loop, no
-data loaders. Inference for the deployed model is served at
-[platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
+et al., 2026). The 5-seed paper-snapshot weights for both **v1.0** (the
+ensemble evaluated in the preprint) and **v1.1** (the audit-clean retrain
+described in Note S3) are distributed via the
+[GitHub Releases](https://github.com/AppliedScientific/CardioSafe-benchmark/releases)
+of this repository under CC-BY-NC-4.0. See [`../inference/README.md`](../inference/README.md)
+for runnable scoring. The continually-updated deployed ensemble is served
+at [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
 
 ## Inputs
 
@@ -65,6 +69,7 @@ Queries    Q = nn.Parameter(torch.randn(4, 128) * 0.02)
 Attention  MultiheadAttention(embed_dim=128, num_heads=2,
                               dropout=0.1, batch_first=True)
            ctx = attn(Q, KV, KV) -> (B, 4, 128)
+           ctx = LayerNorm(ctx)
 
 Heads      For each of the 8 heads:
              head_in = concat(ctx[:, channel, :], chem_emb)  # (B, 128 + 256)
@@ -92,13 +97,11 @@ Parameter count: ~3.96M trainable parameters.
 
 ## What is *not* in this directory
 
-- Trained weights for either the Stage 1 base ensemble or the Stage 2
-  cliff-fine-tuned CardioSafe ensemble. Inference is served at the URL
-  above.
-- The descriptor / L1000 z-score normalisation statistics used at
-  training time. These are checkpoint-bound and ride alongside the
-  weights.
-- A runnable trainer end-to-end. See`train/` for the loss functions
+- Trained weights themselves do not live in `model/` — they are
+  distributed via the GitHub Releases. See [`../inference/`](../inference/)
+  for the loader (auto-downloads + caches under
+  `~/.cache/cardiosafe/weights/`).
+- A runnable trainer end-to-end. See `../train/` for the loss functions
   (`losses.py`), the Stage 1 train step (`stage1_step.py`), and the
   Stage 2 cliff fine-tune script (`stage2.py`).
 

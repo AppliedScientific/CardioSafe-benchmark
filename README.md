@@ -1,8 +1,9 @@
 # CardioSafe-benchmark
 
-[![License: MIT + CC-BY-4.0](https://img.shields.io/badge/license-MIT_%2B_CC--BY--4.0-blue.svg)](LICENSE)
+[![License: MIT + CC-BY-4.0 + CC-BY-NC-4.0](https://img.shields.io/badge/license-MIT_%2B_CC--BY--4.0_%2B_CC--BY--NC--4.0-blue.svg)](LICENSE)
 [![Preprint: bioRxiv](https://img.shields.io/badge/preprint-bioRxiv-b31b1b.svg)](https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1)
 [![Inference: ASI Platform](https://img.shields.io/badge/inference-platform.appliedscientific.ai-2ea44f.svg)](https://platform.appliedscientific.ai/cardiosafe)
+[![Weights: GitHub Releases](https://img.shields.io/badge/weights-GitHub_Releases-181717.svg)](https://github.com/AppliedScientific/CardioSafe-benchmark/releases)
 [![Applied Scientific Intelligence](https://img.shields.io/badge/lab-appliedscientific.ai-000000.svg)](https://appliedscientific.ai)
 
 Splits, labels, and supplementary artifacts for **CardioSafe: multi-task
@@ -20,11 +21,14 @@ figure promised in the *Additional files* section of the manuscript.
 > **Status:** initial release. The repository ships the curated dataset
 > + Tanimoto-controlled splits + supplementary tables / notes / figure,
 > together with the paper-faithful reference architecture, training-step
-> reference code, and the exhaustive O(n²) Tanimoto leakage audit script
-> that drove the v1.1 correction. Inference for the deployed CardioSafe
-> ensemble is available at
-> [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
-> Questions: lukas@appliedscientific.ai or mihailo@appliedscientific.ai.
+> reference code, the exhaustive O(n²) Tanimoto leakage audit script
+> that drove the v1.1 correction, **and the v1.0 + v1.1 ensemble weights
+> + runnable inference** (`inference/predict.py`). The deployed CardioSafe
+> ensemble at
+> [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe)
+> is continually updated with CRO-validated bioassay data and may differ
+> from this paper snapshot. Questions: lukas@appliedscientific.ai or
+> mihailo@appliedscientific.ai.
 
 ## What's in the box
 
@@ -37,8 +41,10 @@ figure promised in the *Additional files* section of the manuscript.
 | `data/supplementary/` | Notes S1–S2, Tables S0–S9 (no S4), Figure S1, plus the per-split cliff manifests |
 | `data/comparators/` | CToxPred2 and CardioGenAI predictions on the tan70 test fold — the inputs to the reverse-leak audit and the head-to-head comparison in Tables 3 / 3b / S2 / S3 / Figure 4 |
 | `scripts/audit_tanimoto_leak.py` | Exhaustive O(n_train × n_other) Tanimoto leakage audit — verifies no cross-fold Morgan-r2-2048 edges at or above the cutoff. See[`scripts/README.md`](scripts/README.md). |
-| `model/` | Reference architecture (`CrossAttnIonChannelPredictor`, ChemBERTa adapter, L1000 encoder) + `MODEL_CARD.md`. Forward-pass code only; no weights. |
+| `model/` | Reference architecture (`CrossAttnIonChannelPredictor`, ChemBERTa adapter, L1000 encoder) + `MODEL_CARD.md`. |
+| `inference/` | Runnable inference: `predict.py` (CSV-in / CSV-out CLI), `featurize.py`, `ensemble.py`. Auto-downloads weights from [Releases](https://github.com/AppliedScientific/CardioSafe-benchmark/releases) on first call. See [`inference/README.md`](inference/README.md). |
 | `train/` | Paper-faithful loss functions and Stage 1 / Stage 2 training-step references. No data loaders; bring your own feature caches. |
+| [Releases](https://github.com/AppliedScientific/CardioSafe-benchmark/releases) | v1.0 + v1.1 ensemble weights (5 seeds each, 15 MB / seed) and the L1000 expression encoder (10 MB). Licensed CC-BY-NC-4.0 (see `LICENSE-WEIGHTS`). |
 
 See [`data/README.md`](data/README.md) for the schema, fold counts, and per-file documentation.
 
@@ -130,17 +136,17 @@ table (CSV / Markdown / JSON) where applicable:
 
 ## What's NOT in this repository
 
-The paper's *Availability of data and materials* section deposits only
-data; inference and code are available elsewhere.
-
-- **Model weights** are not deposited here. Inference is served at
-  [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
 - **L1000 raw signatures** used to train the expression encoder are
   available from GEO under accessions GSE92742 (Phase I) and GSE70138
-  (Phase II).
+  (Phase II). The trained encoder weights are released; the raw input
+  signatures are not redistributed.
 - **ChEMBL 36 source dump** (SHA-256
   `b25820eef0f0481ad7712bdf4bac3b45f354e3cbacb76be1fdbf4205d6b48fb9`) is
   available from <https://www.ebi.ac.uk/chembl/>.
+- **Continually-updated production ensemble** is served at
+  [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe)
+  and may differ from this paper snapshot — it is retrained on new
+  CRO-validated bioassay data routed through ASI's partner network.
 - **Comparator predictions** (CToxPred2, CardioGenAI) used in the
   reverse-leak audit are reproducible from each comparator's released
   code on this repo's `tan70` test fold. The aggregated paired-bootstrap
@@ -163,7 +169,12 @@ data; inference and code are available elsewhere.
 
 ## License
 
-- **Code** snippets in this repository (and any future code releases)
-  are under the [MIT License](LICENSE).
+- **Code** in this repository is under the [MIT License](LICENSE).
 - **Data** (everything under `data/`) is released under
   [Creative Commons Attribution 4.0 International](LICENSE-DATA).
+- **Model weights** distributed via the GitHub Releases of this
+  repository are released under
+  [Creative Commons Attribution-NonCommercial 4.0 International](LICENSE-WEIGHTS).
+  Academic, educational, and non-profit research use is permitted with
+  attribution. Commercial use requires a separate license — contact
+  `business@appliedscientific.ai`.

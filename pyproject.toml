@@ -47,6 +47,14 @@ train = [
     "cardiosafe-benchmark[model]",
     "rdkit>=2025.9.6",
 ]
+inference = [
+    "cardiosafe-benchmark[model]",
+    "rdkit>=2025.9.6",
+    "pandas>=2.0",
+]
+
+[project.scripts]
+cardiosafe-predict = "inference.predict:main"
 
 [project.urls]
 Homepage = "https://github.com/AppliedScientific/CardioSafe-benchmark"
