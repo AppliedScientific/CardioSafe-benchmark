@@ -125,6 +125,9 @@ manuscript live here. As of the current release:
 | `supplementary/note_s2_source_bibliography.csv` | 25 source citation keys with per-source compound counts and citation stubs (full citations to be completed by author at proof stage) |
 | `supplementary/note_s2_cliff_set_tan70.csv` | Per-split filtered cliff manifest for tan70 (48 compounds surviving Stage B of the curation) |
 | `supplementary/note_s2_cliff_set_tan60.csv` | Per-split filtered cliff manifest for tan60 (51 compounds surviving Stage B) |
+| `comparators/ctoxpred2_tan70_predictions.csv` | CToxPred2 per-compound block probabilities on the tan70 test fold — input to the reverse-leak audit and head-to-head comparison (Tables 3 / 3b / S2 / S3 / Figure 4) |
+| `comparators/cardiogenai_tan70_predictions.csv` | CardioGenAI per-compound block probabilities on the tan70 test fold |
+| `comparators/README.md` | Schema, citations, coverage notes, and rationale for shipping these CSVs alongside the data deposit |
 
 All paper-promised supplementary materials are now in this directory.See
 the manuscript's *Additional files* section for the original list and the
