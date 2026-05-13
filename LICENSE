@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-The MIT license applies to all source code in this repository.
-
-Data files (under `data/` and any released as supplementary artifacts on
-Zenodo) are licensed under Creative Commons Attribution 4.0 International
-(CC BY 4.0). SeeLICENSE-DATA for the full text.
