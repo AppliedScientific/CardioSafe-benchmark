@@ -19,7 +19,7 @@ A single flat float tensor of shape `(B, 7526)`. Layout:
 | 0 – 2047 | Morgan radius-2 2048-bit binary fingerprint | RDKit `GetMorganGenerator(radius=2, fpSize=2048)` |
 | 2048 – 4095 | AtomPair 2048-bit binary fingerprint | RDKit `GetAtomPairGenerator(fpSize=2048)` |
 | 4096 – 6143 | TopologicalTorsion 2048-bit binary fingerprint | RDKit `GetTopologicalTorsionGenerator(fpSize=2048)` |
-| 6144 – 6163 | 20-descriptor block, training-fold z-scored | See`data/supplementary/table_s0_descriptor_spec.*` |
+| 6144 – 6163 | 20-descriptor block, training-fold z-scored | See `data/supplementary/table_s0_descriptor_spec.*` |
 | 6164 – 6547 | ChemBERTa-77M-MTR mean-pooled sentence embedding (384) | `model/chemberta_encoder.py` |
 | 6548 – 7525 | L1000 predicted gene-expression z-scores (978) | `model/l1000_encoder.py` |
 
@@ -86,12 +86,12 @@ Parameter count: ~3.96M trainable parameters.
 
 - **ChemBERTa**: `DeepChem/ChemBERTa-77M-MTR` from the HuggingFace hub,
   frozen, attention-mask-weighted mean pool over `last_hidden_state`.
- See `model/chemberta_encoder.py`.
+  See `model/chemberta_encoder.py`.
 - **L1000 encoder**: 2 × `GCNConv(384, 384)` over the L1000 gene
   co-expression graph (`|Pearson r| > 0.40` on training-set signatures),
   followed by a shared 3-layer FFN of width 512 and per-gene linear
   heads producing 978 z-score predictions. Input is a 1024-dim count
-  TopologicalTorsion fingerprint. See`model/l1000_encoder.py`. The
+  TopologicalTorsion fingerprint. See `model/l1000_encoder.py`. The
   graph is computed offline from LINCS Phase I (GSE92742) and Phase II
   (GSE70138); it is not redistributed here.
 

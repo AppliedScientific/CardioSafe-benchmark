@@ -37,9 +37,9 @@ tricyclic antidepressant).
 active split, the filter computes Morgan-r=2 2,048-bit Tanimoto
 from each cliff compound to **every** validation + test row and
 drops any cliff compound whose maximum Tanimoto to the val/test
-holdout exceeds the split cutoff (0.70 for tan70_v2, 0.60 for
-tan60_v2). This is the only mechanism preventing cliff-training
-information from leaking into the held-out evaluation set.
+holdout exceeds the split cutoff (0.70 for tan70, 0.60 for tan60).
+This is the only mechanism preventing cliff-training information
+from leaking into the held-out evaluation set.
 
 ## Per-split survivors
 
@@ -53,8 +53,8 @@ fold (Tanimoto = 1.0 to a val row): Terfenadine, Fexofenadine,
 Ranolazine, Desipramine, and Amitriptyline.
 
 On **tan60** (stricter 0.60 cutoff), only Terfenadine and
-Fexofenadine drop — they are the only two compounds force-moved to
-the validation fold by `build_tan_splits_v2.py`. Ranolazine,
+Fexofenadine drop — they are the only two compounds force-routed to
+the validation fold by the split builder. Ranolazine,
 Desipramine, and Amitriptyline sit in the *training* fold on tan60
 under the relaxed cutoff and therefore remain in the cliff set.
 

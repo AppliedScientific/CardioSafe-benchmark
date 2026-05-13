@@ -123,7 +123,8 @@ platform at appliedscientific.ai/cardiosafe additionally provides:
 - Hosted batch scoring + REST API + dashboard
 
 For commercial use of the weights themselves, see `LICENSE-WEIGHTS`
-(CC-BY-NC-4.0). Contact `business@appliedscientific.ai`.
+(CC-BY-NC-4.0). Contact the authors (`lukas@appliedscientific.ai`,
+`mihailo@appliedscientific.ai`).
 
 ## Citation
 

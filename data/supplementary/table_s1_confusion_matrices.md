@@ -3,7 +3,8 @@
 Confusion matrices for the deployed CardioSafe 5-seed ensemble at the
 default operating threshold of 0.5 on the sigmoid output, per binary
 head per split. Numbers are the ensemble (mean-of-seeds) predictions
-evaluated against the curated labels_v1 ground truth on the v2 test fold.
+evaluated against the curated labels_v1 ground truth on the tan70 and
+tan60 test folds.
 
 ## Counts
 

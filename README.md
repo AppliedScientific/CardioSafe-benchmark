@@ -37,10 +37,10 @@ figure promised in the *Additional files* section of the manuscript.
 | `data/compounds/compounds.csv` | Canonical SMILES + standard InChI-keys for all 334,444 curated compounds |
 | `data/labels/labels_v1.csv` + `MANIFEST.json` | The 8-task curated label matrix and its provenance manifest |
 | `data/splits/tan70.csv`, `tan60.csv` | v1.0 splits — Tanimoto ≥ 0.70 / 0.60 cutoffs, as used in the bioRxiv preprint |
-| `data/splits/tan70_v1_1.csv`, `tan60_v1_1.csv` | **v1.1** splits — audit-clean (cardiac-cliff cluster fully force-routed to val). Test fold identical to v1.0. See`data/splits/CHANGELOG.md`. |
+| `data/splits/tan70_v1_1.csv`, `tan60_v1_1.csv` | **v1.1** splits — audit-clean (cardiac-cliff cluster fully force-routed to val). Test fold identical to v1.0. See `data/splits/CHANGELOG.md`. |
 | `data/supplementary/` | Notes S1–S2, Tables S0–S9 (no S4), Figure S1, plus the per-split cliff manifests |
 | `data/comparators/` | CToxPred2 and CardioGenAI predictions on the tan70 test fold — the inputs to the reverse-leak audit and the head-to-head comparison in Tables 3 / 3b / S2 / S3 / Figure 4 |
-| `scripts/audit_tanimoto_leak.py` | Exhaustive O(n_train × n_other) Tanimoto leakage audit — verifies no cross-fold Morgan-r2-2048 edges at or above the cutoff. See[`scripts/README.md`](scripts/README.md). |
+| `scripts/audit_tanimoto_leak.py` | Exhaustive O(n_train × n_other) Tanimoto leakage audit — verifies no cross-fold Morgan-r2-2048 edges at or above the cutoff. See [`scripts/README.md`](scripts/README.md). |
 | `model/` | Reference architecture (`CrossAttnIonChannelPredictor`, ChemBERTa adapter, L1000 encoder) + `MODEL_CARD.md`. |
 | `inference/` | Runnable inference: `predict.py` (CSV-in / CSV-out CLI), `featurize.py`, `ensemble.py`. Auto-downloads weights from [Releases](https://github.com/AppliedScientific/CardioSafe-benchmark/releases) on first call. See [`inference/README.md`](inference/README.md). |
 | `train/` | Paper-faithful loss functions and Stage 1 / Stage 2 training-step references. No data loaders; bring your own feature caches. |
@@ -176,5 +176,5 @@ table (CSV / Markdown / JSON) where applicable:
   repository are released under
   [Creative Commons Attribution-NonCommercial 4.0 International](LICENSE-WEIGHTS).
   Academic, educational, and non-profit research use is permitted with
-  attribution. Commercial use requires a separate license — contact
-  `business@appliedscientific.ai`.
+  attribution. Commercial use requires a separate license — contact the
+  authors (`lukas@appliedscientific.ai`, `mihailo@appliedscientific.ai`).

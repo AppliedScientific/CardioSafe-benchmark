@@ -55,7 +55,7 @@ python train/stage2.py \
   --chemberta-path path/to/chemberta_384.npy \
   --bio-path     path/to/bio_l1000_978.npy \
   --labels-path  path/to/labels_v1.npy \
-  --splits-path  path/to/splits_tan70_v2.npz \
+  --splits-path  path/to/splits_tan70.npz \
   --cliff-path   path/to/cliff_features_v6.npz
 ```
 

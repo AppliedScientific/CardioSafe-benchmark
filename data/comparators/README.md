@@ -51,13 +51,3 @@ Tables S2 and S3 (the comparator panels pre- and post-de-leak) are built
 on top of these CSVs. The full paired-bootstrap output is shipped at
 `data/supplementary/tables_s2_s3_paired_bootstrap.json` so you can verify
 the aggregated numbers without re-running the bootstrap.
-
-## Note on the legacy tan70 / tan60 files
-
-The upstream cache also carries `*_tan70_full_test.npz` and
-`*_tan60_full_test.npz` files at older sizes (n = 46,432 and n = 14,005).
-These correspond to an earlier per-head split variant (v1) that **is not
-used in the published manuscript**; only the **tan70_v2** comparator
-predictions deposited here are paper-relevant. The v2 splits exclude
-terfenadine and fexofenadine from the training fold and yield slightly
-different test-fold compositions (n = 46,326 and n = 13,889 respectively).
