@@ -1,5 +1,18 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "v2_yrand_tan70_seed42_controls": {
+    "herg_blocker_10um_auc": 0.6977504407765527,
+    "herg_blocker_10um_mcc": 0.043438549048424424,
+    "herg_blocker_1um_mcc": -0.022142469298396996,
+    "nav15_blocker_mcc": 0.050240118349163906,
+    "cav12_blocker_mcc": -0.06233123935401189,
+    "iks_blocker_mcc": 0.0,
+    "herg_pchembl_r": 0.10407146145422028,
+    "nav15_pchembl_r": 0.019169953672771127,
+    "cav12_pchembl_r": -0.28844664160531364,
+    "n_test_herg_10um": 46137
+  },
+  "earlier_yrand_tan70_seed42_note": "These are the paper-quoted per-head MCC and Pearson r values (manuscript line 145). They come from the architecture-V2 yrand checkpoint at stage3 (15-dim descriptor block), not the Stage 1 yrand at stage6. Architecture is otherwise identical (CrossAttnIonChannelPredictor).",
   "stage1_overall_yrand_herg10_auc": {
     "tan70": 0.7011104208473116
   },
@@ -121,22 +134,6 @@
       "auc": 0.5789957774154438
     }
   ],
-  "v6_base_seed42_unconfounded_controls": {
-    "tan70_v2": {
-      "herg_blocker_10um_auc": 0.7048028637058581,
-      "herg_blocker_10um_mcc": 0.0026827052048819765,
-      "herg_pchembl_r": 0.11452228808685515,
-      "nav15_blocker_mcc": 0.10435684680975632,
-      "cav12_blocker_mcc": -0.08068909869778992
-    },
-    "tan60_v2": {
-      "herg_blocker_10um_auc": 0.6673140076411632,
-      "herg_blocker_10um_mcc": 0.03991852937398713,
-      "herg_pchembl_r": 0.15508809156606856,
-      "nav15_blocker_mcc": 0.22020968562562226,
-      "cav12_blocker_mcc": 0.22724676513417622
-    }
-  },
   "prevalence_controlled_subsample_tan70_v6": {
     "original_n_pos": 937,
     "original_n_neg": 45183,

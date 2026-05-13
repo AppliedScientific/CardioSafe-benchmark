@@ -123,6 +123,8 @@ manuscript live here. As of the current release:
 | `supplementary/note_s2_pair_id_composition.csv` | Per-`pair_id` table: therapeutic class, blocker members, safer members, sources, ranking-pair eligibility per split |
 | `supplementary/note_s2_per_split_manifest.csv` | One row per cliff compound × split with include / exclude status, literature IC50, and herg_1um / herg_10um block flags |
 | `supplementary/note_s2_source_bibliography.csv` | 25 source citation keys with per-source compound counts and citation stubs (full citations to be completed by author at proof stage) |
+| `supplementary/note_s2_cliff_set_tan70.csv` | Per-split filtered cliff manifest for tan70 (48 compounds surviving Stage B of the curation) |
+| `supplementary/note_s2_cliff_set_tan60.csv` | Per-split filtered cliff manifest for tan60 (51 compounds surviving Stage B) |
 
 All paper-promised supplementary materials are now in this directory.See
 the manuscript's *Additional files* section for the original list and the
