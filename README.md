@@ -18,7 +18,7 @@ figure promised in the *Additional files* section of the manuscript.
 > Inference is available at
 > [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
 > Researchers with benchmarking-study questions can contact the
-> corresponding author (Lukas@appliedscientific.ai).
+> corresponding author (lukas@appliedscientific.ai).
 
 ## What's in the box
 
