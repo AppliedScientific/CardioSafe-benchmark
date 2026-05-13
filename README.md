@@ -15,10 +15,10 @@ matrix, Tanimoto-controlled splits, and supplementary tables / notes /
 figure promised in the *Additional files* section of the manuscript.
 
 > **Status:** initial release. This repository is a **data deposit**.
-> Inference is available via a free academic API at the journal version
-> of the manuscript; researchers seeking earlier access for benchmarking
-> studies can contact the corresponding author
-> (Lukas@appliedscientific.ai).
+> Inference is available at
+> [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
+> Researchers with benchmarking-study questions can contact the
+> corresponding author (Lukas@appliedscientific.ai).
 
 ## What's in the box
 
@@ -118,9 +118,8 @@ table (CSV / Markdown / JSON) where applicable:
 The paper's *Availability of data and materials* section deposits only
 data; inference and code are available elsewhere.
 
-- **Model weights** are not deposited here. Inference is via a free
-  academic API at the journal version of the manuscript; contact the
-  corresponding author for earlier access.
+- **Model weights** are not deposited here. Inference is served at
+  [platform.appliedscientific.ai/cardiosafe](https://platform.appliedscientific.ai/cardiosafe).
 - **L1000 raw signatures** used to train the expression encoder are
   available from GEO under accessions GSE92742 (Phase I) and GSE70138
   (Phase II).
