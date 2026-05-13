@@ -53,12 +53,18 @@ def parse_args() -> argparse.Namespace:
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    p.add_argument("--split", choices=["tan70", "tan60"], default="tan70")
+    p.add_argument(
+        "--split",
+        default="tan70",
+        help="Split name (file at data/splits/<split>.csv). Default tan70. "
+        "Cutoff is inferred from the prefix: any name starting with 'tan70' "
+        "uses 0.70; any name starting with 'tan60' uses 0.60. Override with --cutoff.",
+    )
     p.add_argument(
         "--cutoff",
         type=float,
         default=None,
-        help="Override the Tanimoto cutoff (default: 0.70 for tan70, 0.60 for tan60).",
+        help="Override the Tanimoto cutoff (default: 0.70 if --split starts with tan70, 0.60 if tan60).",
     )
     p.add_argument(
         "--data-dir",
@@ -126,7 +132,14 @@ def fingerprint_all(smiles: list[str]) -> list:
 def main() -> int:
     args = parse_args()
 
-    cutoff = args.cutoff if args.cutoff is not None else (0.70 if args.split == "tan70" else 0.60)
+    if args.cutoff is not None:
+        cutoff = args.cutoff
+    elif args.split.startswith("tan70"):
+        cutoff = 0.70
+    elif args.split.startswith("tan60"):
+        cutoff = 0.60
+    else:
+        sys.exit(f"cannot infer cutoff for --split={args.split!r}; pass --cutoff explicitly")
     out_path = args.out or (Path.cwd() / f"audit_{args.split}_leaks.csv")
 
     compounds_path = args.data_dir / "compounds" / "compounds.csv"

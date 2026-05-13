@@ -22,9 +22,16 @@ charge neutralization → sanitization → canonical-SMILES regeneration.
 InChI-keys are the 27-character standard InChI-key produced by RDKit's
 `MolToInchiKey`.
 
-## `splits/tan70.csv` and `splits/tan60.csv` — 334,444 × 3 each
+## `splits/` — Tanimoto-controlled splits
 
-The Tanimoto-controlled splits used in the paper.
+Two versions are shipped side-by-side; see `splits/CHANGELOG.md`.
+
+| File | Version | Notes |
+| --- | --- | --- |
+| `splits/tan70.csv`, `splits/tan60.csv` | **v1.0** | The splits as used in the bioRxiv preprint. Carry 12 (tan70) and 15 (tan60) train→val cross-fold edges in the hydroxymethyl-terfenadine cluster — the audit catches them. Retained for reproducibility of the v1.0 numbers. |
+| `splits/tan70_v1_1.csv`, `splits/tan60_v1_1.csv` | **v1.1** | Audit-clean. The 3 HMT analogs of the cardiac-cliff anchors are routed to `val`. Test fold is identical to v1.0. **Use this for any new work.** |
+
+Schema (same for both versions):
 
 | column | dtype | notes |
 | --- | --- | --- |
@@ -32,19 +39,30 @@ The Tanimoto-controlled splits used in the paper.
 | `inchikey` | str | duplicated here so the file is self-contained |
 | `fold` | str | one of `train`, `val`, `test`, or `excluded` |
 
+Construction:
+
 - **tan70** (primary): Morgan radius-2 2048-bit Tanimoto ≥ 0.70 forbids
-  cross-fold edges. Terfenadine and fexofenadine are force-excluded from the
-  `train` fold and routed to `val`.
+  cross-fold edges. Terfenadine and fexofenadine are force-routed to `val`;
+  v1.1 additionally routes the 2 HMT analogs in their ≥-cutoff neighbourhood.
 - **tan60** (stricter): same construction at Tanimoto ≥ 0.60. 1 compound is
   marked `excluded` (no fold could be assigned without violating the
-  cutoff).
+  cutoff). v1.1 additionally routes the 3 HMT analogs to val.
 
 Fold counts:
 
-| split | train | val | test | excluded |
-| --- | --- | --- | --- | --- |
-| tan70 | 241,792 | 46,326 | 46,326 | 0 |
-| tan60 | 306,665 | 13,889 | 13,889 | 1 |
+| version | split | train | val | test | excluded |
+| --- | --- | --- | --- | --- | --- |
+| v1.0 | tan70 | 241,792 | 46,326 | 46,326 | 0 |
+| v1.0 | tan60 | 306,665 | 13,889 | 13,889 | 1 |
+| **v1.1** | tan70 | 241,790 | 46,328 | 46,326 | 0 |
+| **v1.1** | tan60 | 306,662 | 13,892 | 13,889 | 1 |
+
+To verify a split is audit-clean:
+
+```bash
+python scripts/audit_tanimoto_leak.py --split tan70_v1_1
+python scripts/audit_tanimoto_leak.py --split tan60_v1_1
+```
 
 ## `labels/labels_v1.csv` — 334,444 × 10
 

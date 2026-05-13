@@ -29,8 +29,8 @@ figure promised in the *Additional files* section of the manuscript.
 | --- | --- |
 | `data/compounds/compounds.csv` | Canonical SMILES + standard InChI-keys for all 334,444 curated compounds |
 | `data/labels/labels_v1.csv` + `MANIFEST.json` | The 8-task curated label matrix and its provenance manifest |
-| `data/splits/tan70.csv` | tan70 split indices (Tanimoto ≥ 0.70 cutoff) — primary benchmark |
-| `data/splits/tan60.csv` | tan60 split indices (Tanimoto ≥ 0.60 cutoff) — stricter secondary benchmark |
+| `data/splits/tan70.csv`, `tan60.csv` | v1.0 splits — Tanimoto ≥ 0.70 / 0.60 cutoffs, as used in the bioRxiv preprint |
+| `data/splits/tan70_v1_1.csv`, `tan60_v1_1.csv` | **v1.1** splits — audit-clean (cardiac-cliff cluster fully force-routed to val). Test fold identical to v1.0. See`data/splits/CHANGELOG.md`. |
 | `data/supplementary/` | Notes S1–S2, Tables S0–S9 (no S4), Figure S1, plus the per-split cliff manifests |
 | `data/comparators/` | CToxPred2 and CardioGenAI predictions on the tan70 test fold — the inputs to the reverse-leak audit and the head-to-head comparison in Tables 3 / 3b / S2 / S3 / Figure 4 |
 | `scripts/audit_tanimoto_leak.py` | Exhaustive O(n_train × n_other) Tanimoto leakage audit — verifies no cross-fold Morgan-r2-2048 edges at or above the cutoff. See[`scripts/README.md`](scripts/README.md). |
@@ -60,17 +60,23 @@ print(len(test_herg_10um))
 
 ## Splits
 
-Two Tanimoto-controlled splits are released, built off Morgan radius-2
-2048-bit Tanimoto with cross-fold edges forbidden:
+Two Tanimoto-controlled splits are released in two versions:
 
-| split | train | val | test | excluded |
-| --- | --- | --- | --- | --- |
-| tan70 (primary)  | 241,792 | 46,326 | 46,326 | 0 |
-| tan60 (stricter) | 306,665 | 13,889 | 13,889 | 1 |
+| version | split | train | val | test | excluded |
+| --- | --- | --- | --- | --- | --- |
+| v1.0 (preprint) | tan70 (primary)  | 241,792 | 46,326 | 46,326 | 0 |
+| v1.0 (preprint) | tan60 (stricter) | 306,665 | 13,889 | 13,889 | 1 |
+| **v1.1** (audit-clean) | tan70 | 241,790 | 46,328 | 46,326 | 0 |
+| **v1.1** (audit-clean) | tan60 | 306,662 | 13,892 | 13,889 | 1 |
 
-Both splits force-exclude terfenadine and fexofenadine from the training
-fold (routed to `val`) so the canonical cardiac activity cliff is
-available as a held-out case study.
+Both versions force-route terfenadine and fexofenadine to `val` so the
+canonical cardiac activity cliff is available as a held-out case study.
+v1.1 additionally force-routes 2-3 hydroxymethyl-terfenadine analogs in
+the same cluster (caught by `scripts/audit_tanimoto_leak.py`); test fold
+is identical between versions. Use v1.1 for new work; v1.0 is retained
+so the bioRxiv preprint numbers stay reproducible.See
+See
+
 
 ## Labels
 
