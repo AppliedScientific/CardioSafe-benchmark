@@ -44,6 +44,26 @@ _ensure_clone(MOLGPKA_REPO, MOLGPKA_DIR)
 os.environ["MOLGPKA_SRC"] = str(MOLGPKA_DIR / "src")
 sys.path.insert(0, str(CARDIOSAFE_DIR))
 
+
+def _patch_molgpka_smarts_path() -> None:
+    """MolGpKa's utils/ionization_group.py computes `root = abspath(dirname(__file__))`
+    at module load. On HF Spaces, __file__ resolves cwd-relative for sys.path
+    imports, so `root` and `smarts_file` end up rooted at `/app/utils/` (which
+    doesn't exist) and every pKa prediction silently falls back to sentinel
+    values. We force-set them to the absolute MolGpKa path after the module
+    loads. `get_ionization_aid` reads `smarts_file` from the module global on
+    every call, so the patch sticks."""
+    import inference.featurize as _fz  # noqa
+    _fz._setup_molgpka()  # triggers utils.* imports under MolGpKa/src
+    import utils.ionization_group as _uig
+    correct_root = str((MOLGPKA_DIR / "src" / "utils").resolve())
+    _uig.root = correct_root
+    _uig.smarts_file = str(Path(correct_root) / "smarts_pattern.tsv")
+    print(f"  patched MolGpKa smarts_file -> {_uig.smarts_file}")
+
+
+_patch_molgpka_smarts_path()
+
 # ---------------------------------------------------------------------------
 # Heavy imports (after sys.path is set)
 # ---------------------------------------------------------------------------
@@ -122,7 +142,7 @@ COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC"""
 INTRO_MD = """# CardioSafe — cardiac ion-channel safety predictions
 
 Paste SMILES below (one per line, up to 50) and get predictions for the four
-CiPA channels: **hERG, Nav1.5, Cav1.2, IKs** — blocker classification output (CO; sigmoid in [0, 1], not a calibrated probability — the underlying classes are heavily imbalanced) plus pIC50 (where applicable).
+CiPA channels: **hERG, Nav1.5, Cav1.2, IKs** — blocker classification output (CO; sigmoid in [0, 1], not a calibrated probability — the underlying classes are heavily imbalanced), plus pIC50 for hERG / Nav1.5 / Cav1.2 (IKs has no regression head — n = 115 labelled compounds).
 
 This is the paper-snapshot ensemble from
 [Jovanović et al. 2026 (bioRxiv)](https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1).
@@ -134,8 +154,11 @@ The continually-updated production model is at
 
 FOOTER_MD = """---
 
-**v1.1** is the audit-clean retrain (recommended). **v1.0** is the preprint
-ensemble (use only for reproducing paper numbers).
+**v1.1** is the recommended retrain; it differs from v1.0 by 2 force-routed
+analogs in the cardiac-cliff cluster (see
+[Note S3](https://github.com/AppliedScientific/CardioSafe-benchmark/blob/main/data/supplementary/note_s3_v1_1_audit_correction.md)).
+Test fold and headline metrics are unchanged. **v1.0** is the preprint snapshot —
+use it when reproducing paper numbers.
 
 Per-checkpoint normalization, MolGpKa-based pKa descriptors, ChemBERTa-77M-MTR
 embeddings, and a learned L1000 expression encoder are all applied automatically.
@@ -154,7 +177,7 @@ with gr.Blocks(title="CardioSafe", theme=gr.themes.Soft()) as demo:
             version_in = gr.Radio(
                 ["v1.1", "v1.0"],
                 value="v1.1",
-                label="Ensemble (v1.1 audit-clean recommended)",
+                label="Ensemble (v1.1 recommended)",
             )
             btn = gr.Button("Predict", variant="primary")
         with gr.Column(scale=3):

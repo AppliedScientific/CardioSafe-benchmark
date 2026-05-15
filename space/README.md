@@ -24,7 +24,7 @@ Paste SMILES, get predictions for the four CiPA cardiac ion channels:
 | `hERG blocker (10 µM / 1 µM)` | classification output (CO; sigmoid in [0, 1], not a calibrated probability) |
 | `Nav1.5 blocker`, `Cav1.2 blocker`, `IKs blocker` | classification output (CO) |
 
-**v1.1** (audit-clean) is the recommended ensemble. **v1.0** (preprint) is also available for reproduction.
+**v1.1** is the recommended ensemble. It differs from **v1.0** (the preprint snapshot) by 2 force-routed analogs in the cardiac-cliff cluster — see [Note S3](https://github.com/AppliedScientific/CardioSafe-benchmark/blob/main/data/supplementary/note_s3_v1_1_audit_correction.md). Test fold and headline metrics are unchanged; v1.0 is retained for paper reproduction.
 
 This is the **paper-snapshot** model from
 [Jovanović et al. 2026 (bioRxiv)](https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1).
