@@ -1,0 +1,8 @@
+gradio>=5.0
+torch>=2.6
+torch-geometric>=2.6
+transformers>=4.51
+rdkit>=2025.9.6
+numpy>=2.0
+pandas>=2.0
+huggingface_hub>=0.24,<1.0

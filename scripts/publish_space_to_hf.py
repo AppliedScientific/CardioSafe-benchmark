@@ -23,7 +23,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_STAGING = REPO_ROOT / "build" / "hf_space_staging"
+DEFAULT_STAGING = REPO_ROOT / "space"
 REPO_ID = "appliedscientific/cardiosafe"
 SPACE_SDK = "gradio"
 
