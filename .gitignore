@@ -1,3 +1,6 @@
+# Ignore environment variables and secrets
+.env
+
 # macOS
 .DS_Store
 
