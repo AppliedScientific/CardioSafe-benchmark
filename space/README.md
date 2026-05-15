@@ -1,6 +1,6 @@
 ---
 title: CardioSafe
-emoji: ❤️
+emoji: ❤️‍🩹
 colorFrom: red
 colorTo: indigo
 sdk: gradio
