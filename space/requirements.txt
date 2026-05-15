@@ -1,6 +1,8 @@
 gradio>=5.0
-torch>=2.6
-torch-geometric>=2.6
+torch==2.6.0
+--find-links https://data.pyg.org/whl/torch-2.6.0+cpu.html
+torch-scatter
+torch-geometric>=2.5
 transformers>=4.51
 rdkit>=2025.9.6
 numpy>=2.0
