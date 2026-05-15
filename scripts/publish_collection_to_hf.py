@@ -26,6 +26,8 @@ DESCRIPTION = (
     "encoder, audit-clean splits + labels + supplementary, Gradio demo."
 )
 
+GITHUB_LINK = "\n\nSource: https://github.com/AppliedScientific/CardioSafe-benchmark"
+
 ITEMS = [
     {
         "item_id": "appliedscientific/cardiosafe",
@@ -33,7 +35,7 @@ ITEMS = [
         "note": (
             "5-seed v1.0 and v1.1 paper-snapshot ensembles + L1000 expression "
             "encoder. v1.1 (audit-clean retrain) is the recommended ensemble. "
-            "CC-BY-NC-4.0."
+            "CC-BY-NC-4.0." + GITHUB_LINK
         ),
     },
     {
@@ -42,7 +44,7 @@ ITEMS = [
         "note": (
             "334,444 curated compounds × 8 sparse ion-channel labels (hERG / "
             "Nav1.5 / Cav1.2 / IKs) + four Tanimoto-controlled split configs + "
-            "supplementary tables / notes / figure. CC-BY-4.0."
+            "supplementary tables / notes / figure. CC-BY-4.0." + GITHUB_LINK
         ),
     },
     {
@@ -50,7 +52,7 @@ ITEMS = [
         "item_type": "space",
         "note": (
             "Interactive Gradio demo — paste SMILES, get pIC50 + blocker CO "
-            "for the four CiPA channels. Free CPU tier."
+            "for the four CiPA channels. Free CPU tier." + GITHUB_LINK
         ),
     },
 ]
@@ -117,30 +119,33 @@ def main() -> int:
         slug = collection.slug
         print(f"  created: https://huggingface.co/collections/{slug}")
 
+    # Get existing items so we can update notes in place rather than
+    # silently no-op'ing when an item is already present.
+    existing = {}
+    try:
+        col = api.get_collection(collection_slug=slug)
+        for ci in col.items:
+            existing[(ci.item_id, ci.item_type)] = ci.item_object_id
+    except Exception as e:
+        print(f"  warning: get_collection failed: {e!r}")
+
     for it in ITEMS:
-        print(f"Adding {it['item_type']:7s} {it['item_id']}")
-        try:
+        key = (it["item_id"], it["item_type"])
+        if key in existing:
+            print(f"Updating {it['item_type']:7s} {it['item_id']}")
+            api.update_collection_item(
+                collection_slug=slug,
+                item_object_id=existing[key],
+                note=it["note"],
+            )
+        else:
+            print(f"Adding   {it['item_type']:7s} {it['item_id']}")
             api.add_collection_item(
                 collection_slug=slug,
                 item_id=it["item_id"],
                 item_type=it["item_type"],
                 note=it["note"],
-                exists_ok=True,
             )
-        except TypeError:
-            # Older huggingface_hub versions don't accept exists_ok
-            try:
-                api.add_collection_item(
-                    collection_slug=slug,
-                    item_id=it["item_id"],
-                    item_type=it["item_type"],
-                    note=it["note"],
-                )
-            except Exception as e:
-                if "already" in str(e).lower() or "exists" in str(e).lower():
-                    print(f"  already present, skipping")
-                else:
-                    raise
 
     print(f"\nDone. https://huggingface.co/collections/{slug}")
     return 0
