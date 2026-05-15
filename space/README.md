@@ -21,8 +21,8 @@ Paste SMILES, get predictions for the four CiPA cardiac ion channels:
 | Head | Output |
 | --- | --- |
 | `hERG pIC50`, `Nav1.5 pIC50`, `Cav1.2 pIC50` | raw regression (un-z-scored) |
-| `hERG blocker (10 µM / 1 µM)` | probability |
-| `Nav1.5 blocker`, `Cav1.2 blocker`, `IKs blocker` | probability |
+| `hERG blocker (10 µM / 1 µM)` | classification output (CO; sigmoid in [0, 1], not a calibrated probability) |
+| `Nav1.5 blocker`, `Cav1.2 blocker`, `IKs blocker` | classification output (CO) |
 
 **v1.1** (audit-clean) is the recommended ensemble. **v1.0** (preprint) is also available for reproduction.
 

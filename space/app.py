@@ -26,8 +26,12 @@ MOLGPKA_DIR = WORK / "MolGpKa"
 
 
 def _ensure_clone(url: str, dest: Path) -> None:
+    """Clone the repo, or fast-forward an existing clone to origin/HEAD so the
+    Space picks up upstream fixes without a full container rebuild."""
     if dest.exists() and (dest / ".git").exists():
-        print(f"  [skip] {dest} already cloned")
+        print(f"  pulling {dest}")
+        subprocess.run(["git", "-C", str(dest), "fetch", "--depth", "1", "origin"], check=False)
+        subprocess.run(["git", "-C", str(dest), "reset", "--hard", "origin/HEAD"], check=False)
         return
     dest.parent.mkdir(parents=True, exist_ok=True)
     print(f"  cloning {url} -> {dest}")
@@ -58,13 +62,13 @@ MAX_SMILES = 50
 
 HEAD_LABELS = {
     "herg_pchembl": "hERG pIC50",
-    "herg_blocker_10um": "hERG blocker P (10 µM)",
-    "herg_blocker_1um": "hERG blocker P (1 µM)",
+    "herg_blocker_10um": "hERG blocker CO (10 µM)",
+    "herg_blocker_1um": "hERG blocker CO (1 µM)",
     "nav15_pchembl": "Nav1.5 pIC50",
-    "nav15_blocker": "Nav1.5 blocker P",
+    "nav15_blocker": "Nav1.5 blocker CO",
     "cav12_pchembl": "Cav1.2 pIC50",
-    "cav12_blocker": "Cav1.2 blocker P",
-    "iks_blocker": "IKs blocker P",
+    "cav12_blocker": "Cav1.2 blocker CO",
+    "iks_blocker": "IKs blocker CO",
 }
 
 # ---------------------------------------------------------------------------
@@ -118,7 +122,7 @@ COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC"""
 INTRO_MD = """# CardioSafe — cardiac ion-channel safety predictions
 
 Paste SMILES below (one per line, up to 50) and get predictions for the four
-CiPA channels: **hERG, Nav1.5, Cav1.2, IKs** — blocker probability + pIC50 (where applicable).
+CiPA channels: **hERG, Nav1.5, Cav1.2, IKs** — blocker classification output (CO; sigmoid in [0, 1], not a calibrated probability — the underlying classes are heavily imbalanced) plus pIC50 (where applicable).
 
 This is the paper-snapshot ensemble from
 [Jovanović et al. 2026 (bioRxiv)](https://www.biorxiv.org/content/10.64898/2026.05.06.723181v1).

@@ -195,7 +195,15 @@ def _derive_logd_and_fractions(clogp: float, pka_acidic: float, pka_basic: float
 
 
 def _gasteiger_stats(mol: Chem.Mol) -> tuple[float, float, float, float, float]:
-    """Returns (mean, max, min, std, max_positive_n). max_positive_n = 0.0 if no N."""
+    """Returns (mean, max, min, std, max_positive_n_charge).
+
+    max_positive_n_charge is the largest *positive* Gasteiger partial charge on
+    any N atom (0.0 if none are positive, e.g. neutral amines where the partial
+    charge on N is typically negative). Filtering for positivity matches the
+    training-time featurizer; an earlier version of this function returned the
+    max over all N charges, which produced ~0.3 pIC50 drift on neutral-amine
+    drugs like terfenadine vs the paper's case-study values.
+    """
     AllChem.ComputeGasteigerCharges(mol)
     charges = np.array(
         [float(a.GetDoubleProp("_GasteigerCharge")) for a in mol.GetAtoms()],
@@ -204,12 +212,14 @@ def _gasteiger_stats(mol: Chem.Mol) -> tuple[float, float, float, float, float]:
     charges = np.where(np.isfinite(charges), charges, 0.0)
     if len(charges) == 0:
         return 0.0, 0.0, 0.0, 0.0, 0.0
-    n_charges = [
-        float(a.GetDoubleProp("_GasteigerCharge"))
-        for a in mol.GetAtoms() if a.GetSymbol() == "N"
+    positive_n_charges = [
+        c for c in (
+            float(a.GetDoubleProp("_GasteigerCharge"))
+            for a in mol.GetAtoms() if a.GetSymbol() == "N"
+        )
+        if np.isfinite(c) and c > 0.0
     ]
-    n_charges = [c if np.isfinite(c) else 0.0 for c in n_charges]
-    max_pos_n = max(n_charges) if n_charges else 0.0
+    max_pos_n = max(positive_n_charges) if positive_n_charges else 0.0
     return (
         float(charges.mean()),
         float(charges.max()),
