@@ -39,10 +39,28 @@ directory:
 ```bash
 git clone https://github.com/Xundrug/MolGpKa.git ~/MolGpKa
 export MOLGPKA_SRC=~/MolGpKa/src
+pip install torch-scatter -f https://data.pyg.org/whl/torch-$(python -c 'import torch;print(torch.__version__)').html
 ```
 
 The 2 GCN weight files (`models/weight_acid.pth`, `models/weight_base.pth`)
 ship with the MolGpKa repo — no further setup needed.
+
+MolGpKa imports `torch_scatter`, which is not on PyPI for every platform and
+must match your installed torch build; the wheel index above resolves it.
+
+You do **not** need to run from MolGpKa's directory. MolGpKa resolves its
+`smarts_pattern.tsv` relative to the current working directory, so
+`featurize.py` rebinds that path absolutely at setup. If site detection fails
+for any other reason the pipeline emits a `RuntimeWarning` rather than quietly
+returning sentinel pKa values — treat that warning as a failed run, not a
+cosmetic detail, since it degrades every prediction.
+
+To confirm pKa is live before trusting a run:
+
+```bash
+python -c "from inference.featurize import _predict_pka; print(_predict_pka('CC(C)(C)c1ccc(cc1)C(O)CCCN2CCC(CC2)C(O)(c3ccccc3)c4ccccc4'))"
+# (13.25, 9.45) — terfenadine. (14.0, 0.0) means MolGpKa is NOT working.
+```
 
 ## Quickstart
 

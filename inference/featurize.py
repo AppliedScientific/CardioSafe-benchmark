@@ -33,6 +33,7 @@ from __future__ import annotations
 
 import os
 import sys
+import warnings
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -111,9 +112,23 @@ def _setup_molgpka():
     if str(molgpka_root) not in sys.path:
         sys.path.insert(0, str(molgpka_root))
 
+    from utils import ionization_group  # type: ignore
     from utils.descriptor import mol2vec  # type: ignore
     from utils.ionization_group import get_ionization_aid  # type: ignore
     from utils.net import GCNNet  # type: ignore
+
+    # MolGpKa resolves smarts_pattern.tsv against os.path.abspath(""), i.e. the
+    # current working directory, so get_ionization_aid raises FileNotFoundError
+    # whenever inference runs from anywhere but $MOLGPKA_SRC. Rebind the module
+    # global to an absolute path instead of requiring callers to chdir.
+    smarts_file = molgpka_root / "utils" / "smarts_pattern.tsv"
+    if not smarts_file.exists():
+        raise RuntimeError(
+            f"MolGpKa SMARTS patterns not found at {smarts_file}. "
+            "Ensure you cloned the full MolGpKa repo (src/ + models/)."
+        )
+    ionization_group.root = str(smarts_file.parent)
+    ionization_group.smarts_file = str(smarts_file)
 
     device = torch.device("cpu")
     model_acid = GCNNet().to(device)
@@ -125,6 +140,35 @@ def _setup_molgpka():
 
     _pka_models = (model_acid, model_base, mol2vec, get_ionization_aid, device)
     return _pka_models
+
+
+_pka_setup_warned = False
+
+
+def _ionization_aids(get_ionization_aid, mol_h, kind: str) -> list:
+    """Site detection for one polarity, warning once if MolGpKa itself is broken.
+
+    A per-molecule miss is normal and returns []. An environment fault (missing
+    SMARTS table, unimportable dependency) also returns [], which silently turns
+    all 7 pKa-derived descriptors into sentinels for every compound and shifts
+    predictions without any error. Warn once so a degraded run is visible.
+    """
+    global _pka_setup_warned
+    try:
+        return get_ionization_aid(mol_h, acid_or_base=kind)
+    except Exception as exc:
+        if not _pka_setup_warned:
+            _pka_setup_warned = True
+            warnings.warn(
+                f"MolGpKa ionization-site detection failed ({type(exc).__name__}: {exc}). "
+                "All 7 pKa-derived descriptors (pka_acidic, pka_basic, logd_7_4, "
+                "frac_cation/anion/zwitterion/neutral) are falling back to sentinels, "
+                "which measurably degrades predictions. Check the MolGpKa install and "
+                "MOLGPKA_SRC; see inference/README.md.",
+                RuntimeWarning,
+                stacklevel=2,
+            )
+        return []
 
 
 def _predict_pka(smiles: str) -> tuple[float, float]:
@@ -151,14 +195,8 @@ def _predict_pka(smiles: str) -> tuple[float, float]:
         with torch.no_grad():
             return float(model(data).cpu().numpy()[0][0])
 
-    try:
-        acid_aids = get_ionization_aid(mol_h, acid_or_base="acid")
-    except Exception:
-        acid_aids = []
-    try:
-        base_aids = get_ionization_aid(mol_h, acid_or_base="base")
-    except Exception:
-        base_aids = []
+    acid_aids = _ionization_aids(get_ionization_aid, mol_h, "acid")
+    base_aids = _ionization_aids(get_ionization_aid, mol_h, "base")
 
     acid_pkas = []
     for aid in acid_aids:
