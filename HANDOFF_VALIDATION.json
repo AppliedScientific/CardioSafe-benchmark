@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "date": "2026-09-10",
+  "architecture": "Chemical branches + final MTR first token384 + pretrained predictions199; concat; eight heads",
+  "tests": {
+    "command": "python -m pytest -q tests/test_revision_*.py tests/test_mtr_predictions.py tests/test_fusion_objectives.py tests/test_readout_contract.py",
+    "passed": 39,
+    "skipped": 1,
+    "skip_reason": "Optional historical v2 label CSV is not published on this code branch or included in the two companion ZIPs.",
+    "with_separate_local_v2_and_v3_labels": "40 tests passed before removing the historical data from the code-only handoff."
+  },
+  "inference": {
+    "command": "python -m scripts.verify_revision_release_inference",
+    "passed_folds": 4,
+    "splits": [
+      "tan70_v1_1",
+      "tan60_v1_1"
+    ],
+    "folds": [
+      "val",
+      "test"
+    ],
+    "data": "Used retained final checkpoints and feature caches; bulk features are not in Git or the companion ZIPs."
+  },
+  "limitations": [
+    "Independent randomized-label real-label ranking remains unresolved; baseline matrix paused.",
+    "Original training provenance and exact source hashes are in companion archives; this branch is the current reviewed source.",
+    "No validated new raw-SMILES service or published manuscript update."
+  ]
+}

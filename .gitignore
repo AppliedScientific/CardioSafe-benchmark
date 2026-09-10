@@ -56,3 +56,28 @@ data/weights/
 # Local logs
 *.log
 /tmp/
+
+# Phase-4 experiment artifacts stay on the persistent EC2 box and local disk.
+runs_phase4*/
+# Phase-5 representation and token experiments; retain locally, do not commit weights.
+runs_phase5*/
+
+# Pinned alternative encoder assets (reproducible from manifests).
+/assets/molformer_361063/
+
+/assets/molclr_3d3bc1/
+
+# Alternative encoder experiments remain local.
+runs_phase6*/
+
+# Local paper-revision checkpoints and prediction caches; reports retain hashes.
+/runs_revision*/
+/assets/revision_comparators/
+
+# Companion archives are supplied separately, not committed on this code branch.
+/reports/paper_revision/
+/data/curation/
+/data/labels/labels_v3.csv
+/data/labels/labels_revision_ic50.csv
+/data/labels/MANIFEST_v3.json
+/runs_phase*/

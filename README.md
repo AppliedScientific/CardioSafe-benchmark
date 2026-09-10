@@ -1,3 +1,5 @@
+> **Paper revision branch:** start with [LUKAS_HANDOFF.md](LUKAS_HANDOFF.md) for the locked eight-output architecture, companion archives and current evidence limits. The original release documentation below describes the historical model.
+
 # CardioSafe-benchmark
 
 [![License: MIT + CC-BY-4.0 + CC-BY-NC-4.0](https://img.shields.io/badge/license-MIT_%2B_CC--BY--4.0_%2B_CC--BY--NC--4.0-blue.svg)](LICENSE)

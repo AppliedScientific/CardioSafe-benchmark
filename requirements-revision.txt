@@ -1,0 +1,15 @@
+# Core local revision environment; Python 3.13 was used for the handoff checks.
+# Install an appropriate PyTorch wheel for your CPU/CUDA platform if needed.
+torch==2.10.0
+torch-geometric==2.7.0
+transformers==5.3.0
+numpy==2.4.3
+scipy==1.17.1
+scikit-learn==1.8.0
+pandas==3.0.1
+rdkit==2025.9.6
+matplotlib==3.10.8
+Pillow==12.1.1
+safetensors==0.7.0
+huggingface-hub==1.7.1
+pytest==9.0.2
