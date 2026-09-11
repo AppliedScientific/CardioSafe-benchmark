@@ -23,8 +23,23 @@
     "data": "Used retained final checkpoints and feature caches; bulk features are not in Git or the companion ZIPs."
   },
   "limitations": [
-    "Independent randomized-label real-label ranking remains unresolved; baseline matrix paused.",
+    "Independent randomized-label real-label ranking remains unresolved; baseline matrix completed after explicit author authorization; cause unresolved.",
     "Original training provenance and exact source hashes are in companion archives; this branch is the current reviewed source.",
     "No validated new raw-SMILES service or published manuscript update."
-  ]
+  ],
+  "baseline_addendum": {
+    "date": "2026-09-11",
+    "fits": 160,
+    "checkpoint_fold_replays": 320,
+    "ensemble_checks": 64,
+    "reviewed_figures": 6,
+    "manifest": "baseline_addendum_manifest_2026-09-11_004644.json",
+    "code_update_checks": {
+      "date": "2026-09-11",
+      "tests_passed": 39,
+      "tests_skipped": 1,
+      "skip_reason": "Optional historical curation labels absent from the code-only handoff",
+      "updated_modules_imported": 7
+    }
+  }
 }

@@ -39,6 +39,9 @@ def main():
         if not ic50_path.exists():missing.append(str(ic50_path))
         if missing and not a.available_only:raise FileNotFoundError('Required baseline outputs missing: '+', '.join(missing))
         table=summarize(arms,split,'test','final');pd.DataFrame(table).to_csv(outputs/f'phase3_baselines_{split}.csv',index=False)
+        if 'finetune' in arms and 'frozen_matched' in arms:
+            matched=summarize({name:arms[name] for name in ['frozen_matched','finetune']},split,'test','frozen_matched')
+            pd.DataFrame(matched).to_csv(outputs/f'phase3_adaptation_matched_{split}.csv',index=False)
         for root in arms.values():path=root/'ensemble_test_revision.npz';hashes[str(path)]=sha(path)
         if ic50_path.exists():
             strict=np.load(ic50_path);np.testing.assert_array_equal(strict['idx'],final['idx']);hashes[str(ic50_path)]=sha(ic50_path);rows=[]
@@ -50,6 +53,7 @@ def main():
     (outputs/'phase3_baseline_protocol.json').write_text(json.dumps(dict(input_sha256=hashes,missing_outputs=missing,complete=not missing,bootstrap=1000,seed=20260428,
         comparison='Model minus final; higher classification metrics/correlations are better; lower errors are better',
         single_channel='Four channel models, not one shared multitask model',
+        adaptation='Fine-tuned versus frozen_matched uses direct paired differences with frozen_matched as reference, matching the neural batching protocol; separate from comparisons against locked final.',
         ic50='Both models evaluated against the SAME chosen target matrix on the SAME molecules; v3 and strict IC50 reference targets reported as separate cohorts. Do not compare metric values across reference cohorts as a model delta.',
         partial_reporting=a.available_only),indent=2))
 

@@ -1,6 +1,7 @@
 # CardioSafe revision: code companion for Lukas
 
-This branch accompanies Mihailo's two ZIP archives and `delivery_manifest.json`.
+This branch accompanies Mihailo's two original ZIP archives and `delivery_manifest.json`,
+plus the completed baseline addendum ZIP and its separate JSON manifest.
 It contains the model, training, feature extraction, analysis and plotting code.
 The large data, checkpoints and paper materials come from the archives.
 
@@ -12,8 +13,10 @@ attention in this final model. Research attention modules remain dependencies of
 shared experiment infrastructure; their presence does not change this contract.
 
 **Scientific status:** five final seeds on each of tan70/tan60 are complete.
-The reviewer baseline matrix is paused: whole-row randomized-label ensembles
-retain real hERG ranking (AUROC 0.5667 / 0.6236). Its cause remains unresolved.
+All 160 additional reviewer-baseline fits are complete: 320 checkpoint/fold replays
+and 64 ensemble checks passed. Both compute instances are stopped with reusable
+features retained. The author authorized proceeding despite whole-row randomized-label
+ensembles retaining real hERG ranking (AUROC 0.5667 / 0.6236); its cause remains unresolved.
 IKs has only one TEST positive per split. The paper material is a handback draft,
 not a submission-ready revision or proof of branch superiority.
 
@@ -36,7 +39,11 @@ cd CardioSafe-benchmark
 
 ## Import the companion artifacts
 
-Place the two ZIPs and `delivery_manifest.json` together outside the repository.
+Place the two original ZIPs, `delivery_manifest.json`, the baseline addendum ZIP,
+and `baseline_addendum_manifest_2026-09-11_004644.json` together outside the repository.
+The addendum filename is `cardiosafe_baseline_addendum_2026-09-11_004644.zip`.
+Its SHA-256 is in the separate manifest's `archive.sha256` field; the original
+manifest uses an `archives` list. The original ZIPs are unchanged.
 Check each ZIP's SHA-256 against its entry in the JSON manifest (`shasum -a 256`
 on macOS, `sha256sum` on Linux). The archives also contain per-member hash manifests.
 
@@ -48,10 +55,15 @@ unzip -o /path/to/handback/cardiosafe_paper_completed_material_2026-09-10.zip \
   'reports/paper_revision/*' 'data/*' 'runs_revision*/*'
 unzip -o /path/to/handback/cardiosafe_final_v3_models_2026-09-10.zip \
   'reports/paper_revision/*' 'data/*' 'runs_revision_v3/*'
+unzip -o /path/to/handback/cardiosafe_baseline_addendum_2026-09-11_004644.zip \
+  'reports/paper_revision/*' 'runs_revision*/*'
 ```
 
-Start with `reports/paper_revision/DELIVERY_STATUS.md`, `README.md`,
-`requirements_matrix.md`, and `notes/lukas_direct_answers.md`. The Methods,
+Extract the addendum last: it supersedes the original archive's paused-baseline
+status. Start with `reports/paper_revision/BASELINE_ADDENDUM.md`,
+`notes/baseline_final_results.md`, `notes/baseline_per_head_handback.md`,
+`notes/reviewer_baseline_response.md`, and `requirements_matrix.md`.
+The original `DELIVERY_STATUS.md` and older paused/running notes are historical. The Methods,
 reviewer responses, captions, tables and finished figures are there. Historical
 material in the original root README and `data/supplementary` must not be mistaken
 for the revised model/results. Use only `labels_v3.csv` for this revision. The
@@ -79,17 +91,22 @@ The curation-difference integration test additionally needs the historical
 optional audit inputs are absent. It passed locally with both versioned datasets.
 The other revision tests do not require that historical CSV.
 
-UMAP plots use `umap-learn==0.5.12`; prepared tree baselines use
+UMAP plots use `umap-learn==0.5.12`; tree baselines use
 `xgboost==3.2.0`. Install these optional packages when using those modules.
 Mordred and external comparator inference have additional pinned
 asset/runtime contracts in the supplied report. Some source-reconstruction audits
 expect the sibling `asi` repository and its original source caches. The completed
 curation evidence and source snapshots are already supplied in the paper archive.
+RF training used scikit-learn 1.9.0; sampled saved-model replays passed with the
+local 1.8.0 environment. Prefer the original training version for pickle loading.
+The analysis ZIP includes all baseline prediction arrays and provenance, but not
+baseline comparison weights or bulk features. Checkpoint replay therefore needs
+the separately retained weights/caches; metric regeneration does not.
 Cloud launch/watch/shutdown drivers are not part of this handoff workflow.
 
 ## Use saved results without rebuilding features
 
-The archives contain final and control score arrays, so metrics and ROC/PR plots
+The archives contain final, control and baseline score arrays, so metrics and ROC/PR plots
 can be regenerated without the multi-gigabyte feature cache:
 
 ```bash
@@ -100,7 +117,20 @@ python -m scripts.revision_metrics \
 python -m scripts.draw_revision_performance
 ```
 
-Replace tan70 with tan60 for the second metric table. This uses 1,000 molecule
+To regenerate the complete baseline tables and six figures after importing all
+three ZIPs:
+
+```bash
+python -m scripts.revision_baseline_metrics
+python -m scripts.draw_revision_baseline_results
+```
+
+The baseline metric command also writes direct paired fine-tuned versus matched
+frozen-control comparisons, separately from comparisons against the locked final.
+`write_revision_baseline_handback` additionally requires the included complete
+checkpoint-audit JSON. It uses the full table matrix, not a partial run.
+
+Replace tan70 with tan60 for the second final-model metric table. This uses 1,000 molecule
 bootstrap draws; intervals condition on the already fitted ensemble.
 
 ## Model inference and future retraining
@@ -129,8 +159,8 @@ python -m scripts.verify_revision_release_inference
 ```
 
 For reference, the explicit final training recipe for one seed is below. Additional
-baseline experiments remain paused pending the control investigation; this branch
-push does not authorize a new training campaign.
+baseline experiments are complete. This command is for deliberate reproduction,
+not an instruction to start another training campaign.
 
 ```bash
 TORCH_THREADS=1 python -m train.train_revision_baselines \

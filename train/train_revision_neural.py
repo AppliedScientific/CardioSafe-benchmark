@@ -127,4 +127,6 @@ def main():
         best_epoch=best_epoch,val_wrmse=best,smoke=provenance['smoke']),indent=2))
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    from train.revision_gpu_slots import reserve_finetune_slot
+    with reserve_finetune_slot():main()
