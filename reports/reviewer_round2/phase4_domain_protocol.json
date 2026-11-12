@@ -1,0 +1,13 @@
+{
+  "bootstrap": 1000,
+  "seed": 20260428,
+  "input_sha256": {
+    "runs_revision_v3/final/tan70_v1_1/ensemble_test_revision.npz": "b654eb112955f5510b1ac586a8345e2acfe9a42e25139ef01e3c008a27121b39",
+    "data/features/test_train_tanimoto/nearest_train.npz": "cac6173c866ce4ef241a828a7aabb1919aa8d613628590b4c8095c203c5cc918",
+    "runs_revision_v3/final/tan60_v1_1/ensemble_test_revision.npz": "a4be51d904ac075f8ea3ae68a9305226e30580719f19c6817b22fdfe46798f1c",
+    "data/features/revision_tan60_tanimoto/nearest_train.npz": "81c39cd5159373da523f2d5ea136835efe2644c5b6582ded18da7eac8386f266"
+  },
+  "similarity": "Exact max Morgan2048/radius2 Tanimoto to global TRAIN; no comparator-pool substitution",
+  "potency": "Observed assay potency, not predicted potency; 5<=pChEMBL<=6 corresponds to1\u201310 micromolar",
+  "caveat": "Conditional exploratory subgroup analyses; no multiplicity correction; n<5 not scored"
+}

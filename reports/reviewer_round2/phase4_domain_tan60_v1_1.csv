@@ -1,0 +1,269 @@
+model,head,split,fold,cohort,n,prevalence,metric,estimate,ci_lower,ci_upper,bootstrap_valid,comparison,uncertainty_note
+final,herg_pchembl,tan60_v1_1,test,similarity_0.0_0.3,78,,rmse,0.6158070728309002,0.39218602188245,0.8466457526579297,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.0_0.3,78,,mae,0.3912402406716958,0.29577841571508307,0.5050761887278312,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.0_0.3,78,,pearson_r,0.2086185693090018,0.047341560286125135,0.34714258328217656,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.0_0.3,78,,spearman_rho,0.2754092220354407,0.06524340223212334,0.45999259023935746,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.3_0.5,674,,rmse,0.6609486734411546,0.5926101607186988,0.7243591208407957,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.3_0.5,674,,mae,0.4804339352276629,0.44527750757221657,0.5165257365218963,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.3_0.5,674,,pearson_r,0.4667047549106267,0.38037001595788666,0.5408471824252723,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.3_0.5,674,,spearman_rho,0.4474068511187786,0.38453714767960157,0.5080187766160812,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.5_0.7,447,,rmse,0.7169736216589424,0.6421697724158286,0.8004236978155249,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.5_0.7,447,,mae,0.5115550521769513,0.4683265240867132,0.5601474015171362,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.5_0.7,447,,pearson_r,0.5330537445640826,0.44103587013692547,0.6157665820443247,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,similarity_0.5_0.7,447,,spearman_rho,0.5279212879261405,0.4476885306984605,0.5947902744534451,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.0_0.3,282,0.05319149047136307,auc_roc,0.7500624219725344,0.6005018587360594,0.8830324074074073,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.0_0.3,282,0.05319149047136307,mcc,0.27696367236516667,0.0807831719571806,0.44696508206729374,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.0_0.3,282,0.05319149047136307,sensitivity,0.4666666666666667,0.19968750000000002,0.7272727272727273,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.0_0.3,282,0.05319149047136307,specificity,0.9138576779026217,0.8796992481203008,0.9444444444444444,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.0_0.3,282,0.05319149047136307,accuracy,0.8900709219858156,0.8546099290780141,0.9219858156028369,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.0_0.3,282,0.05319149047136307,auprc,0.17200301475281374,0.08050247139335735,0.34470788905335337,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.3_0.5,4651,0.06428725272417068,auc_roc,0.8948432581644697,0.8746524106518687,0.9137848655366526,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.3_0.5,4651,0.06428725272417068,mcc,0.44222518187381604,0.39711602558984105,0.48382115699028855,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.3_0.5,4651,0.06428725272417068,sensitivity,0.6421404682274248,0.5857593619972261,0.6961163906945331,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.3_0.5,4651,0.06428725272417068,specificity,0.9250919117647058,0.9168772556907121,0.9325072743206051,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.3_0.5,4651,0.06428725272417068,accuracy,0.9069017415609546,0.8991614706514728,0.914647387658568,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.3_0.5,4651,0.06428725272417068,auprc,0.5036220445409684,0.4441728211509426,0.5613688184064778,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.5_0.7,8896,0.04631295055150986,auc_roc,0.913683037859958,0.8988201211290121,0.9269104479975191,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.5_0.7,8896,0.04631295055150986,mcc,0.43607426592935217,0.40159166397930424,0.46990698026644273,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.5_0.7,8896,0.04631295055150986,sensitivity,0.6747572815533981,0.6307451923076923,0.7174475308063095,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.5_0.7,8896,0.04631295055150986,specificity,0.9332861857614333,0.9281998543001452,0.9385167236942874,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.5_0.7,8896,0.04631295055150986,accuracy,0.9213129496402878,0.9161420863309353,0.92693345323741,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,similarity_0.5_0.7,8896,0.04631295055150986,auprc,0.49675444340082076,0.44644686830657737,0.5483543678067242,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,specificity,0.8489795918367347,0.8039795918367347,0.889795918367347,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,accuracy,0.8489795918367347,0.8039795918367347,0.889795918367347,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_10um,245,,rmse,0.8816164124998398,0.7567604551942182,1.004675081938996,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_10um,245,,mae,0.6648997209510025,0.5948633163072625,0.737967306801251,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_10um,245,,pearson_r,0.2206969516745882,0.08533443071274101,0.3696736198349996,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_10um,245,,spearman_rho,0.08110838474978718,-0.04234588565547005,0.21342747707590007,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,specificity,0.661498708010336,0.6072351421188631,0.710594315245478,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,accuracy,0.661498708010336,0.6072351421188631,0.710594315245478,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_10um,387,,rmse,0.4163861680410778,0.3776623708579909,0.45196852506288915,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_10um,387,,mae,0.3263047092644743,0.2996932190518047,0.3523587203149032,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_10um,387,,pearson_r,0.19594712713922194,0.09965888068726345,0.2821046982842654,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_10um,387,,spearman_rho,0.1718187685478005,0.07378128900949063,0.26329738981119144,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_5_6,476,0.6428571343421936,auc_roc,0.7266243752402922,0.6790106022847018,0.7721619946456297,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_5_6,476,0.6428571343421936,mcc,0.3245322028042388,0.23701146877553175,0.4110878295777739,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_5_6,476,0.6428571343421936,sensitivity,0.6830065359477124,0.6301979301973979,0.7340340491002743,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_5_6,476,0.6428571343421936,specificity,0.6529411764705882,0.5789315155358276,0.7229075124025514,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_5_6,476,0.6428571343421936,accuracy,0.6722689075630253,0.6323004201680672,0.7142857142857143,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_5_6,476,0.6428571343421936,auprc,0.8234429323919903,0.7775060857770819,0.8662784211636719,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_10um,476,,rmse,0.5082906938137768,0.47520054596242317,0.5435457579106534,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_10um,476,,mae,0.3958594518549302,0.3679282568082088,0.42488080921794186,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_10um,476,,pearson_r,0.2958115896541424,0.20928010529692898,0.37782024424692684,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_10um,476,,spearman_rho,0.3274962075733512,0.23985362018437667,0.4041677722738837,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,auc_roc,0.76,0.5294117647058824,0.9411764705882353,861,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,mcc,0.1040531963428944,-0.14085904245475275,0.37139012770404195,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,sensitivity,0.74,0.6078431372549019,0.8572142857142856,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,specificity,0.5,0.0,1.0,861,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,accuracy,0.7307692307692307,0.5961538461538461,0.8461538461538461,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,auprc,0.9888329546303416,0.967725192023029,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_10um,52,,rmse,0.9476654528677124,0.8394171120377867,1.0531952768325412,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_10um,52,,mae,0.8378996298863337,0.7211467421971834,0.9564769786137801,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_10um,52,,pearson_r,-0.02979861271927774,-0.3717051328946283,0.2701711685790751,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_10um,52,,spearman_rho,-0.07576603614331855,-0.3970830086490833,0.21805690873250264,1000,absolute,
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_gt6.5,39,0.8974359035491943,auc_roc,0.7428571428571429,0.5405405405405406,0.935436507936508,982,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_gt6.5,39,0.8974359035491943,mcc,0.0900937462695559,-0.17939699356033673,0.503071220355172,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_gt6.5,39,0.8974359035491943,sensitivity,0.8571428571428571,0.7296683046683047,0.9705882352941176,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_gt6.5,39,0.8974359035491943,specificity,0.25,0.0,1.0,982,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_gt6.5,39,0.8974359035491943,accuracy,0.7948717948717948,0.6666666666666666,0.9230769230769231,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_10um,tan60_v1_1,test,pchembl_gt6.5,39,0.8974359035491943,auprc,0.9673252112622025,0.9200159698505519,0.9993252361673414,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_10um,39,,rmse,1.8016908240861904,1.5234980010920265,2.0701605483800085,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_10um,39,,mae,1.5849765508602827,1.3202020143851254,1.8404871607438111,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_10um,39,,pearson_r,0.220048043592545,-0.15227701140577177,0.5322592835214914,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_10um,39,,spearman_rho,0.10589188311803444,-0.23078024701297065,0.40647853582524995,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.0_0.3,276,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.0_0.3,276,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.0_0.3,276,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.0_0.3,276,0.0,specificity,1.0,1.0,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.0_0.3,276,0.0,accuracy,1.0,1.0,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.0_0.3,276,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.3_0.5,4605,0.013680782169103622,auc_roc,0.89848189385838,0.8548042498518843,0.9349619522721573,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.3_0.5,4605,0.013680782169103622,mcc,0.24603117126974383,0.16354394764640448,0.33105488843646114,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.3_0.5,4605,0.013680782169103622,sensitivity,0.36507936507936506,0.24990384615384617,0.48584415584415575,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.3_0.5,4605,0.013680782169103622,specificity,0.9777630999559666,0.9731860757504323,0.9819742582767423,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.3_0.5,4605,0.013680782169103622,accuracy,0.9693811074918567,0.9643811074918567,0.9741639522258414,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.3_0.5,4605,0.013680782169103622,auprc,0.18765405778698888,0.11256041165461748,0.2838929395942453,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.5_0.7,8884,0.009117514826357365,auc_roc,0.9415617290962817,0.9089413842598628,0.9662273584133264,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.5_0.7,8884,0.009117514826357365,mcc,0.37174465711343785,0.2967349205497297,0.4390229935373761,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.5_0.7,8884,0.009117514826357365,sensitivity,0.6049382716049383,0.5,0.7088928636947349,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.5_0.7,8884,0.009117514826357365,specificity,0.9822787686016131,0.9794200665656193,0.9849035615629056,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.5_0.7,8884,0.009117514826357365,accuracy,0.9788383610986042,0.9759089374155785,0.9818775326429536,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,similarity_0.5_0.7,8884,0.009117514826357365,auprc,0.33768643736828075,0.2360736097351551,0.44776203412867904,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,specificity,0.9836734693877551,0.9673469387755103,0.9959183673469387,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,accuracy,0.9836734693877551,0.9673469387755103,0.9959183673469387,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_lt4.5,245,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_1um,245,,rmse,0.8816164124998398,0.7567604551942182,1.004675081938996,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_1um,245,,mae,0.6648997209510025,0.5948633163072625,0.737967306801251,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_1um,245,,pearson_r,0.2206969516745882,0.08533443071274101,0.3696736198349996,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_herg_blocker_1um,245,,spearman_rho,0.08110838474978718,-0.04234588565547005,0.21342747707590007,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,specificity,0.9405684754521964,0.9147286821705426,0.9638242894056848,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,accuracy,0.9405684754521964,0.9147286821705426,0.9638242894056848,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_4.5_5,387,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_1um,387,,rmse,0.4163861680410778,0.3776623708579909,0.45196852506288915,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_1um,387,,mae,0.3263047092644743,0.2996932190518047,0.3523587203149032,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_1um,387,,pearson_r,0.19594712713922194,0.09965888068726345,0.2821046982842654,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_herg_blocker_1um,387,,spearman_rho,0.1718187685478005,0.07378128900949063,0.26329738981119144,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_5_6,476,0.012605042196810246,auc_roc,0.8641843971631206,0.6962832926120591,0.9916842847075406,997,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_5_6,476,0.012605042196810246,mcc,0.19166368099164088,0.05950681312152315,0.2915062939228627,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_5_6,476,0.012605042196810246,sensitivity,0.8333333333333334,0.42571428571428577,1.0,997,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_5_6,476,0.012605042196810246,specificity,0.8276595744680851,0.7936170212765957,0.8598726114649682,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_5_6,476,0.012605042196810246,accuracy,0.8277310924369747,0.7941176470588235,0.8592436974789915,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_5_6,476,0.012605042196810246,auprc,0.27659403858732884,0.02195344470621832,0.6838644688644689,997,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_1um,476,,rmse,0.5082906938137768,0.47520054596242317,0.5435457579106534,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_1um,476,,mae,0.3958594518549302,0.3679282568082088,0.42488080921794186,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_1um,476,,pearson_r,0.2958115896541424,0.20928010529692898,0.37782024424692684,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_herg_blocker_1um,476,,spearman_rho,0.3274962075733512,0.23985362018437667,0.4041677722738837,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,auc_roc,0.79,0.56,0.9803921568627451,861,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,mcc,0.15811388300841897,0.0,0.2684509057772551,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,sensitivity,0.4,0.26,0.5306448111159358,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,specificity,1.0,1.0,1.0,861,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,accuracy,0.4230769230769231,0.28846153846153844,0.5576923076923077,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_6_6.5,52,0.9615384340286255,auprc,0.9902464765187874,0.9691891084423867,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_1um,52,,rmse,0.9476654528677124,0.8394171120377867,1.0531952768325412,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_1um,52,,mae,0.8378996298863337,0.7211467421971834,0.9564769786137801,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_1um,52,,pearson_r,-0.02979861271927774,-0.3717051328946283,0.2701711685790751,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_herg_blocker_1um,52,,spearman_rho,-0.07576603614331855,-0.3970830086490833,0.21805690873250264,1000,absolute,
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_gt6.5,39,0.9743589758872986,auc_roc,0.6842105263157895,0.5263157894736842,0.8157894736842105,636,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_gt6.5,39,0.9743589758872986,mcc,0.21677749238103,0.0,0.3959251908590267,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_gt6.5,39,0.9743589758872986,sensitivity,0.6578947368421053,0.5,0.7948717948717948,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_gt6.5,39,0.9743589758872986,specificity,1.0,1.0,1.0,636,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_gt6.5,39,0.9743589758872986,accuracy,0.6666666666666666,0.5128205128205128,0.7948717948717948,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_blocker_1um,tan60_v1_1,test,pchembl_gt6.5,39,0.9743589758872986,auprc,0.9904714135346238,0.9671170515359893,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_1um,39,,rmse,1.8016908240861904,1.5234980010920265,2.0701605483800085,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_1um,39,,mae,1.5849765508602827,1.3202020143851254,1.8404871607438111,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_1um,39,,pearson_r,0.220048043592545,-0.15227701140577177,0.5322592835214914,1000,absolute,
+final,herg_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_herg_blocker_1um,39,,spearman_rho,0.10589188311803444,-0.23078024701297065,0.40647853582524995,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.0_0.3,2,,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.3_0.5,39,,rmse,0.42053346989095985,0.3098613137270602,0.5225997580547238,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.3_0.5,39,,mae,0.32242452181302583,0.24070775111516318,0.4091029760165092,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.3_0.5,39,,pearson_r,0.7106778744435372,0.5074622425384895,0.8401958320104812,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.3_0.5,39,,spearman_rho,0.7001513126305186,0.44917816179117276,0.840972116790214,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.5_0.7,23,,rmse,0.551830781107428,0.4016076806217787,0.6928550488902264,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.5_0.7,23,,mae,0.42167514303456183,0.28720910393673443,0.5683548657790474,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.5_0.7,23,,pearson_r,0.5319154015512155,0.13913146646118582,0.8093431914365389,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,similarity_0.5_0.7,23,,spearman_rho,0.5430298362270313,0.04775636920461904,0.82414585975885,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.0_0.3,4,0.5,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,nav15_blocker,tan60_v1_1,test,similarity_0.3_0.5,55,0.16363635659217834,auc_roc,0.8840579710144928,0.7156512605042017,0.9840526004728133,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.3_0.5,55,0.16363635659217834,mcc,0.51604684654214,0.18049871809528883,0.7951386657064907,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.3_0.5,55,0.16363635659217834,sensitivity,0.6666666666666666,0.3333333333333333,1.0,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.3_0.5,55,0.16363635659217834,specificity,0.8913043478260869,0.7954545454545454,0.9777777777777777,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.3_0.5,55,0.16363635659217834,accuracy,0.8545454545454545,0.7636363636363637,0.9454545454545454,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.3_0.5,55,0.16363635659217834,auprc,0.6246905599846776,0.29152811077811075,0.9385041592394534,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.5_0.7,27,0.4444444477558136,auc_roc,0.7388888888888889,0.5340719696969697,0.9120879120879121,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.5_0.7,27,0.4444444477558136,mcc,0.48067031949555206,0.122122618841428,0.7790174143548602,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.5_0.7,27,0.4444444477558136,sensitivity,0.75,0.4666666666666667,1.0,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.5_0.7,27,0.4444444477558136,specificity,0.7333333333333333,0.5,0.9411764705882353,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.5_0.7,27,0.4444444477558136,accuracy,0.7407407407407407,0.5555555555555556,0.8888888888888888,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,similarity_0.5_0.7,27,0.4444444477558136,auprc,0.6599358845488877,0.41401556280541785,0.9200592855871444,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_lt4.5,11,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_lt4.5,11,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_lt4.5,11,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_lt4.5,11,0.0,specificity,1.0,1.0,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_lt4.5,11,0.0,accuracy,1.0,1.0,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_lt4.5,11,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_nav15_blocker,11,,rmse,0.4585905129905075,0.3385685236686626,0.5613208066404478,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_nav15_blocker,11,,mae,0.41315421191128815,0.30224270712245593,0.5306450670415704,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_nav15_blocker,11,,pearson_r,0.6348659460144034,0.17751487700365426,0.8762831643009015,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_nav15_blocker,11,,spearman_rho,0.4738053294813334,-0.21531114656940958,0.8868486638113894,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_4.5_5,17,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_4.5_5,17,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_4.5_5,17,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_4.5_5,17,0.0,specificity,0.8823529411764706,0.7058823529411765,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_4.5_5,17,0.0,accuracy,0.8823529411764706,0.7058823529411765,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_blocker,tan60_v1_1,test,pchembl_4.5_5,17,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,nav15_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_nav15_blocker,17,,rmse,0.3050453577187931,0.20133104791881942,0.39928235178325755,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_nav15_blocker,17,,mae,0.23605125090655157,0.15000976885066314,0.3333398559514214,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_nav15_blocker,17,,pearson_r,0.40824676928022596,-0.07286243649745804,0.7233087723881636,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_nav15_blocker,17,,spearman_rho,0.5201824741717032,0.007395283032833321,0.8219058591031922,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_5_6,30,0.6000000238418579,auc_roc,0.7222222222222222,0.5231077219564062,0.90503125,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_5_6,30,0.6000000238418579,mcc,0.3055555555555556,-0.06583578991473558,0.6590820436573076,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_5_6,30,0.6000000238418579,sensitivity,0.7222222222222222,0.5238095238095238,0.909189723320158,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_5_6,30,0.6000000238418579,specificity,0.5833333333333334,0.25,0.8571428571428571,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_5_6,30,0.6000000238418579,accuracy,0.6666666666666666,0.5,0.8333333333333334,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_5_6,30,0.6000000238418579,auprc,0.785606222513388,0.605628011924164,0.949854959988003,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_nav15_blocker,30,,rmse,0.4093199468920163,0.2902252628340883,0.5149834440925954,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_nav15_blocker,30,,mae,0.30824554761250816,0.21984310865402223,0.40509715795516965,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_nav15_blocker,30,,pearson_r,0.37995662988957135,0.06207556412831843,0.7383822187501375,1000,absolute,
+final,nav15_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_nav15_blocker,30,,spearman_rho,0.5043480674689923,0.15012626818007352,0.7751625948390317,1000,absolute,
+final,nav15_blocker,tan60_v1_1,test,pchembl_6_6.5,4,0.75,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,nav15_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_nav15_blocker,4,,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,nav15_blocker,tan60_v1_1,test,pchembl_gt6.5,2,1.0,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,nav15_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_nav15_blocker,2,,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.0_0.3,2,,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.3_0.5,23,,rmse,0.8433027340329847,0.5996475214976987,1.0537150530389123,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.3_0.5,23,,mae,0.6730498956597369,0.46601283239281693,0.8735565543174744,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.3_0.5,23,,pearson_r,0.4082438105764182,-0.21319035396747393,0.7232608691942397,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.3_0.5,23,,spearman_rho,0.24268232146815494,-0.2646038598521236,0.6094114955980846,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.5_0.7,15,,rmse,0.7828805153414453,0.5346900839145574,1.0149832971401487,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.5_0.7,15,,mae,0.650037924448649,0.4343322571118673,0.890887082417806,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.5_0.7,15,,pearson_r,0.8434304165007007,0.34912374810437596,0.9468200883800457,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,similarity_0.5_0.7,15,,spearman_rho,0.65,0.15994248608534323,0.8919389169389169,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.0_0.3,3,0.0,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,cav12_blocker,tan60_v1_1,test,similarity_0.3_0.5,37,0.1621621549129486,auc_roc,0.8333333333333334,0.659453369905956,0.9696969696969697,998,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.3_0.5,37,0.1621621549129486,mcc,0.4341812964543931,0.01091089451179962,0.7733878477190165,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.3_0.5,37,0.1621621549129486,sensitivity,0.6666666666666666,0.2,1.0,998,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.3_0.5,37,0.1621621549129486,specificity,0.8387096774193549,0.7058823529411765,0.9655172413793104,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.3_0.5,37,0.1621621549129486,accuracy,0.8108108108108109,0.6756756756756757,0.918918918918919,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.3_0.5,37,0.1621621549129486,auprc,0.5242063492063492,0.20330357142857142,0.8810267857142856,998,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.5_0.7,19,0.31578946113586426,auc_roc,0.8589743589743589,0.6248611111111111,1.0,999,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.5_0.7,19,0.31578946113586426,mcc,0.4200412794412907,-0.049416621110740085,0.8059127110409877,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.5_0.7,19,0.31578946113586426,sensitivity,0.6666666666666666,0.25,1.0,999,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.5_0.7,19,0.31578946113586426,specificity,0.7692307692307693,0.5,1.0,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.5_0.7,19,0.31578946113586426,accuracy,0.7368421052631579,0.5263157894736842,0.8960526315789462,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,similarity_0.5_0.7,19,0.31578946113586426,auprc,0.8144230769230769,0.5081547619047618,1.0,999,absolute,
+final,cav12_blocker,tan60_v1_1,test,pchembl_lt4.5,14,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_lt4.5,14,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_lt4.5,14,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_lt4.5,14,0.0,specificity,0.7142857142857143,0.42857142857142855,0.9285714285714286,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_lt4.5,14,0.0,accuracy,0.7142857142857143,0.42857142857142855,0.9285714285714286,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_lt4.5,14,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_cav12_blocker,14,,rmse,1.1857385392308424,0.908879376548723,1.4334355780657047,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_cav12_blocker,14,,mae,1.0708463191986084,0.8008126233305249,1.3259625358240945,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_cav12_blocker,14,,pearson_r,0.30189295682166223,-0.1883212274278443,0.742715893120153,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_lt4.5_paired_to_cav12_blocker,14,,spearman_rho,0.32892152803367214,-0.2815826377782162,0.8154210848164577,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,pchembl_4.5_5,10,0.0,auc_roc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_4.5_5,10,0.0,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_4.5_5,10,0.0,sensitivity,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_4.5_5,10,0.0,specificity,0.7,0.4,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_4.5_5,10,0.0,accuracy,0.7,0.4,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_4.5_5,10,0.0,auprc,,,,0,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_cav12_blocker,10,,rmse,0.7258386122815226,0.2961791977807663,1.1004793722581554,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_cav12_blocker,10,,mae,0.5082634449005127,0.23454700231552125,0.8261303746700287,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_cav12_blocker,10,,pearson_r,0.21799312042804622,-0.3987919129986492,0.8942213718673281,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_4.5_5_paired_to_cav12_blocker,10,,spearman_rho,0.45647294162092733,-0.3375019904458599,0.9715188929149614,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,pchembl_5_6,13,0.692307710647583,auc_roc,0.9444444444444444,0.7458333333333333,1.0,991,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_5_6,13,0.692307710647583,mcc,0.5270462766947299,0.22821773229381923,0.8539125638299666,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_5_6,13,0.692307710647583,sensitivity,0.5555555555555556,0.24930555555555559,0.8888888888888888,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_5_6,13,0.692307710647583,specificity,1.0,1.0,1.0,991,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_5_6,13,0.692307710647583,accuracy,0.6923076923076923,0.46153846153846156,0.9230769230769231,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_blocker,tan60_v1_1,test,pchembl_5_6,13,0.692307710647583,auprc,0.9765432098765433,0.890909090909091,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,cav12_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_cav12_blocker,13,,rmse,0.5422637293722012,0.3466430979995669,0.7220980391792955,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_cav12_blocker,13,,mae,0.43939485916724574,0.28830517255342925,0.6110737924392406,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_cav12_blocker,13,,pearson_r,0.5152539723790477,-0.04248347741367257,0.8314520584464794,1000,absolute,
+final,cav12_pchembl,tan60_v1_1,test,pchembl_5_6_paired_to_cav12_blocker,13,,spearman_rho,0.5356278920468934,-0.04495430929606347,0.873102148634302,1000,absolute,
+final,cav12_blocker,tan60_v1_1,test,pchembl_6_6.5,2,1.0,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,cav12_pchembl,tan60_v1_1,test,pchembl_6_6.5_paired_to_cav12_blocker,2,,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,cav12_blocker,tan60_v1_1,test,pchembl_gt6.5,1,1.0,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,cav12_pchembl,tan60_v1_1,test,pchembl_gt6.5_paired_to_cav12_blocker,1,,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,iks_blocker,tan60_v1_1,test,similarity_0.0_0.3,1,0.0,not_scored,,,,0,n<5,Insufficient labelled compounds
+final,iks_blocker,tan60_v1_1,test,similarity_0.3_0.5,8,0.125,auc_roc,0.7142857142857143,0.3333333333333333,1.0,644,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,iks_blocker,tan60_v1_1,test,similarity_0.3_0.5,8,0.125,mcc,0.0,0.0,0.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,iks_blocker,tan60_v1_1,test,similarity_0.3_0.5,8,0.125,sensitivity,0.0,0.0,0.0,644,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,iks_blocker,tan60_v1_1,test,similarity_0.3_0.5,8,0.125,specificity,1.0,1.0,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,iks_blocker,tan60_v1_1,test,similarity_0.3_0.5,8,0.125,accuracy,0.875,0.625,1.0,1000,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,iks_blocker,tan60_v1_1,test,similarity_0.3_0.5,8,0.125,auprc,0.3333333333333333,0.2,1.0,644,absolute,Very small minority class; conditional percentile intervals may be degenerate
+final,iks_blocker,tan60_v1_1,test,similarity_0.5_0.7,1,0.0,not_scored,,,,0,n<5,Insufficient labelled compounds

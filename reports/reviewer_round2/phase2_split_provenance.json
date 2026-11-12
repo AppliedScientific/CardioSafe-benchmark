@@ -1,0 +1,245 @@
+{
+  "compounds": 334444,
+  "source_smiles_exact_order_match": true,
+  "source_smiles_sha256": "cf454a05e422b1893df86add337d7a84e57cc7247454b0df5ff72994f17276bc",
+  "max_sim_loo_sha256": "aafe61ced4aca121e4c2f1df6793716cd7b0a182b9c8eda46a06166f536e57ea",
+  "source_code_sha256": {
+    "build_tan_splits.py": "3bf271bf80d7b7f9d01ae9607628d26f618eea6fddbd7f8dd34564bb1a3329ca",
+    "build_tan_splits_v2.py": "f17d068c2d4e345c3c4ce85d55af6f68aecf8c1ebbf0177f99f01e7e13e114ae",
+    "build_tan_splits_per_head.py": "5b59aa736bd49a0788430066c489d6a2ebc0c1cf3182c38f6a52758db4778bf1"
+  },
+  "algorithm": "Global leave-one-out Morgan Tanimoto novelty pool, deterministic 50/50 evaluation split, forced validation compounds; later v1.1 train-to-val corrections.",
+  "unsupported_claim": "753 removed by reconciliation of per-channel components: no corresponding removal in the released tan70 assignment, which assigns all 334444 compounds.",
+  "caution": "Stored LOO values establish source provenance, not an independent recomputation of every similarity. Forced validation compounds are exceptions to the LOO novelty rule; direct train similarity must be audited separately.",
+  "splits": {
+    "tan70": {
+      "source_split": "/Users/mihailo/Projects/AppliedScientific/asi/data/ion-channel-cache/splits_tan70_v2.npz",
+      "source_sha256": "2cfb0682417ad049c3e30d61e07168c78a624dca0386584ebd39e4dc6e4dc7db",
+      "released_equals_source_all_folds": true,
+      "source_algorithm_reproduces_assignments_exactly": true,
+      "unassigned_rows": [],
+      "unassigned_explanation": "Odd augmented evaluation-pool remainder is omitted by two equal-size half slices in build_split_v2; not an unsatisfiable similarity conflict.",
+      "original_counts": {
+        "train": 241792,
+        "val": 46326,
+        "test": 46326
+      },
+      "final_counts": {
+        "train": 241790,
+        "val": 46328,
+        "test": 46326
+      },
+      "original_unassigned": 0,
+      "final_unassigned": 0,
+      "original_eval_above_global_loo_cutoff": [
+        {
+          "row_idx": "2132",
+          "smiles": "CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "3770",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-GDLZYMKVSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "7905",
+          "smiles": "CC(C)(C)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326022",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-LJAQVGFWSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326039",
+          "smiles": "CC(C)(C)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-PMERELPUSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326056",
+          "smiles": "CC(C)(C)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-SSEXGKCCSA-N",
+          "max_sim_loo": 1.0
+        }
+      ],
+      "final_eval_above_global_loo_cutoff": [
+        {
+          "row_idx": "2132",
+          "smiles": "CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "3770",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-GDLZYMKVSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "7905",
+          "smiles": "CC(C)(C)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "317153",
+          "smiles": "CC(C)(O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "DRGRCRRKRGIMMI-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326022",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-LJAQVGFWSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326039",
+          "smiles": "CC(C)(C)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-PMERELPUSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326056",
+          "smiles": "CC(C)(C)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-SSEXGKCCSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "331406",
+          "smiles": "CC(C)(O)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "DRGRCRRKRGIMMI-GDLZYMKVSA-N",
+          "max_sim_loo": 1.0
+        }
+      ]
+    },
+    "tan60": {
+      "source_split": "/Users/mihailo/Projects/AppliedScientific/asi/data/ion-channel-cache/splits_tan60_v2.npz",
+      "source_sha256": "977be1f5552a5d70c61b92797542e97cb2ff09c0dfcf691523f68934d0e3b603",
+      "released_equals_source_all_folds": true,
+      "source_algorithm_reproduces_assignments_exactly": true,
+      "unassigned_rows": [
+        {
+          "row_idx": "108361",
+          "smiles": "CCCc1ccc(-c2c(C)sc(N)c2C#N)cc1",
+          "inchikey": "RBANQTNMICYSAA-UHFFFAOYSA-N",
+          "max_sim_loo": 0.49152541160583496
+        }
+      ],
+      "unassigned_explanation": "Odd augmented evaluation-pool remainder is omitted by two equal-size half slices in build_split_v2; not an unsatisfiable similarity conflict.",
+      "original_counts": {
+        "train": 306665,
+        "val": 13889,
+        "test": 13889
+      },
+      "final_counts": {
+        "train": 306662,
+        "val": 13892,
+        "test": 13889
+      },
+      "original_unassigned": 1,
+      "final_unassigned": 1,
+      "original_eval_above_global_loo_cutoff": [
+        {
+          "row_idx": "2132",
+          "smiles": "CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "3770",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-GDLZYMKVSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "7905",
+          "smiles": "CC(C)(C)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326022",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-LJAQVGFWSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326039",
+          "smiles": "CC(C)(C)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-PMERELPUSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326056",
+          "smiles": "CC(C)(C)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-SSEXGKCCSA-N",
+          "max_sim_loo": 1.0
+        }
+      ],
+      "final_eval_above_global_loo_cutoff": [
+        {
+          "row_idx": "2132",
+          "smiles": "CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "3770",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-GDLZYMKVSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "7905",
+          "smiles": "CC(C)(C)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "317153",
+          "smiles": "CC(C)(O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "DRGRCRRKRGIMMI-UHFFFAOYSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326022",
+          "smiles": "CC(C)(C(=O)O)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "RWTNPBWLLIMQHL-LJAQVGFWSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326039",
+          "smiles": "CC(C)(C)c1ccc([C@@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-PMERELPUSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "326056",
+          "smiles": "CC(C)(C)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "GUGOEEXESWIERI-SSEXGKCCSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "331406",
+          "smiles": "CC(C)(O)c1ccc([C@H](O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "DRGRCRRKRGIMMI-GDLZYMKVSA-N",
+          "max_sim_loo": 1.0
+        },
+        {
+          "row_idx": "331595",
+          "smiles": "CC(C)(O)c1ccc(C(O)CCC[N+]2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1",
+          "inchikey": "QZZLQXZHKPPSLA-UHFFFAOYSA-N",
+          "max_sim_loo": 0.6730769276618958
+        }
+      ]
+    }
+  }
+}

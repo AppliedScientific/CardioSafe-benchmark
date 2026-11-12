@@ -1,0 +1,25 @@
+{
+  "hf_revision": "66b895cab8adebea0cb59a8effa66b2020f204ca",
+  "upstream_revision": "695bc28cbaa0b00410711f1b2ab5953cd668530d",
+  "weight_sha256": "7882205587d3985c07e425632d0e57ba0fc2fc778e3b47aab02aef9b7961407f",
+  "normalization_max_difference": {
+    "mean": 18.66821792809776,
+    "std": 62.37775111007903
+  },
+  "output_width": 199,
+  "checked_on": "2026-11-12",
+  "published_model": "DeepChem/ChemBERTa-77M-MTR",
+  "published_weight_metadata_url": "https://huggingface.co/api/models/DeepChem/ChemBERTa-77M-MTR?blobs=true",
+  "saved_feature_contract_weight_sha256": "7882205587d3985c07e425632d0e57ba0fc2fc778e3b47aab02aef9b7961407f",
+  "published_weight_hash_matches_saved_contract": true,
+  "upstream_descriptor_recipe": "RDKit Descriptors.descList with Ipc removed; code inspected at upstream_revision",
+  "exact_historical_output_name_order_verified": false,
+  "original_pretraining_logs_verified": false,
+  "pretraining_molecule_overlap_audited": false,
+  "normalization_comparison_note": "The 199-column upstream example normalization JSON differs from the released checkpoint configuration; do not treat it as an exact coordinate mapping. The difference does not by itself identify training targets or imply assay-label leakage.",
+  "sources": [
+    "https://arxiv.org/html/2209.01712v1",
+    "https://github.com/seyonechithrananda/bert-loves-chemistry/blob/695bc28cbaa0b00410711f1b2ab5953cd668530d/chemberta/utils/compute_norms.py",
+    "https://github.com/seyonechithrananda/bert-loves-chemistry/blob/695bc28cbaa0b00410711f1b2ab5953cd668530d/chemberta/utils/raw_text_dataset.py"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-12",
+  "python": "3.11.13",
+  "numpy": "2.4.4",
+  "pandas": "3.0.3",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.0",
+  "torch": "2.12.0",
+  "input_sha256": {
+    "data/compounds/compounds.csv": "1077a0f429906341dac8b1d29da2feb3de87e43ebfc29e0bdc4a94c197e6478f",
+    "data/labels/labels_v3.csv": "4492a02c3091f0669949f02bbb044c152a76a126bcb42269d5295310c9a41ecb",
+    "data/features/descriptors_20.npy": "1d74ae5a1a3ad959870316a45c093bc4e5038d5035f309ea7cb5dcf5cc7ed9b7",
+    "data/features/chemberta_mtr_cls_predictions/predictions.npy": "b5b4835dccfbf0a9f4b762302a393f1f8e34fcbab89860749346a8691b8c98d1",
+    "data/splits/tan70_v1_1.csv": "7693cb160f448aa07029a7454a4233f7e2894bb81a2f08a3043981667a42ec33",
+    "data/features/revision_tan70_v1_1/manifest.json": "0e8530b99f8bbc6dcf21561b15d9565e811309d24e98b4552f1897d9a32552d0",
+    "runs_revision_v3/final/tan70_v1_1/ensemble_test_revision.npz": "b654eb112955f5510b1ac586a8345e2acfe9a42e25139ef01e3c008a27121b39",
+    "runs_revision_v3/final/tan70_v1_1/seed_42/predictions_test_revision.npz": "94933320f9451b9256cff00bb6dad2a0c00e1caaf1c840a2922b171f9917ac25",
+    "runs_revision_v3/final/tan70_v1_1/seed_42/model.pt": "d0d26dbe9db077626e93d079ac3c089e3b08d87e0fe1d1615ebfdebae89d7d1d",
+    "runs_revision_v3/final/tan70_v1_1/seed_42/provenance.json": "b3c13560d6d45b5e95caaf0b319cbf1c6d5b4960d7b2ad0ddc23742666bb4b0f",
+    "runs_revision_v3/final/tan70_v1_1/seed_43/predictions_test_revision.npz": "5de7d5d486d508031cf7a2aa5f5063698b41c0c4a8fe4d0fd245f0814eb6c665",
+    "runs_revision_v3/final/tan70_v1_1/seed_43/model.pt": "419746fd9d19145bd882e4fb8b1be03d32c97f9cad4637b6c20ebb9f9167a861",
+    "runs_revision_v3/final/tan70_v1_1/seed_43/provenance.json": "4a6fd538e406d857f19a2d597f1d918965c4319f0b25fc6c19ba5af4bb344a0b",
+    "runs_revision_v3/final/tan70_v1_1/seed_44/predictions_test_revision.npz": "ff7e7807bade8f2fc0c822e5054ad0c80c1e1134006d8d20bf55e1957fabb809",
+    "runs_revision_v3/final/tan70_v1_1/seed_44/model.pt": "eb36eec16c62eb5f7c854d9c9cf82f588ef278e0153098987b29aa27d87fd701",
+    "runs_revision_v3/final/tan70_v1_1/seed_44/provenance.json": "832a9a91fa4e67207eea438aa58cf0d1b32f1fc29c5af9c067cfd19add18a8be",
+    "runs_revision_v3/final/tan70_v1_1/seed_45/predictions_test_revision.npz": "865903da0ea2d9ccf9ce893ad1f18a6510065fd46e4a0c98e2b104d777fc2c4b",
+    "runs_revision_v3/final/tan70_v1_1/seed_45/model.pt": "96669d0fc4ca709db4ee237fa43deb20ceb9673a408679333c1536d392f5d5fc",
+    "runs_revision_v3/final/tan70_v1_1/seed_45/provenance.json": "dc9c0611aa612d9c5430b7f058e12568a3a203b597656a38eaaff5341bb12cc7",
+    "runs_revision_v3/final/tan70_v1_1/seed_46/predictions_test_revision.npz": "ddceeefbaac2dbdbe1f31c70dad5898967879ff8bcc5cb335ebbba388ab79581",
+    "runs_revision_v3/final/tan70_v1_1/seed_46/model.pt": "6f992c2d3776917829305bc038f86d5b0d1416455d63e3c0de56f1152ad6e999",
+    "runs_revision_v3/final/tan70_v1_1/seed_46/provenance.json": "fd6c1718c0b321177bb0b56641fa5909a496642666e51f4582dd17c99472e44d",
+    "data/splits/tan60_v1_1.csv": "a308f9273737e7d93637103b77cf0a23f1c26de2091d4557a32bc61d543d214d",
+    "data/features/revision_tan60_v1_1/manifest.json": "762b6a555364a0679f973458d3b38b51b500170ede5cf38a33999ff066425c08",
+    "runs_revision_v3/final/tan60_v1_1/ensemble_test_revision.npz": "a4be51d904ac075f8ea3ae68a9305226e30580719f19c6817b22fdfe46798f1c",
+    "runs_revision_v3/final/tan60_v1_1/seed_42/predictions_test_revision.npz": "f0bf64dea73575c448fa1a24ada131206543cb4b6dde35dc92f2b38c955129f4",
+    "runs_revision_v3/final/tan60_v1_1/seed_42/model.pt": "86cd84a5035aad22af7ba3f793861b11ab6c2e5750db140d5fa2905d4fc70151",
+    "runs_revision_v3/final/tan60_v1_1/seed_42/provenance.json": "666974e5d71b47784b1252018cb13f227fdaae92f9a2bb41500d719e669531da",
+    "runs_revision_v3/final/tan60_v1_1/seed_43/predictions_test_revision.npz": "e1632285d9f07056ff5d34c6b8fb5f2f2243733a515d43ffbb38eab6150c58de",
+    "runs_revision_v3/final/tan60_v1_1/seed_43/model.pt": "cec29cf006912d00b9cf097febe2ef587583361dbb65897a636ea8d930f4800a",
+    "runs_revision_v3/final/tan60_v1_1/seed_43/provenance.json": "6bf69c4a56205180e5f88d2b58eca3ed2fc0852d287b4e9db11d6e8a2fdbde51",
+    "runs_revision_v3/final/tan60_v1_1/seed_44/predictions_test_revision.npz": "7e913dead9fe35d5bf13ecf7c67a664772cb8562ee429efa99ea5d48b82b708f",
+    "runs_revision_v3/final/tan60_v1_1/seed_44/model.pt": "2252c24e22f6ccb67fb43fcde8f055236f0d5bd93bff94e22db63818908bbc17",
+    "runs_revision_v3/final/tan60_v1_1/seed_44/provenance.json": "7acf27be662208c0f8332bcebe7561b4587deac0126a271ffa30c5c94dbe262a",
+    "runs_revision_v3/final/tan60_v1_1/seed_45/predictions_test_revision.npz": "7baf7cc074b35d0a3ddd6cd260266564469934e351078a458453b6c2018109f6",
+    "runs_revision_v3/final/tan60_v1_1/seed_45/model.pt": "2d7efbce1dd48a3845e997ef2a338cf2aabaec74e6133ee30aa2452ccbe1a140",
+    "runs_revision_v3/final/tan60_v1_1/seed_45/provenance.json": "5a1513e84f03bb508ae9fb6b25ceacd98ee161ed384dda2354381586712a621e",
+    "runs_revision_v3/final/tan60_v1_1/seed_46/predictions_test_revision.npz": "bab75b142153afe81b775a3425c17a91e8c67df955cfb0efdc4f1bd66a1468a5",
+    "runs_revision_v3/final/tan60_v1_1/seed_46/model.pt": "5ebe84cdb66e991cc39c9ef45a78f007b4f7b0bab25f038ecaaeea5340208fe8",
+    "runs_revision_v3/final/tan60_v1_1/seed_46/provenance.json": "f1124322a89c87bd6625856cf068d02ac6fcb87b1abd4f60dc9868515be93f63",
+    "reports/paper_revision/tables/phase4_domain_tan70_v1_1.csv": "e7f61fbf6d06bf6e6fa54ecf14a407104744f58464baca7bf5aaf2a7b4a90fc0",
+    "reports/paper_revision/tables/phase4_domain_tan60_v1_1.csv": "fc9630ef38dbe7610c94f6e83e91a2045da8213d8c01e9355847bd6209a82209",
+    "reports/paper_revision/tables/phase4_potency_error_counts_both.csv": "e39af08b1f89d34710e708e204f07024910f752d9910b8d8a5e3447e4fe40fec",
+    "reports/paper_revision/tables/phase4_domain_protocol.json": "ff278609e2a2db56235078b558be60e83e25c87de70baf678f71848bde9cdb39",
+    "reports/paper_revision/notes/phase2_split_provenance.json": "2d943b693d1962c7bde08c70998d32c86b8d2c829e416334de270c2680730ac6"
+  },
+  "checks": {
+    "tan70_v1_1": {
+      "test_rows": 46326,
+      "prediction_ensemble_max_abs_difference": 1.1920928955078125e-07,
+      "labels_match_v3": true
+    },
+    "tan60_v1_1": {
+      "test_rows": 13889,
+      "prediction_ensemble_max_abs_difference": 1.1920928955078125e-07,
+      "labels_match_v3": true
+    },
+    "supplement_exact_roundtrip": true
+  },
+  "protocol": {
+    "ensemble": "Mean sigmoid probabilities; mean already inverse-scaled regression predictions.",
+    "stability": "All 31 nonempty subsets of five fixed fits per split; descriptive ranges, not confidence intervals or independent replicates.",
+    "descriptor_groups": "Four bins defined by global TRAIN quartiles before test error grouping; ties may produce empty/unequal bins. All six selected descriptors and all endpoints are reported.",
+    "descriptor_inference": "Exploratory conditional summaries; no hypothesis tests, multiplicity claims, causal claims, or validated domain boundary.",
+    "data": "Lossless numeric join of v3 labels to standardized compound identities and both global fold assignments; no relabelling.",
+    "copied_tables": "Archived text tables are copied with LF line endings; CSV cells are unchanged."
+  },
+  "dataset": {
+    "rows": 334444,
+    "label_source_sha256": "4492a02c3091f0669949f02bbb044c152a76a126bcb42269d5295310c9a41ecb",
+    "columns": [
+      "row_idx",
+      "smiles",
+      "inchikey",
+      "herg_pchembl",
+      "herg_blocker_10um",
+      "herg_blocker_1um",
+      "nav15_pchembl",
+      "nav15_blocker",
+      "cav12_pchembl",
+      "cav12_blocker",
+      "iks_blocker",
+      "tan70_v1_1",
+      "tan60_v1_1"
+    ],
+    "missing_labels": "empty CSV cell; never a negative label",
+    "counts": {
+      "herg_pchembl": {
+        "labelled": 23667,
+        "positive": null
+      },
+      "herg_blocker_10um": {
+        "labelled": 331111,
+        "positive": 25065
+      },
+      "herg_blocker_1um": {
+        "labelled": 330525,
+        "positive": 5457
+      },
+      "nav15_pchembl": {
+        "labelled": 2855,
+        "positive": null
+      },
+      "nav15_blocker": {
+        "labelled": 3160,
+        "positive": 1240
+      },
+      "cav12_pchembl": {
+        "labelled": 997,
+        "positive": null
+      },
+      "cav12_blocker": {
+        "labelled": 1138,
+        "positive": 548
+      },
+      "iks_blocker": {
+        "labelled": 114,
+        "positive": 30
+      }
+    },
+    "fold_counts": {
+      "tan70_v1_1": {
+        "train": 241790,
+        "val": 46328,
+        "test": 46326
+      },
+      "tan60_v1_1": {
+        "train": 306662,
+        "val": 13892,
+        "test": 13889,
+        "excluded": 1
+      }
+    }
+  },
+  "output_sha256": {
+    "phase2_split_provenance.json": "2d943b693d1962c7bde08c70998d32c86b8d2c829e416334de270c2680730ac6",
+    "phase4_domain_tan60_v1_1.csv": "8213e6dbe2ff3932abe98539a51789c0d32a35a97a1ae9fa17a1e519c195a79c",
+    "phase4_domain_protocol.json": "ff278609e2a2db56235078b558be60e83e25c87de70baf678f71848bde9cdb39",
+    "upstream_provenance.json": "60c5df8b1e83446ed816f0b6d80e20b3512f39e28b96d26f1f3e89be06f17788",
+    "seed_stability_summary.csv": "5e8d050d9ab55e80ab6f3f60642cfdbeae5b2387b544406ee5444bf6bfd7e7ae",
+    "phase4_domain_tan70_v1_1.csv": "09c88342c19c18cdb15c0e1c55b266d5dcbceb83469dea8d5403ea709c96a3af",
+    "pretrained_scaler_audit.csv": "b1de25fc135f6fd523a05f7b86bdef6b3cd8759a808c0f6542c2066d9163ef3d",
+    "descriptor_error_groups.csv": "6a09a8133307cecfd2a0d6d40a28249634ae55fc72943457291ec1b3f0884e6d",
+    "Additional_file_1_cardiosafe_v3.csv.gz": "98395f4c47eb8e6aca83c1880ea141dd3122b7e114a0205aa2aa0286739cbed1",
+    "phase4_potency_error_counts_both.csv": "f69286e031bed551a36f536703fccdedbb9b135ddf6ec1127d03945dc4eaf321",
+    "seed_subsets.csv": "0c16cf5c0ede247e31cd73095c6d402d307e467ac2b612bebb70ea72fb485760",
+    "checkpoint_scaler_audit.json": "da1f521a2a08a20076cbbb70e58b85fc95a56ceb372bdfa321eee46ab05bad7d"
+  },
+  "script_sha256": "359c458c46a180413746fc01d0f69ae57ea4478852ed0e78433615ae95b02d26",
+  "reviewed_branch_commit": "398731342ded43488c2359d840cf22bad8105918"
+}
